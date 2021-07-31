@@ -8,7 +8,7 @@
 
 .ti {
   font-family: 'themify';
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -12068,7 +12068,7 @@
 
 .si {
   font-family: 'simple-line-icons';
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

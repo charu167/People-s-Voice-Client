@@ -3,7 +3,7 @@
     *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: "Poppins", sans-serif;
     }
  
@@ -19,11 +19,12 @@ body{
 .container {
     position: relative;
     max-width: 850px;
-    width: 100%;
+    width: 700px;
     background: #fff;
     padding: 40px 30px;   
     box-shadow: 0 10px 15px rgba(0,0,0,0.2); 
     perspective: 2800px;
+    margin-top: 50px;
 }
 
 .container .cover{
