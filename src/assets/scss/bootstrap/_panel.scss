@@ -1,0 +1,226 @@
+.panel-group .panel {
+	border-radius: 0;
+	box-shadow: none;
+	border-color: #EEEEEE;
+}
+.panel-default>.panel-heading {
+	padding: 0;
+	border-radius: 0;
+	background-color: #eaeaf9;
+	border-color: #EEEEEE;
+}
+.panel-title {
+	font-size: 14px;
+	margin-bottom: 0;
+	>a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+	}
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border: 1px solid #e4e6f9;
+	padding: 10px;
+}
+.panel1 {
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: $white;
+	background: none;
+	box-shadow: none;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.panel-group1 {
+	>.panel1:first-child .panel-heading1 {
+		border-radius: 4px 4px 0 0;
+	}
+	.panel1 {
+		border-radius: 0;
+	}
+}
+.panel-body1 {
+	padding: 10px;
+	background: $white;
+}
+.panel-title1 {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+.panel-group1 .panel1+.panel1 {
+	margin-top: 0;
+}
+.panel-heading1 {
+	background-color: #5797fc;
+	border-radius: 0;
+	border: none;
+	color: $white;
+	padding: 0;
+}
+.panel-group1 .panel-body {
+	border: 1px solid #e4e6f9;
+}
+.panel-title1 a {
+	display: block;
+	color: $white;
+	padding: 10px;
+	position: relative;
+	font-size: 16px;
+	font-weight: 400;
+}
+.panel1:last-child {
+	.panel-body1 {
+		border-radius: 0 0 4px 4px;
+	}
+	.panel-heading1 {
+		border-radius: 0 0 4px 4px;
+		transition: border-radius 0.3s linear 0.2s;
+		&.active {
+			border-radius: 0;
+			transition: border-radius linear 0s;
+		}
+	}
+}
+/* #bs-collapse icon scale option */
+
+.panel-title a.accordion-toggle {
+	&:before {
+		content: "\f068";
+		padding: 0 10px 0 0;
+		color: $white;
+		font-family: 'Font Awesome 5 Free';
+		float: right;
+	}
+	&.collapsed:before {
+		content: "\f067";
+		padding: 0 10px 0 0;
+		color: $white;
+		font-family: 'Font Awesome 5 Free';
+		float: right;
+	}
+}
+.panel-heading1 {
+	a {
+		&.collapsed:before {
+			content: "\e9af";
+			position: absolute;
+			font-family: 'feather' !important;
+			right: 10px;
+			top: 7px;
+			font-size: 20px;
+			transition: all 0.5s;
+			transform: scale(1);
+		}
+		&:before {
+			content: "\e994";
+			position: absolute;
+			font-family: 'feather' !important;
+			right: 10px;
+			top: 7px;
+			font-size: 20px;
+			transition: all 0.5s;
+			transform: scale(1);
+		}
+	}
+	&.active a:before {
+		content: ' ';
+		transition: all 0.5s;
+		transform: scale(0);
+	}
+}
+.demo-accordion p:last-child, .panel-group1 p:last-child {
+	margin-bottom: 0;
+}
+#bs-collapse .panel-heading1 {
+	a:after {
+		content: "\f01a";
+		font-size: 24px;
+		position: absolute;
+		font-family: 'Font Awesome 5 Free';
+		right: 5px;
+		top: 10px;
+		transform: scale(0);
+		transition: all 0.5s;
+	}
+	&.active a:after {
+		content: "\f01a";
+		transform: scale(1);
+		transition: all 0.5s;
+	}
+}
+/* #accordion rotate icon option */
+
+#accordion .panel-heading1 {
+	a:before {
+		content: "\f01a";
+		font-size: 24px;
+		position: absolute;
+		font-family: 'Font Awesome 5 Free';
+		right: 5px;
+		top: 10px;
+		transform: rotate(180deg);
+		transition: all 0.5s;
+	}
+	&.active a:before {
+		transform: rotate(0deg);
+		transition: all 0.5s;
+	}
+}
+/*--------35. panel----------*/
+
+.expanel-default {
+	border: #ddd !important;
+}
+.expanel-success {
+	border: $success !important;
+}
+.expanel-danger {
+	border: $danger !important;
+}
+.expanel-success>.expanel-heading {
+	color: $white !important;
+	background-color: $success !important;
+	border-color: $success !important;
+}
+.expanel-danger>.expanel-heading {
+	color: $white !important;
+	background-color: $danger !important;
+	border-color: $danger !important;
+}
+.expanel-title {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	font-size: 16px !important;
+	color: inherit !important;
+}
+.expanel {
+	margin-bottom: 20px;
+	background-color: $white !important;
+	border: 1px solid #e4e6f9 !important;
+	border-radius: 4px !important;
+	-webkit-box-shadow: 0 1px 1px rgba(199, 199, 199, 0.2) !important;
+	box-shadow: 0 1px 1px rgba(199, 199, 199, 0.2) !important;
+}
+.expanel-default>.expanel-heading {
+	color: $default-color !important;
+	background-color: #eaeaf9 !important;
+	border-color: #e4e6f9 !important;
+}
+.expanel-heading {
+	padding: 10px 15px !important;
+	border-bottom: 1px solid #e4e6f9;
+	border-top-left-radius: 3px !important;
+	border-top-right-radius: 3px !important;
+}
+.expanel-footer {
+	padding: 10px 15px !important;
+	background-color: #eaeaf9 !important;
+	border-top: 1px solid #e4e6f9 !important;
+	border-bottom-right-radius: 3px !important;
+	border-bottom-left-radius: 3px !important;
+}
+.expanel-body {
+	padding: 15px !important;
+	border: 1px solid #e6e4e4;
+}

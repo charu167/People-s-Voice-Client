@@ -1,0 +1,106 @@
+/*--- Ribbon ---*/
+
+.arrow-ribbon {
+	color: #FFF;
+	padding: 2px 8px;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	z-index: 999;
+	font-size: 18px;
+	&.bg-purple:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid $purple;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-danger:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid $danger;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-primary:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-secondary:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid #f3f7fd;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-success:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid $success;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-info:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid $info;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-warning:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid $warning;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-pink:before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		right: -15px;
+		border-top: 15px solid transparent;
+		border-left: 15px solid $pink;
+		border-bottom: 15px solid transparent;
+		width: 0;
+	}
+}

@@ -1,0 +1,889 @@
+@import "../../scss/variables";
+a {
+	color: $primary;
+}
+a:hover {
+	color: $primary;
+}
+/*------- 2. Forms -------*/
+
+.form-control:focus {
+	border: 1px solid $primary;
+	box-shadow: none;
+}
+select.form-control:focus::-ms-value {
+	border: 1px solid $primary !important;
+}
+/*--------3. Buttons ------*/
+
+.btn-primary {
+	border: 1px solid $primary;
+	background: $primary;
+	color: $white;
+}
+.btn-primary:hover {
+	color: $white;
+	background-color: #0ea064;
+	border: 1px solid #0ea064;
+}
+.btn-primary:focus, .btn-primary.focus {
+	box-shadow: 0 0 0 2px rgba(83, 18, 127, 0.1);
+}
+.btn-primary.disabled, .btn-primary:disabled {
+	color: $white;
+	background-color: #14a267;
+	border-color: #14a267;
+	opacity: 0.7;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show>.btn-primary.dropdown-toggle {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show>.btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+}
+.btn-secondary {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.btn-secondary:hover {
+	color: $white;
+	background-color: #00a0cc;
+	border-color: #00a0cc;
+}
+.btn-secondary:focus, .btn-secondary.focus {
+	box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+}
+.btn-secondary.disabled, .btn-secondary:disabled {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+	opacity: 0.7;
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show>.btn-secondary.dropdown-toggle {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+}
+.btn-outline-primary {
+	color: $primary;
+	background-color: transparent;
+	background-image: none;
+	border-color: $primary !important;
+}
+.btn-outline-primary:hover {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+	box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+}
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+	color: $primary;
+	background-color: transparent;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show>.btn-outline-primary.dropdown-toggle {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+}
+.btn-outline-secondary {
+	color: $secondary-15;
+	background-color: transparent;
+	background-image: none;
+	border-color: $secondary-15 !important;
+}
+.btn-outline-secondary:hover {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+	box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+}
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+	color: $secondary-15;
+	background-color: transparent;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show>.btn-outline-secondary.dropdown-toggle {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show>.btn-outline-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+}
+.btn-link {
+	color: $primary;
+}
+.btn-link:hover {
+	color: #0ea064;
+}
+/*------4. Drop Downs-------*/
+
+.notifyimg {
+	background: $primary;
+}
+/*------ 5. Tables -----*/
+
+.table-primary, .table-primary>th, .table-primary>td {
+	background-color: rgba(8, 158, 96, 0.1);
+}
+.table-hover .table-primary:hover {
+	background-color: #9efad4;
+}
+.table-hover .table-primary:hover>td, .table-hover .table-primary:hover>th {
+	background-color: #9efad4;
+}
+.table-secondary, .table-secondary>th, .table-secondary>td {
+	background-color: #a2ddf6;
+}
+.table-hover .table-secondary:hover {
+	background-color: #a2ddf6;
+}
+.table-hover .table-secondary:hover>td, .table-hover .table-secondary:hover>th {
+	background-color: $secondary-15;
+}
+.table-primary thead th, .table-primary thead th {
+	color: $white !important;
+}
+.table-primary td {
+	color: $primary !important;
+}
+/*----- 7. Custom control -----*/
+
+.accordionjs .acc_section.acc_active>.acc_head {
+	background: $primary;
+}
+.sweet-alert button {
+	background-color: $primary !important;
+}
+.addui-slider .addui-slider-track .addui-slider-handle.addui-slider-handle-active .addui-slider-value {
+	background: $primary;
+}
+.addui-slider .addui-slider-track {
+	background: $primary;
+}
+.addui-slider .addui-slider-track .addui-slider-handle:after {
+	background: $primary;
+}
+.addui-slider .addui-slider-track .addui-slider-handle.addui-slider-handle-active {
+	background: $primary;
+}
+.addui-slider .addui-slider-track .addui-slider-range {
+	background: $primary;
+}
+.timeline__item:after {
+	border: 6px solid $primary;
+}
+.spinLoader {
+	color: $primary !important;
+}
+.spinLoader, .spinLoader:before, .spinLoader:after {
+	background: $primary !important;
+}
+div.conv-form-wrapper div.options div.option {
+	border: 1px solid $primary;
+	color: $primary;
+}
+div.conv-form-wrapper div#messages div.message.from {
+	background: $primary;
+}
+form.convFormDynamic button.submit:hover {
+	background: $primary;
+}
+form.convFormDynamic button.submit {
+	background: $primary;
+}
+.fc-event, .fc-event-dot {
+	background-color: $primary;
+}
+.fc-event {
+	border: 1px solid $primary
+}
+.fc button {
+	background: $primary;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
+	background: $primary;
+}
+.cal1 .clndr .clndr-table tr .day.today, .cal1 .clndr .clndr-table tr .day.my-today {
+	background: $primary;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
+	background: $primary;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button:hover {
+	background: $primary;
+}
+.cal1 .clndr .clndr-table .header-days {
+	background: $primary;
+}
+.offer-primary {
+	border-color: $primary;
+}
+.offer-primary .shape {
+	border-color: transparent $primary transparent transparent;
+}
+.icon-shape-primary {
+	color: $primary;
+	background-color: rgba(8, 58, 96, .5);
+}
+.icon-shape-secondary {
+	color: $secondary-15;
+	background-color: rgba(19, 150, 204, .5);
+}
+.bg-gradient-primary {
+	background: linear-gradient( 89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%) !important;
+}
+.bg-gradient-secondary {
+	background: linear-gradient(87deg, $secondary-15 0, $secondary-15 100%) !important;
+}
+.custom-control-input:checked~.custom-control-label::before {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.custom-control-input:focus~.custom-control-label::before {
+	box-shadow: 0 0 0 1px rgba(152, 166, 173, 0.1), 0 0 0 2px rgba(242, 242, 242, 0.25);
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+	background-color: $primary;
+}
+.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
+	background-color: $primary;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+	background-color: $primary;
+}
+.custom-select:focus {
+	border-color: $primary;
+}
+.custom-file-input:focus~.custom-file-label {
+	border-color: $primary;
+}
+.custom-file-input:focus~.custom-file-label::after {
+	border-color: $primary;
+}
+.custom-file-label::after {
+	background-color: $primary;
+	border-left: 1px solid $primary;
+}
+.custom-range::-webkit-slider-thumb {
+	background-color: $primary;
+}
+.custom-range::-moz-range-thumb {
+	background-color: $primary;
+}
+.custom-range::-ms-thumb {
+	background-color: $primary;
+}
+/*------8. Navigation -------*/
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background-color: $primary;
+}
+/*------ Accordion -------*/
+
+.page-link:hover {
+	color: $primary;
+	border: 1px solid $primary;
+}
+.page-link:focus {
+	border: 1px solid $primary;
+}
+.page-item.active .page-link {
+	background-color: $primary;
+	border: 1px solid $primary;
+}
+/*------ 11. Email services -------*/
+
+ul.inbox-nav li a:hover, ul.inbox-nav li.active a, ul.inbox-nav li a:focus {
+	color: $primary;
+}
+/*----- 12. Range slider -------*/
+
+.range.range-primary input[type="range"]::-webkit-slider-thumb {
+	background-color: $primary;
+}
+.range.range-primary input[type="range"]::-moz-slider-thumb {
+	background-color: $primary;
+}
+.range.range-primary output {
+	background-color: $primary;
+}
+.range.range-primary input[type="range"] {
+	outline-color: $primary;
+}
+/*-----13.Pricing tables-----*/
+
+.pricing-table:hover .price-header {
+	background-color: $primary;
+}
+.nav-tabs .nav-item1 .nav-link:hover:not(.disabled) {
+	background: $primary;
+}
+.nav-tabs .nav-item1 .nav-link.active {
+	background: $primary;
+}
+/*-------15. Tooptip &popover------*/
+
+/*alerts*/
+
+.pop-primary {
+	color: $primary;
+}
+.popsecondary {
+	color: $secondary-15;
+}
+/*----- 16. Typography ------*/
+
+.heading-primary {
+	background-color: $primary;
+}
+.heading-secondary {
+	background-color: $secondary-15;
+}
+/*------19. Breadcrumb ------*/
+
+.breadcrumb-item a {
+	color: $primary;
+}
+.breadcrumb-item1 a {
+	color: $primary;
+}
+.breadcrumb-item1 a:hover {
+	color: #0ea064;
+}
+/* ----- v CAN BE DELETED v ----- */
+
+.panel-title1 a {
+	background: $primary;
+}
+/*-----21. List Of Dropdwons-----*/
+
+.btn.dropdown-toggle.btn-primary~.dropdown-menu .dropdown-plus-title {
+	border-color: rgb(8, 158, 96) !important;
+}
+.btn.dropdown-toggle.btn-secondary~.dropdown-menu .dropdown-plus-title {
+	border-color: rgb(19, 150, 204) !important;
+}
+/*-----22. Badges-----*/
+
+.badge-primary {
+	background-color: $primary;
+}
+.badge-primary[href]:hover, .badge-primary[href]:focus {
+	background-color: $primary;
+}
+.badge-secondary {
+	background-color: $secondary-15;
+}
+.badge-secondary[href]:hover, .badge-secondary[href]:focus {
+	background-color: $primary;
+}
+/*-----24. Alerts-----*/
+
+.alert-primary {
+	background-color: $primary;
+	border-color: $primary;
+}
+.alert-primary hr {
+	border-top-color: #b7cded;
+}
+.alert-primary .alert-link {
+	color: #172b46;
+}
+.alert-secondary {
+	color: #464a4e;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.alert-secondary hr {
+	border-top-color: #cfd2d6;
+}
+.alert-secondary .alert-link {
+	color: #2e3133;
+}
+/*-----25. progress-----*/
+
+.progress-bar {
+	background-color: $primary;
+}
+/*-----26. Lists-----*/
+
+.list-group-item.active {
+	color: $primary;
+}
+.list-group-item-primary {
+	color: $white;
+	background-color: $primary;
+}
+.list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
+	color: $white;
+	background-color: $primary;
+}
+.list-group-item-primary.list-group-item-action.active {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.list-group-item-secondary {
+	color: $white;
+	background-color: $secondary-15;
+}
+.list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
+	color: $white;
+	background-color: $secondary-15;
+}
+.list-group-item-secondary.list-group-item-action.active {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+/*------27. Modal -------*/
+
+.widget-info i {
+	border: 2px solid $primary;
+}
+/*------29. Alignments -------*/
+
+.bg-primary {
+	background-color: $primary !important;
+}
+a.bg-primary:hover, a.bg-primary:focus, button.bg-primary:hover, button.bg-primary:focus {
+	background-color: $primary !important;
+}
+.bg-secondary {
+	background-color: $secondary-15 !important;
+}
+a.bg-secondary:hover, a.bg-secondary:focus, button.bg-secondary:hover, button.bg-secondary:focus {
+	background-color: $secondary-15 !important;
+}
+.border-primary {
+	border-color: $primary !important;
+}
+.border-secondary {
+	border-color: $secondary-15 !important;
+}
+/*------- 31. Alignments & values-------*/
+
+.text-primary {
+	color: $primary !important;
+}
+a.text-primary:hover, a.text-primary:focus {
+	color: $primary !important;
+}
+.text-secondary {
+	color: $secondary-15 !important;
+}
+a.text-secondary:hover, a.text-secondary:focus {
+	color: $secondary-15 !important;
+}
+/*------32. Headers -------*/
+
+.header-bg {
+	background: $primary;
+	background: -webkit-linear-gradient(to right, $primary, $primary);
+	background: linear-gradient(to right, $primary, $primary);
+}
+/*------33. Background colors -------*/
+
+.nav-tabs .nav-link:hover:not(.disabled) {
+	background: $primary;
+}
+.nav-tabs .nav-link.active {
+	background: $primary;
+}
+/*---Mega Menu---*/
+
+.ren-navbar .nav-link:hover, .ren-navbar .nav-link:focus {
+	background-color: $primary;
+}
+.ren-navbar .nav-link.active {
+	background-color: $primary;
+}
+.ren-navbar .mega-dropdown .sub-item .section-label {
+	color: $primary;
+}
+.ren-navbar .sub-item ul a:active {
+	background-color: $primary;
+}
+/*----- 34. Btn styles------*/
+
+.btn-secondary {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+	box-shadow: 0 1px 1px 0 $black-05;
+}
+.btn-secondary:hover {
+	color: $white;
+	background-color: #0e94cc;
+	border-color: #0e94cc;
+}
+.btn-secondary:focus, .btn-secondary.focus {
+	box-shadow: 0 0 0 2px $secondary-15;
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show>.btn-secondary.dropdown-toggle {
+	color: $white;
+	background-color: $secondary-15;
+}
+/*--------35. panel----------*/
+
+.expanel-primary {
+	border: $primary !important;
+}
+.expanel-secondary {
+	border: $secondary-15 !important;
+}
+.expanel-primary>.expanel-heading {
+	color: $white !important;
+	background-color: $primary !important;
+	border-color: $primary !important;
+}
+.expanel-secondary>.expanel-heading {
+	color: $white !important;
+	background-color: $secondary-15 !important;
+	border-color: $secondary-15 !important;
+}
+/*----- 38. Avatars -----*/
+
+.avatar {
+	background: $primary no-repeat center/cover;
+}
+/*-------- 41. Loaders ---------*/
+
+.lds-circle>div {
+	background: $primary;
+}
+.lds-dual-ring:after {
+	border: 5px solid $primary;
+	border-color: $primary transparent $primary transparent;
+}
+.lds-facebook div {
+	background: $primary;
+}
+.lds-heart div {
+	background: $primary;
+}
+.lds-heart div:after, .lds-heart div:before {
+	background: $primary;
+}
+.lds-ring div {
+	border: 6px solid $primary;
+	border-color: $primary transparent transparent transparent;
+}
+.lds-roller div:after {
+	background: $primary;
+}
+.lds-default div {
+	background: $primary;
+}
+.lds-ellipsis div {
+	background: $primary;
+}
+.lds-grid div {
+	background: $primary;
+}
+.lds-hourglass:after {
+	border: 26px solid $primary;
+	border-color: $primary transparent $primary transparent;
+}
+.lds-ripple div {
+	border: 4px solid $primary;
+}
+.lds-spinner div:after {
+	background: $primary;
+}
+/*----42. Profile----*/
+
+.mediaicon {
+	border: 1px solid $primary;
+	background: $primary;
+}
+/*-----43. Icon input-----*/
+
+a.chip:hover {
+	background-color: $primary;
+}
+/*----44. Tags-----*/
+
+.tag-primary {
+	background-color: $primary;
+}
+.tag-secondary {
+	background-color: $secondary-15;
+}
+.selectgroup-input:checked+.selectgroup-button {
+	border-color: $primary;
+	color: $primary;
+	background: #eaeaf9;
+}
+.selectgroup-input:focus+.selectgroup-button {
+	border-color: $primary;
+	color: $primary;
+	box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.25);
+}
+.custom-switch-input:checked~.custom-switch-indicator {
+	background: $primary;
+}
+/*----- 48. Gallery -----*/
+
+.demo-gallery>ul>li a {
+	border: 2px solid $primary;
+}
+.demo-gallery>ul>li a {
+	background: $primary;
+}
+/*-----51. Back to Top-----*/
+
+#back-to-top {
+	background: linear-gradient( 89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+#back-to-top:hover {
+	color: $primary;
+	border: 2px solid $primary;
+}
+.tabs-menu ul li .active {
+	background: $primary;
+}
+.tabs-menu1 ul li .active {
+	border-bottom: 3px solid $primary;
+}
+.feature .border {
+	border: 2px solid $primary !important;
+}
+/*-- rating--*/
+
+.error-bg:before {
+	background: linear-gradient( 89.1deg, rgba(8, 158, 96, 0.8) 0.7%, rgba(19, 150, 204, 0.8) 88.4%);
+}
+/*---Count-down---*/
+
+#count-down .clock-presenter {
+	background: linear-gradient( 89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+/*---Navtab Wizard---*/
+
+.navtab-wizard.nav-tabs .nav-link.active, .navtab-wizard.nav-tabs .nav-link:hover {
+	background: $primary;
+}
+/*--- Ribbon ---*/
+
+.arrow-ribbon.bg-primary:before {
+	border-left: 15px solid $primary;
+}
+.arrow-ribbon.bg-secondary:before {
+	border-left: 15px solid $secondary-15;
+}
+/*--chat--*/
+
+.chat .action-header {
+	background: $primary;
+}
+@media (max-width: 767px) {
+	.search-show .search-element {
+		background: linear-gradient(125deg, $primary 35%, $primary 65%);
+	}
+}
+.page-headertabs .tabs-menu ul li a {
+	border: 1px solid $primary;
+}
+.welcome-image:before {
+	background: linear-gradient( 89.1deg, rgba(8, 158, 96, 0.5) 0.7%, rgba(19, 150, 204, 0.5) 88.4%);
+}
+.page-header .page-title i {
+	background: rgba(8, 158, 96, 0.1);
+	color: $primary;
+}
+/*--bg-transparents--*/
+
+.bg-secondary-transparent {
+	background-color: rgba(19, 150, 204, 0.1);
+}
+.bg-primary-transparent {
+	background-color: rgba(8, 158, 96, 0.1);
+}
+/** Calender **/
+
+.cal1 .clndr .clndr-table tr .empty:hover, .cal1 .clndr .clndr-table tr .adjacent-month:hover, .cal1 .clndr .clndr-table tr .my-empty:hover, .cal1 .clndr .clndr-table tr .my-adjacent-month:hover {
+	background: $primary;
+}
+.cal1 .clndr .clndr-table tr .day:hover {
+	background: $primary;
+}
+.cal1 .clndr .clndr-table tr .day.today:hover, .cal1 .clndr .clndr-table tr .day.my-today:hover {
+	background: #0ea064;
+}
+.header-1 .header {
+	background: linear-gradient( 89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+.header {
+	background: linear-gradient( 89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+/*Side Menu*/
+
+.app-header {
+	background: linear-gradient( 89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+.side-menu__item.active, .side-menu__item:hover, .side-menu__item:focus {
+	color: $primary;
+}
+.slide-menu a.active {
+	color: $primary;
+}
+.slide-item.active, .slide-item:hover, .slide-item:focus {
+	color: $primary;
+}
+.slide.submenu .side-menu__label:hover {
+	color: $primary;
+}
+.side-menu .slide-menu.submenu-list a:hover {
+	color: $primary;
+}
+.side-menu .slide.submenu a.active {
+	color: $primary;
+}
+/*Horizontal*/
+
+.horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li>a:hover {
+	color: $primary;
+}
+.horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li>ul.sub-menu>li>a:hover {
+	color: $primary !important;
+}
+.horizontalMenu>.horizontalMenu-list>li>.horizontal-megamenu .link-list li a:hover {
+	color: $primary;
+}
+@media only screen and (max-width: 991px) {
+	.horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li>a:hover {
+		color: $primary;
+	}
+	.horizontalMenu>.horizontalMenu-list>li:hover>a {
+		background: $primary;
+	}
+	.hor-menu .horizontalMenu>.horizontalMenu-list>li>a:hover {
+		color: $white;
+		background: $primary
+	}
+	.hor-menu .horizontalMenu>.horizontalMenu-list>li>a.active {
+		color: $white !important;
+		background: $primary
+	}
+}
+/*----- Menu-Styles ----- */
+
+.side-menu .side-menu__item:hover {
+	background: $primary !important;
+	color: $white !important;
+}
+.app-sidebar .side-menu li .side-menu__item.active {
+	background: $primary !important;
+	color: $white !important;
+}
+.slide.is-expanded [data-toggle="slide"], .slide .side-menu__item.active {
+	color: rgb(255, 255, 255) !important;
+	background: rgb(8, 158, 96) !important;
+}
+/*--- Switcher Checkbox ----*/
+
+.onoffswitch-checkbox:checked+.onoffswitch-label {
+	background-color: $primary;
+}
+.onoffswitch-checkbox:checked+.onoffswitch-label, .onoffswitch-checkbox:checked+.onoffswitch-label:before {
+	border-color: $primary;
+}
+.onoffswitch2-checkbox:checked+.onoffswitch2-label {
+	background-color: $primary;
+}
+.onoffswitch2-checkbox:checked+.onoffswitch-label2, .onoffswitch2-checkbox:checked+.onoffswitch2-label:before {
+	border-color: $primary;
+}
+/*Skin-modes*/
+
+.image-menu1 .first-sidemenu:before {
+	background: linear-gradient( 89.1deg, rgba(8, 158, 96, 0.8) 0.7%, rgba(19, 150, 204, 0.8) 88.4%) !important;
+}
+.image-menu1 .resp-vtabs li.active {
+	border-right: 0 !important;
+	color: $white;
+	background: rgba(0, 0, 0, 0.3) !important;
+}
+.image-menu1 .resp-vtabs li.resp-tab-active {
+	background: rgba(0, 0, 0, 0.3) !important;
+}
+.image-leftmenu1 .app-sidebar:before {
+	background: linear-gradient( 89.1deg, rgba(8, 158, 96, 0.8) 0.7%, rgba(19, 150, 204, 0.8) 88.4%) !important;
+}
+.image-leftmenu1 .app-sidebar .side-menu li a.active {
+	color: $white !important;
+	background: rgba(0, 0, 0, 0.3) !important;
+}
+.image-leftmenu1 .side-menu .side-menu__item:hover {
+	background: rgba(0, 0, 0, 0.3) !important;
+	color: $white !important;
+}
+.hor-image1 .horizontal-main.hor-menu:before {
+	background: linear-gradient( 89.1deg, rgba(8, 158, 96, 0.8) 0.7%, rgba(19, 150, 204, 0.8) 88.4%) !important;
+}
+/* Horizontal-Light */
+
+.hor-light .horizontal-main.hor-menu {
+	background: $white;
+	color: $default-color;
+}
+@media only screen and (max-width: 991px) {
+	.hor-light .horizontalMenu>.horizontalMenu-list {
+		background: $white;
+	}
+	.hor-light .horizontalMenu>.horizontalMenu-list>li>a {
+		border-bottom: 1px solid #f4f5ff !important;
+	}
+}
+/* Horizontal-Default */
+
+.hor-default .horizontal-main.hor-menu {
+	background: #040807;
+	color: $white;
+}
+@media only screen and (max-width: 991px) {
+	.hor-default .hor-menu .horizontalMenu>.horizontalMenu-list>li>a.active {
+		color: $white !important;
+		background: $primary;
+	}
+	.hor-default .hor-menu .horizontalMenu>.horizontalMenu-list>li>a:hover {
+		color: $white !important;
+		background: $primary;
+	}
+	.horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li:hover>a {
+		color: #0c9a8d;
+	}
+}
+.dark-mode .horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li:hover>a {
+	color: #00bf70;
+}
+.dark-mode .horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li>a:hover {
+	color: #00bf70 !important;
+}
+.dark-mode .horizontalMenu>.horizontalMenu-list>li>.horizontal-megamenu .link-list li a:hover {
+	color: #00bf70;
+}
+.dark-mode .page-header .page-title i {
+	color: #00bf70;
+}
+.dark-mode .horizontalMenu>.horizontalMenu-list>li>ul.sub-menu>li>ul.sub-menu>li>a:hover {
+	color: #00bf70;
+}
+.dark-mode .breadcrumb-item a {
+	color: #00bf70;
+}

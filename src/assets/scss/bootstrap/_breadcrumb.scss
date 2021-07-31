@@ -1,0 +1,97 @@
+/*------19. Breadcrumb ------*/
+
+.breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+	list-style: none;
+	float: left;
+	margin: 0;
+	list-style: none;
+	background-color: transparent;
+	border-radius: 50px;
+	padding: 10px 0px !important;
+	border-radius: 3px;
+	border-radius: 50px;
+}
+.breadcrumb-item {
+	+.breadcrumb-item {
+		&::before {
+			display: inline-block;
+			padding-right: 0.5rem;
+			padding-left: 0.5rem;
+			color: #bdcce5;
+			content: "/";
+		}
+		&:hover::before {
+			text-decoration: underline;
+		}
+	}
+	&.active {
+		color: $default-color;
+	}
+}
+.breadcrumb1 {
+	display: flex;
+	flex-wrap: wrap;
+	padding: .75rem 1rem;
+	margin-bottom: 1rem;
+	list-style: none;
+	background-color: #eaeaf9;
+	border-radius: 3px;
+}
+.breadcrumb-item1 {
+	a:hover {
+		text-decoration: underline;
+	}
+	+.breadcrumb-item1 {
+		&::before {
+			display: inline-block;
+			padding-right: 0.5rem;
+			padding-left: 0.5rem;
+			content: "/";
+		}
+		&:hover::before {
+			text-decoration: underline;
+			text-decoration: none;
+		}
+	}
+	&.active {
+		color: $default-color;
+	}
+}
+@media (min-width: 768px) {
+	.page-breadcrumb {
+		margin: -.5rem 0 0;
+	}
+}
+.page-breadcrumb .breadcrumb-item {
+	color: #6c6a8d;
+	&.active {
+		color: #495057;
+	}
+}
+.breadcrumb-1 {
+	ol {
+		position: relative;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	li {
+		display: contents;
+		text-align: center;
+	}
+}
+.breadcrumb-2 {
+	ol {
+		position: relative;
+		display: block;
+		width: 100%;
+		text-align: right;
+	}
+	li {
+		display: contents;
+		text-align: right;
+	}
+}

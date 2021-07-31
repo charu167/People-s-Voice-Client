@@ -1,0 +1,178 @@
+/*------17. Charts styles ------*/
+
+.chart-visitors {
+	min-height: 17rem;
+	overflow: hidden;
+}
+.chart-tasks {
+	height: 13.8rem;
+	overflow: hidden;
+}
+.chart-donut, .chart-pie {
+	height: 21rem;
+	overflow: hidden;
+}
+.chartsh {
+	height: 16rem;
+	overflow: hidden;
+}
+.chartwidget {
+	height: 18rem;
+	overflow: hidden;
+}
+.chart-height {
+	height: 12rem;
+	overflow: hidden;
+}
+@media (max-width: 480px) {
+	tspan, .apexcharts-legend {
+		display: none;
+	}
+}
+.social-links li a {
+	background: #f8f8f8;
+	border-radius: 50%;
+	color: #6c6a8d;
+	display: inline-block;
+	height: 1.75rem;
+	width: 1.75rem;
+	line-height: 1.75rem;
+	text-align: center;
+}
+.map, .chart {
+	position: relative;
+	padding-top: 56.25%;
+}
+.map-square, .chart-square {
+	padding-top: 100%;
+}
+.map-content, .chart-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.map-header {
+	margin-bottom: 1.5rem;
+	height: 15rem;
+	position: relative;
+	margin-bottom: -1.5rem;
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 10rem;
+		background: linear-gradient(to bottom, rgba(245, 247, 251, 0) 5%, #e4e6f9 95%);
+		pointer-events: none;
+	}
+}
+.map-header-layer {
+	height: 100%;
+}
+.map-static {
+	height: 120px;
+	width: 100%;
+	max-width: 640px;
+	background-position: center center;
+	background-size: 640px 120px;
+}
+.chart-circle {
+	display: block;
+	height: 8rem;
+	width: 8rem;
+	position: relative;
+	margin: 0 auto;
+	canvas {
+		margin: 0 auto;
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.chart-circle-xs {
+	height: 2.5rem;
+	width: 2.5rem;
+	font-size: .8rem;
+}
+.chart-circle-md {
+	height: 6rem;
+	width: 6rem;
+	font-size: 1rem;
+}
+.chart-circle-sm {
+	height: 4rem;
+	width: 4rem;
+	font-size: .8rem;
+}
+.chart-circle-lg {
+	height: 10rem;
+	width: 10rem;
+	font-size: .8rem;
+}
+.chart-circle-value {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	line-height: 1;
+	small {
+		display: block;
+		color: #6c6a8d;
+		font-size: 0.9375rem;
+	}
+}
+.chart-dropshadow {
+	-webkit-filter: drop-shadow((-6px) 9px 4px rgba(199, 199, 199, 0.2));
+	filter: drop-shadow((-6px) 9px 4px rgba(199, 199, 199, 0.2));
+}
+.BarChartShadow {
+	-webkit-filter: drop-shadow(0px 1px 4px rgba(199, 199, 199, 0.2));
+	filter: drop-shadow(0px 1px 4px rgba(199, 199, 199, 0.2));
+}
+.areaChart {
+	width: 105% !important;
+	height: 103px !important;
+	bottom: -15px;
+	position: relative;
+	left: -7px;
+	overflow: hidden;
+}
+.success-box {
+	text-align: center;
+	color: $white;
+	i {
+		font-size: 4rem;
+		margin-bottom: 0.5rem;
+	}
+	h4, small {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-top: 0.5rem;
+	}
+}
+.box-shadow-0 {
+	box-shadow: none;
+}
+.finance-chart .finance {
+	border: 4px solid;
+}
+.chart-wraper-absolute {
+	width: 100% !important;
+	bottom: -13px;
+	position: relative;
+	overflow: hidden;
+}

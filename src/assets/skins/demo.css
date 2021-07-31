@@ -1,0 +1,289 @@
+/* Color Swicher CSS */
+
+.switcher {
+    width: 30px !important;
+    height: 40px !important;
+    display: inline-block;
+    margin: 4px 8px;
+    border-radius: 5px;
+    border: 0px solid #000;
+}
+.swichermainleft {
+  width: 100%;
+  float: left;
+}
+.wscolorcode {
+    display: inline-block;
+    margin: 4px 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/*-- color-1 --*/
+.color1{
+	background: #2c51b9 !important
+}
+
+/*-- color-2 --*/
+.color2{
+	background: #3399ff !important;
+}
+
+/*-- color-3 --*/
+.color3{
+	background: #7a3dcc !important;
+}
+
+/*-- color-4 --*/
+.color4{
+	background: #ce3675 !important;
+}
+
+/*-- color-5 --*/
+.color5{
+	background: #619646 !important;
+}
+
+/*-- color-6 --*/
+.color6{
+	background: #9a62d6 !important;
+}
+
+/*-- color-7 --*/
+.color7{
+	background: #007b99 !important;
+}
+
+/*-- color-8 --*/
+.color8{
+	background: #286eef !important;
+}
+
+/*-- color-9 --*/
+.color9{
+	background: #6d622b !important;
+}
+
+/*-- color-10 --*/
+.color10{
+	background: #cc6699 !important;
+}
+/*-- color-11 --*/
+.color11{
+	background: linear-gradient( 89.1deg,  #f54c64 0.7%, #f78161  88.4% ) ;
+}
+
+/*-- color-12 --*/
+.color12{
+	background: linear-gradient( 89.1deg,  rgb(143, 6, 255) 0.7%, rgb(208, 98, 135) 88.4% );
+}
+
+/*-- color-13 --*/
+.color13{
+	background: linear-gradient( 89.1deg,  rgb(243, 83, 47) 0.7%, rgb(47,31,116) 88.4% );
+}
+
+/*-- color-14 --*/
+.color14{
+	background: linear-gradient( 89.1deg,  rgb(11, 133, 234) 0.7%, rgb(34,63,201) 88.4% );
+}
+
+/*-- color-15 --*/
+.color15{
+	background: linear-gradient( 89.1deg,  rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4% );
+}
+
+/*-- color-16 --*/
+.color16{
+	background:linear-gradient( 89.1deg,  rgb(189, 120, 60) 0.7%, rgb(189, 58, 100) 88.4% );
+}
+
+/*-- color-17 --*/
+.color17{
+	background: linear-gradient( 89.1deg,  rgb(61,106,239) 0.7%, rgb(153, 102, 255) 88.4% );
+}
+/*-- color-18 --*/
+.color18{
+	background: linear-gradient( 89.1deg,  rgb(255,99,145) 0.7%, rgb( 62,76,167) 88.4% );
+}
+/*-- color-19 --*/
+.color19{
+	background:linear-gradient( 89.1deg,  rgb(56,104,178) 0.7%, rgb(31,67,122) 88.4% );
+}
+
+/*-- color-20 --*/
+.color20{
+	background: linear-gradient( 89.1deg,  rgb(139,10,130) 0.7%, rgb(73,6,70) 88.4% );
+}
+
+
+.full-width .container{  
+    max-width:inherit !important;
+	width:95% !important;	
+	transition:all 0.5s ease;
+}
+.switch_section span {
+    font-size: 14px;
+    font-weight: 400;
+}
+.unbox {  
+   margin:0; 
+}
+
+.switch_section li{
+    width:100%;
+    height:30px;
+}
+.switch_section {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    font-size: 1.1em;
+    margin: 0 auto;
+    padding: 4px 10px;
+}
+
+/* //////////////////  switch-1  //////////////// */
+.onoffswitch {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #cbcee8;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #cbcee8; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+/* //////////////////  switch-2  //////////////// */
+.onoffswitch2 {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch2-checkbox {
+    display: none;
+}
+.onoffswitch2-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #cbcee8;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch2-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #cbcee8;
+	border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+	
+}
+
+.onoffswitch2-checkbox:checked + .onoffswitch2-label:before {
+    right: 0px; 
+}
+
+/* //////////////////  switch-3  //////////////// */
+.onoffswitch3 {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch3-checkbox {
+    display: none;
+}
+.onoffswitch3-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #cbcee8;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch3-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #cbcee8; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label {
+    background-color: #49E845;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch-label3, .onoffswitch3-checkbox:checked + .onoffswitch3-label:before {
+   border-color: #49E845;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label:before {
+    right: 0px; 
+}
+.menus li{
+	width: 33.333%;
+    float: left;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+.menus span{
+	display:inline-grid;
+}

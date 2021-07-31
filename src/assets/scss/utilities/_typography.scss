@@ -1,0 +1,283 @@
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+/*----- 16. Typography ------*/
+
+.heading-primary, .heading-secondary {
+	color: $white;
+	padding: 5px;
+}
+.heading-inverse {
+	background-color: #040807;
+	color: $white;
+	padding: 5px;
+}
+.heading-success {
+	background-color: $success;
+	color: $white;
+	padding: 5px;
+}
+.heading-info {
+	background-color: $info;
+	color: $white;
+	padding: 5px;
+}
+.heading-warning {
+	background-color: $warning;
+	color: $white;
+	padding: 5px;
+}
+.heading-danger {
+	background-color: $danger;
+	color: $white;
+	padding: 5px;
+}
+.text-monospace {
+	font-family: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.text-justify {
+	text-align: justify !important;
+}
+.text-nowrap {
+	white-space: nowrap !important;
+}
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-center {
+	text-align: center !important;
+}
+@media (min-width: 576px) {
+	.text-sm-left {
+		text-align: left !important;
+	}
+	.text-sm-right {
+		text-align: right !important;
+	}
+	.text-sm-center {
+		text-align: center !important;
+	}
+}
+@media (min-width: 768px) {
+	.text-md-left {
+		text-align: left !important;
+	}
+	.text-md-right {
+		text-align: right !important;
+	}
+	.text-md-center {
+		text-align: center !important;
+	}
+}
+@media (min-width: 992px) {
+	.text-lg-left {
+		text-align: left !important;
+	}
+	.text-lg-right {
+		text-align: right !important;
+	}
+	.text-lg-center {
+		text-align: center !important;
+	}
+}
+@media (min-width: 1280px) {
+	.text-xl-left {
+		text-align: left !important;
+	}
+	.text-xl-right {
+		text-align: right !important;
+	}
+	.text-xl-center {
+		text-align: center !important;
+	}
+}
+.text-lowercase {
+	text-transform: lowercase !important;
+}
+.text-uppercase {
+	text-transform: uppercase !important;
+}
+.text-capitalize {
+	text-transform: capitalize !important;
+}
+.font-weight-light, .font-weight-normal {
+	font-weight: 300 !important;
+}
+.font-weight-semibold {
+	font-weight: 400 !important;
+}
+.font-weight-bold {
+	font-weight: 500 !important;
+}
+.font-weight-extrabold {
+	font-weight: 600 !important;
+}
+.font-italic {
+	font-style: italic !important;
+}
+.text-white {
+	color: $white !important;
+}
+.text-success {
+	color: $success !important;
+}
+a.text-success {
+	&:hover, &:focus {
+		color: #1f8f5f !important;
+	}
+}
+.text-info {
+	color: $info !important;
+}
+a.text-info {
+	&:hover, &:focus {
+		color: #1594ef !important;
+	}
+}
+.text-warning {
+	color: $warning !important;
+}
+a.text-warning {
+	&:hover, &:focus {
+		color: #c29d0b !important;
+	}
+}
+.text-danger {
+	color: $danger !important;
+}
+a.text-danger {
+	&:hover, &:focus {
+		color: #a11918 !important;
+	}
+}
+.text-light {
+	color: #eaeaf9 !important;
+}
+a.text-light {
+	&:hover, &:focus {
+		color: #dae0e5 !important;
+	}
+}
+.text-dark {
+	color: $default-color !important;
+}
+a.text-dark {
+	&:hover, &:focus {
+		color: #1d2124 !important;
+	}
+}
+.text-body {
+	color: #495057 !important;
+}
+.text-muted {
+	color: #6c6a8d !important;
+}
+.text-black-50 {
+	color: $black-5 !important;
+}
+.text-white-50 {
+	color: $white-5 !important;
+}
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+.text-wrap {
+	font-size: 14px;
+	line-height: 1.66;
+	> {
+		:first-child {
+			margin-top: 0;
+		}
+		:last-child {
+			margin-bottom: 0;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 1em;
+		}
+	}
+}
+.content-heading {
+	font-weight: 400;
+	margin: 2rem 0 1.5rem;
+	font-size: 1.25rem;
+	line-height: 1.25;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+.text-inherit {
+	color: inherit !important;
+}
+.text-default {
+	color: #6c6a8d !important;
+}
+.text-muted-dark {
+	color: #495057 !important;
+}
+.text-blue {
+	color: #1171ef !important;
+}
+.text-indigo {
+	color: $indigo !important;
+}
+.text-purple {
+	color: $purple !important;
+}
+.text-lightpink-red {
+	color: #ff7088 !important;
+}
+.text-lightgreen {
+	color: #26eda2 !important;
+}
+.text-pink {
+	color: $pink !important;
+}
+.text-red {
+	color: $danger !important;
+}
+.text-orange {
+	color: $secondary-15 !important;
+}
+.text-yellow {
+	color: $warning !important;
+}
+.text-green {
+	color: $success !important;
+}
+.text-teal {
+	color: $teal !important;
+}
+.text-cyan {
+	color: $cyan !important;
+}
+.text-gray {
+	color: #4d6a98 !important;
+}
+.text-gray-dark {
+	color: $gray-dark !important;
+}
+.text-azure {
+	color: $info !important;
+}
+.text-lime {
+	color: $lime !important;
+}
+textarea[cols] {
+	height: auto;
+}
+.richText .richText-toolbar {
+	background: #eaeaf9;
+}

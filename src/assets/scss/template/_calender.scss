@@ -1,0 +1,42 @@
+.fc {
+	td, th {
+		font-weight: 500;
+	}
+}
+@media (max-width: 320px) {
+	.fc-toolbar .fc-right {
+		float: right;
+		width: 100%;
+		text-align: center;
+		margin: 10px 0;
+	}
+}
+/** Claender **/
+
+.calendar-title th {
+	background: #eaeaf9;
+	border: 1px solid #e4e6f9;
+}
+.calendar tbody tr td.today {
+	background: #eaeaf9;
+}
+.cal1 .clndr {
+	.clndr-controls .clndr-control-button .clndr-previous-button {
+		background: #eaeaf9;
+	}
+	.clndr-table tr {
+		.empty:hover, .adjacent-month:hover, .my-empty:hover, .my-adjacent-month:hover, .day:hover {
+			color: $white;
+		}
+		.empty, .adjacent-month, .my-empty, .my-adjacent-month {
+			border-left: 1px solid #e4e6f9;
+			border-top: 1px solid #e4e6f9;
+			background: #eaeaf9;
+		}
+		.day {
+			&.event, &.my-event {
+				background: #eaeaf9;
+			}
+		}
+	}
+}

@@ -1,0 +1,920 @@
+@import "../scss/variables";
+
+a {
+	color: $primary;
+	&:hover {
+		color: $primary;
+	}
+}
+/*------- 2. Forms -------*/
+
+.form-control:focus {
+	border: 1px solid $primary;
+	box-shadow: none;
+}
+select.form-control:focus::-ms-value {
+	border: 1px solid $primary !important;
+}
+/*--------3. Buttons ------*/
+
+.btn-primary {
+	border: 1px solid $primary;
+	background: $primary;
+	color: $white;
+	&:hover {
+		color: $white;
+		background-color: #0ea064;
+		border: 1px solid #0ea064;
+	}
+	&:focus, &.focus {
+		box-shadow: 0 0 0 2px rgba(83, 18, 127, 0.1);
+	}
+	&.disabled, &:disabled {
+		color: $white;
+		background-color: #14a267;
+		border-color: #14a267;
+		opacity: 0.7;
+	}
+	&:not(:disabled):not(.disabled) {
+		&:active, &.active {
+			color: $white;
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+}
+.show>.btn-primary.dropdown-toggle {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.btn-primary:not(:disabled):not(.disabled) {
+	&:active:focus, &.active:focus {
+		box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+	}
+}
+.show>.btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+}
+.btn-secondary {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+	&:hover {
+		color: $white;
+		background-color: #00a0cc;
+		border-color: #00a0cc;
+	}
+	&:focus, &.focus {
+		box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+	}
+	&.disabled, &:disabled {
+		color: $white;
+		background-color: $secondary-15;
+		border-color: $secondary-15;
+		opacity: 0.7;
+	}
+	&:not(:disabled):not(.disabled) {
+		&:active, &.active {
+			color: $white;
+			background-color: $secondary-15;
+			border-color: $secondary-15;
+		}
+	}
+}
+.show>.btn-secondary.dropdown-toggle {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.btn-secondary:not(:disabled):not(.disabled) {
+	&:active:focus, &.active:focus {
+		box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+	}
+}
+.show>.btn-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+}
+.btn-outline-primary {
+	color: $primary;
+	background-color: transparent;
+	background-image: none;
+	border-color: $primary !important;
+	&:hover {
+		color: $white;
+		background-color: $primary;
+		border-color: $primary;
+	}
+	&:focus, &.focus {
+		box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+	}
+	&.disabled, &:disabled {
+		color: $primary;
+		background-color: transparent;
+	}
+	&:not(:disabled):not(.disabled) {
+		&:active, &.active {
+			color: $white;
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+}
+.show>.btn-outline-primary.dropdown-toggle {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.btn-outline-primary:not(:disabled):not(.disabled) {
+	&:active:focus, &.active:focus {
+		box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+	}
+}
+.show>.btn-outline-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.1);
+}
+.btn-outline-secondary {
+	color: $secondary-15;
+	background-color: transparent;
+	background-image: none;
+	border-color: $secondary-15 !important;
+	&:hover {
+		color: $white;
+		background-color: $secondary-15;
+		border-color: $secondary-15;
+	}
+	&:focus, &.focus {
+		box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+	}
+	&.disabled, &:disabled {
+		color: $secondary-15;
+		background-color: transparent;
+	}
+	&:not(:disabled):not(.disabled) {
+		&:active, &.active {
+			color: $white;
+			background-color: $secondary-15;
+			border-color: $secondary-15;
+		}
+	}
+}
+.show>.btn-outline-secondary.dropdown-toggle {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled) {
+	&:active:focus, &.active:focus {
+		box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+	}
+}
+.show>.btn-outline-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(134, 142, 150, 0.1);
+}
+.btn-link {
+	color: $primary;
+	&:hover {
+		color: #0ea064;
+	}
+}
+/*------4. Drop Downs-------*/
+
+.notifyimg {
+	background: $primary;
+}
+/*------ 5. Tables -----*/
+
+.table-primary {
+	background-color: rgba(8, 158, 96, 0.1);
+	> {
+		th, td {
+			background-color: rgba(8, 158, 96, 0.1);
+		}
+	}
+}
+.table-hover .table-primary:hover {
+	background-color: #9efad4;
+	> {
+		td, th {
+			background-color: #9efad4;
+		}
+	}
+}
+.table-secondary {
+	background-color: #a2ddf6;
+	> {
+		th, td {
+			background-color: #a2ddf6;
+		}
+	}
+}
+.table-hover .table-secondary:hover {
+	background-color: #a2ddf6;
+	> {
+		td, th {
+			background-color: $secondary-15;
+		}
+	}
+}
+.table-primary {
+	thead th {
+		color: $white !important;
+	}
+	td {
+		color: $primary !important;
+	}
+}
+/*----- 7. Custom control -----*/
+
+.accordionjs .acc_section.acc_active>.acc_head {
+	background: $primary;
+}
+.sweet-alert button {
+	background-color: $primary !important;
+}
+.addui-slider .addui-slider-track {
+	.addui-slider-handle {
+		&.addui-slider-handle-active .addui-slider-value, &:after, &.addui-slider-handle-active {
+			background: $primary;
+		}
+	}
+	background: $primary;
+	.addui-slider-range {
+		background: $primary;
+	}
+}
+.timeline__item:after {
+	border: 6px solid $primary;
+}
+.spinLoader {
+	color: $primary !important;
+	background: $primary !important;
+	&:before, &:after {
+		background: $primary !important;
+	}
+}
+div.conv-form-wrapper div {
+	&.options div.option {
+		border: 1px solid $primary;
+		color: $primary;
+	}
+	&#messages div.message.from {
+		background: $primary;
+	}
+}
+form.convFormDynamic button.submit {
+	&:hover {
+		background: $primary;
+	}
+	background: $primary;
+}
+.fc-event, .fc-event-dot {
+	background-color: $primary;
+}
+.fc-event {
+	border: 1px solid $primary;
+}
+.fc button {
+	background: $primary;
+}
+.cal1 .clndr {
+	.clndr-controls .clndr-control-button .clndr-next-button:hover {
+		background: $primary;
+	}
+	.clndr-table tr .day {
+		&.today, &.my-today {
+			background: $primary;
+		}
+	}
+	.clndr-controls .clndr-control-button {
+		.clndr-next-button:hover, .clndr-previous-button:hover {
+			background: $primary;
+		}
+	}
+	.clndr-table .header-days {
+		background: $primary;
+	}
+}
+.offer-primary {
+	border-color: $primary;
+	.shape {
+		border-color: transparent $primary transparent transparent;
+	}
+}
+.icon-shape-primary {
+	color: $primary;
+	background-color: rgba(8, 58, 96, 0.5);
+}
+.icon-shape-secondary {
+	color: $secondary-15;
+	background-color: rgba(19, 150, 204, 0.5);
+}
+.bg-gradient-primary {
+	background: linear-gradient(89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%) !important;
+}
+.bg-gradient-secondary {
+	background: linear-gradient(87deg, $secondary-15 0, $secondary-15 100%) !important;
+}
+.custom-control-input {
+	&:checked~.custom-control-label::before {
+		color: $white;
+		background-color: $primary;
+		border-color: $primary;
+	}
+	&:focus~.custom-control-label::before {
+		box-shadow: 0 0 0 1px rgba(152, 166, 173, 0.1), 0 0 0 2px rgba(242, 242, 242, 0.25);
+	}
+}
+.custom-checkbox .custom-control-input {
+	&:checked~.custom-control-label::before, &:indeterminate~.custom-control-label::before {
+		background-color: $primary;
+	}
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+	background-color: $primary;
+}
+.custom-select:focus {
+	border-color: $primary;
+}
+.custom-file-input:focus~.custom-file-label {
+	border-color: $primary;
+	&::after {
+		border-color: $primary;
+	}
+}
+.custom-file-label::after {
+	background-color: $primary;
+	border-left: 1px solid $primary;
+}
+.custom-range {
+	&::-webkit-slider-thumb, &::-moz-range-thumb, &::-ms-thumb {
+		background-color: $primary;
+	}
+}
+/*------8. Navigation -------*/
+
+.nav-pills {
+	.nav-link.active, .show>.nav-link {
+		background-color: $primary;
+	}
+}
+/*------ Accordion -------*/
+
+.page-link {
+	&:hover {
+		color: $primary;
+		border: 1px solid $primary;
+	}
+	&:focus {
+		border: 1px solid $primary;
+	}
+}
+.page-item.active .page-link {
+	background-color: $primary;
+	border: 1px solid $primary;
+}
+/*------ 11. Email services -------*/
+
+ul.inbox-nav li {
+	a:hover, &.active a, a:focus {
+		color: $primary;
+	}
+}
+/*----- 12. Range slider -------*/
+
+.range.range-primary {
+	input[type="range"] {
+		&::-webkit-slider-thumb, &::-moz-slider-thumb {
+			background-color: $primary;
+		}
+	}
+	output {
+		background-color: $primary;
+	}
+	input[type="range"] {
+		outline-color: $primary;
+	}
+}
+/*-----13.Pricing tables-----*/
+
+.pricing-table:hover .price-header {
+	background-color: $primary;
+}
+.nav-tabs .nav-item1 .nav-link {
+	&:hover:not(.disabled), &.active {
+		background: $primary;
+	}
+}
+/*-------15. Tooptip &popover------*/
+
+/*alerts*/
+
+.pop-primary {
+	color: $primary;
+}
+.popsecondary {
+	color: $secondary-15;
+}
+/*----- 16. Typography ------*/
+
+.heading-primary {
+	background-color: $primary;
+}
+.heading-secondary {
+	background-color: $secondary-15;
+}
+/*------19. Breadcrumb ------*/
+
+.breadcrumb-item a {
+	color: $primary;
+}
+.breadcrumb-item1 a {
+	color: $primary;
+	&:hover {
+		color: #0ea064;
+	}
+}
+/* ----- v CAN BE DELETED v ----- */
+
+.panel-title1 a {
+	background: $primary;
+}
+/*-----21. List Of Dropdwons-----*/
+
+.btn.dropdown-toggle {
+	&.btn-primary~.dropdown-menu .dropdown-plus-title {
+		border-color: rgb(8, 158, 96) !important;
+	}
+	&.btn-secondary~.dropdown-menu .dropdown-plus-title {
+		border-color: rgb(19, 150, 204) !important;
+	}
+}
+/*-----22. Badges-----*/
+
+.badge-primary {
+	background-color: $primary;
+	&[href] {
+		&:hover, &:focus {
+			background-color: $primary;
+		}
+	}
+}
+.badge-secondary {
+	background-color: $secondary-15;
+	&[href] {
+		&:hover, &:focus {
+			background-color: $primary;
+		}
+	}
+}
+/*-----24. Alerts-----*/
+
+.alert-primary {
+	background-color: $primary;
+	border-color: $primary;
+	hr {
+		border-top-color: #b7cded;
+	}
+	.alert-link {
+		color: #172b46;
+	}
+}
+.alert-secondary {
+	color: #464a4e;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+	hr {
+		border-top-color: #cfd2d6;
+	}
+	.alert-link {
+		color: #2e3133;
+	}
+}
+/*-----25. progress-----*/
+
+.progress-bar {
+	background-color: $primary;
+}
+/*-----26. Lists-----*/
+
+.list-group-item.active {
+	color: $primary;
+}
+.list-group-item-primary {
+	color: $white;
+	background-color: $primary;
+	&.list-group-item-action {
+		&:hover, &:focus {
+			color: $white;
+			background-color: $primary;
+		}
+		&.active {
+			color: $white;
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+}
+.list-group-item-secondary {
+	color: $white;
+	background-color: $secondary-15;
+	&.list-group-item-action {
+		&:hover, &:focus {
+			color: $white;
+			background-color: $secondary-15;
+		}
+		&.active {
+			color: $white;
+			background-color: $secondary-15;
+			border-color: $secondary-15;
+		}
+	}
+}
+/*------27. Modal -------*/
+
+.widget-info i {
+	border: 2px solid $primary;
+}
+/*------29. Alignments -------*/
+
+.bg-primary {
+	background-color: $primary !important;
+}
+a.bg-primary {
+	&:hover, &:focus {
+		background-color: $primary !important;
+	}
+}
+button.bg-primary {
+	&:hover, &:focus {
+		background-color: $primary !important;
+	}
+}
+.bg-secondary {
+	background-color: $secondary-15 !important;
+}
+a.bg-secondary {
+	&:hover, &:focus {
+		background-color: $secondary-15 !important;
+	}
+}
+button.bg-secondary {
+	&:hover, &:focus {
+		background-color: $secondary-15 !important;
+	}
+}
+.border-primary {
+	border-color: $primary !important;
+}
+.border-secondary {
+	border-color: $secondary-15 !important;
+}
+/*------- 31. Alignments & values-------*/
+
+.text-primary {
+	color: $primary !important;
+}
+a.text-primary {
+	&:hover, &:focus {
+		color: $primary !important;
+	}
+}
+.text-secondary {
+	color: $secondary-15 !important;
+}
+a.text-secondary {
+	&:hover, &:focus {
+		color: $secondary-15 !important;
+	}
+}
+/*------32. Headers -------*/
+
+.header-bg {
+	background: $primary;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, $primary, $primary);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, $primary, $primary);
+}
+/*------33. Background colors -------*/
+
+.nav-tabs .nav-link {
+	&:hover:not(.disabled), &.active {
+		background: $primary;
+	}
+}
+/*---Mega Menu---*/
+
+.ren-navbar {
+	.nav-link {
+		&:hover, &:focus, &.active {
+			background-color: $primary;
+		}
+	}
+	.mega-dropdown .sub-item .section-label {
+		color: $primary;
+	}
+	.sub-item ul a:active {
+		background-color: $primary;
+	}
+}
+/*----- 34. Btn styles------*/
+
+.btn-secondary {
+	color: $white;
+	background-color: $secondary-15;
+	border-color: $secondary-15;
+	box-shadow: 0 1px 1px 0 $black-05;
+	&:hover {
+		color: $white;
+		background-color: #0e94cc;
+		border-color: #0e94cc;
+	}
+	&:focus, &.focus {
+		box-shadow: 0 0 0 2px $secondary-15;
+	}
+	&:not(:disabled):not(.disabled) {
+		&:active, &.active {
+			color: $white;
+			background-color: $secondary-15;
+		}
+	}
+}
+.show>.btn-secondary.dropdown-toggle {
+	color: $white;
+	background-color: $secondary-15;
+}
+/*.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 2px $primary ;
+}*/
+
+/*
+.close:before {
+  content: '\ea00';
+  font-family: "feather";
+}
+*/
+
+/*--------35. panel----------*/
+
+.expanel-primary {
+	border: $primary !important;
+}
+.expanel-secondary {
+	border: $secondary-15 !important;
+}
+.expanel-primary>.expanel-heading {
+	color: $white !important;
+	background-color: $primary !important;
+	border-color: $primary !important;
+}
+.expanel-secondary>.expanel-heading {
+	color: $white !important;
+	background-color: $secondary-15 !important;
+	border-color: $secondary-15 !important;
+}
+/*----- 38. Avatars -----*/
+
+.avatar {
+	background: $primary no-repeat center/cover;
+}
+/*-------- 41. Loaders ---------*/
+
+.lds-circle>div {
+	background: $primary;
+}
+.lds-dual-ring:after {
+	border: 5px solid $primary;
+	border-color: $primary transparent $primary transparent;
+}
+.lds-facebook div {
+	background: $primary;
+}
+.lds-heart div {
+	background: $primary;
+	&:after, &:before {
+		background: $primary;
+	}
+}
+.lds-ring div {
+	border: 6px solid $primary;
+	border-color: $primary transparent transparent transparent;
+}
+.lds-roller div:after, .lds-default div, .lds-ellipsis div, .lds-grid div {
+	background: $primary;
+}
+.lds-hourglass:after {
+	border: 26px solid $primary;
+	border-color: $primary transparent $primary transparent;
+}
+.lds-ripple div {
+	border: 4px solid $primary;
+}
+.lds-spinner div:after {
+	background: $primary;
+}
+/*----42. Profile----*/
+
+.mediaicon {
+	border: 1px solid $primary;
+	background: $primary;
+}
+/*-----43. Icon input-----*/
+
+a.chip:hover, .tag-primary {
+	background-color: $primary;
+}
+/*----44. Tags-----*/
+
+.tag-secondary {
+	background-color: $secondary-15;
+}
+.selectgroup-input {
+	&:checked+.selectgroup-button {
+		border-color: $primary;
+		color: $primary;
+		background: #eaeaf9;
+	}
+	&:focus+.selectgroup-button {
+		border-color: $primary;
+		color: $primary;
+		box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.25);
+	}
+}
+.custom-switch-input:checked~.custom-switch-indicator {
+	background: $primary;
+}
+/*----- 48. Gallery -----*/
+
+.demo-gallery>ul>li a {
+	border: 2px solid $primary;
+	background: $primary;
+}
+/*-----51. Back to Top-----*/
+
+#back-to-top {
+	background: linear-gradient(89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+	&:hover {
+		color: $primary;
+		border: 2px solid $primary;
+	}
+}
+.tabs-menu ul li .active {
+	background: $primary;
+}
+.tabs-menu1 ul li .active {
+	border-bottom: 3px solid $primary;
+}
+.feature .border {
+	border: 2px solid $primary !important;
+}
+/*-- rating--*/
+
+.error-bg:before {
+	background: linear-gradient(89.1deg, rgba(8, 158, 96, 0.8) 0.7%, rgba(19, 150, 204, 0.8) 88.4%);
+}
+/*---Count-down---*/
+
+#count-down .clock-presenter {
+	background: linear-gradient(89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+/*---Navtab Wizard---*/
+
+.navtab-wizard.nav-tabs .nav-link {
+	&.active, &:hover {
+		background: $primary;
+	}
+}
+/*--- Ribbon ---*/
+
+.arrow-ribbon {
+	&.bg-primary:before {
+		border-left: 15px solid $primary;
+	}
+	&.bg-secondary:before {
+		border-left: 15px solid $secondary-15;
+	}
+}
+/*--chat--*/
+
+.chat .action-header {
+	background: $primary;
+}
+@media (max-width: 767px) {
+	.search-show .search-element {
+		background: linear-gradient(125deg, $primary 35%, $primary 65%);
+	}
+}
+.page-headertabs .tabs-menu ul li a {
+	border: 1px solid $primary;
+}
+.welcome-image:before {
+	background: linear-gradient(89.1deg, rgba(8, 158, 96, 0.5) 0.7%, rgba(19, 150, 204, 0.5) 88.4%);
+}
+.page-header .page-title i {
+	background: rgba(8, 158, 96, 0.1);
+	color: $primary;
+}
+/*--bg-transparents--*/
+
+.bg-secondary-transparent {
+	background-color: rgba(19, 150, 204, 0.1);
+}
+.bg-primary-transparent {
+	background-color: rgba(8, 158, 96, 0.1);
+}
+/** Calender **/
+
+.cal1 .clndr .clndr-table tr {
+	.empty:hover, .adjacent-month:hover, .my-empty:hover, .my-adjacent-month:hover {
+		background: $primary;
+	}
+	.day {
+		&:hover {
+			background: $primary;
+		}
+		&.today:hover, &.my-today:hover {
+			background: #0ea064;
+		}
+	}
+}
+.header-1 .header, .header, .app-header {
+	background: linear-gradient(89.1deg, rgb(8, 158, 96) 0.7%, rgb(19, 150, 204) 88.4%);
+}
+/*Side Menu*/
+
+.side-menu__item {
+	&.active, &:hover, &:focus {
+		color: $primary;
+	}
+}
+.slide-menu a.active {
+	color: $primary;
+}
+.slide-item {
+	&.active, &:hover, &:focus {
+		color: $primary;
+	}
+}
+.slide.submenu .side-menu__label:hover {
+	color: $primary;
+}
+.side-menu {
+	.slide-menu.submenu-list a:hover, .slide.submenu a.active {
+		color: $primary;
+	}
+}
+/*Horizontal*/
+
+.horizontalMenu>.horizontalMenu-list>li> {
+	a {
+		&.active, &:hover {
+		}
+	}
+	ul.sub-menu>li> {
+		a:hover, ul.sub-menu>li>a:hover {
+		}
+	}
+	.horizontal-megamenu .link-list li a:hover {
+		color: $primary;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.horizontalMenu>.horizontalMenu-list>li {
+		>ul.sub-menu {
+			>li>a:hover {
+				color: $primary !important;
+			}
+			li:hover>a {
+				background: transparent;
+			}
+		}
+		&:hover>a {
+			background: $primary;
+		}
+	}
+	.hor-menu .horizontalMenu>.horizontalMenu-list>li>a {
+		&:hover, &.active {
+			color: $white;
+			background: #123e2b;
+		}
+	}
+}
+/*--- Switcher Checkbox ----*/
+
+.onoffswitch-checkbox:checked+.onoffswitch-label {
+	background-color: $primary;
+	border-color: $primary;
+	&:before {
+		border-color: $primary;
+	}
+}
+.onoffswitch2-checkbox:checked+ {
+	.onoffswitch2-label {
+		background-color: $primary;
+	}
+	.onoffswitch-label2, .onoffswitch2-label:before {
+		border-color: $primary;
+	}
+}

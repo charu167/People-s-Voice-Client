@@ -1,0 +1,30 @@
+.item-card {
+	.cardbody {
+		position: relative;
+		padding: 30px 15px;
+		border-radius: 0 0 .2rem .2rem;
+	}
+	.cardtitle {
+		span {
+			display: block;
+			font-size: .75rem;
+			opacity: .5;
+		}
+		a {
+			font-weight: 500;
+			text-decoration: none;
+		}
+	}
+	.cardprice {
+		position: absolute;
+		top: 30px;
+		right: 15px;
+		span {
+			&.type--strikethrough {
+				opacity: .5;
+				text-decoration: line-through;
+			}
+			display: block;
+		}
+	}
+}

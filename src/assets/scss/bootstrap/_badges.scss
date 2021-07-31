@@ -1,0 +1,107 @@
+/*-----22. Badges-----*/
+
+.btn .badge {
+	position: relative;
+	top: -1px;
+}
+.badge-primary {
+	color: $white;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+.badge-success {
+	color: $white;
+	background-color: $success;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #1f8f5f;
+		}
+	}
+}
+.badge-info {
+	color: $white;
+	background-color: $info;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #1594ef;
+		}
+	}
+}
+.badge-warning {
+	color: $white;
+	background-color: $warning;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #c29d0b;
+		}
+	}
+}
+.badge-danger {
+	color: $white;
+	background-color: $danger;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #a11918;
+		}
+	}
+}
+.badge-light {
+	color: #495057;
+	background-color: #eaeaf9;
+	&[href] {
+		&:hover, &:focus {
+			color: #495057;
+			text-decoration: none;
+			background-color: #dae0e5;
+		}
+	}
+}
+.badge-dark {
+	color: $white;
+	background-color: $gray-dark;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #1d2124;
+		}
+	}
+}
+.badge {
+	display: inline-block;
+	padding: 0.25em 0.4em;
+	font-size: 85%;
+	font-weight: 300;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 3px;
+}
+.badge-pill {
+	padding-right: .6em;
+	padding-left: .6em;
+	border-radius: 10rem;
+}
+.badgetext {
+	float: right;
+}
+.badge-default {
+	background: #e9eaf3;
+	color: #495057;
+}
+.badge-secondary {
+    color: #fff;
+}

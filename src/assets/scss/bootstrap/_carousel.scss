@@ -1,0 +1,301 @@
+/*------28. Carousel -------*/
+
+.carousel-indicators {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	left: 0;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	margin-right: 15%;
+	margin-left: 15%;
+	list-style: none;
+	li {
+		position: relative;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 7px;
+		height: 7px;
+		margin-right: 3px;
+		margin-left: 3px;
+		text-indent: -999px;
+		border-radius: 50%;
+		background-color: $white-5;
+		&::before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+		&::after {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+	}
+	.active {
+		background-color: $white;
+	}
+}
+.carousel-indicators1 {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	left: 0;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	margin-right: 15%;
+	margin-left: 15%;
+	list-style: none;
+	li {
+		position: relative;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 7px;
+		height: 7px;
+		margin-right: 3px;
+		margin-left: 3px;
+		text-indent: -999px;
+		background-color: $white-5;
+		border-radius: 50%;
+		&::before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+		&::after {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+	}
+	.active {
+		background-color: $white;
+	}
+}
+.carousel-indicators2 {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	margin-top: 10px;
+	list-style: none;
+	li {
+		position: relative;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 7px;
+		height: 7px;
+		margin-right: 3px;
+		margin-left: 3px;
+		text-indent: -999px;
+		background-color: $white-5;
+		border-radius: 50%;
+		&::before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+		&::after {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+	}
+	.active {
+		background-color: $white;
+	}
+}
+.carousel-indicators3 {
+	position: absolute;
+	left: 10px;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	margin-top: 10px;
+	list-style: none;
+	li {
+		position: relative;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 7px;
+		height: 7px;
+		margin-right: 3px;
+		margin-left: 3px;
+		text-indent: -999px;
+		background-color: $white-5;
+		border-radius: 50%;
+		&::before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+		&::after {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+	}
+	.active {
+		background-color: $white;
+	}
+}
+.carousel-indicators4 {
+	position: absolute;
+	right: 10px;
+	bottom: 0;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	margin-top: 10%;
+	list-style: none;
+	li {
+		position: relative;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 7px;
+		height: 7px;
+		margin-right: 3px;
+		margin-left: 3px;
+		text-indent: -999px;
+		background-color: $white-5;
+		border-radius: 50%;
+		&::before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+		&::after {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+	}
+	.active {
+		background-color: $white;
+	}
+}
+.carousel-indicators5 {
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	list-style: none;
+	li {
+		position: relative;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 7px;
+		height: 7px;
+		margin-right: 3px;
+		margin-left: 3px;
+		text-indent: -999px;
+		background-color: $white-5;
+		border-radius: 50%;
+		&::before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+		&::after {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			content: "";
+		}
+	}
+	.active {
+		background-color: $white;
+	}
+}
+.carousel-caption {
+	position: absolute;
+	right: 15%;
+	top: 30%;
+	left: 15%;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: $white;
+	text-align: center;
+}
+@media (max-width: 990px) and (min-width: 767px) {
+	.carousel-caption {
+		top: 10%;
+	}
+}
+.carousel-inner>.item> {
+	img, a>img {
+		width: 100%;
+	}
+}
