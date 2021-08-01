@@ -10,11 +10,12 @@ import AdminRegLog from "./components/AdminRegLog";
 import Error from "./components/Error";
 
 import "./css/styled.css";
+import "./css/navbar.css"
 
 function App() {
   return (
     <>
-      navbar
+      {/* navbar */}
       <Navbar />
       {/* First page route */}
       <Route exact path="/">

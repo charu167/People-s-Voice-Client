@@ -1,60 +1,54 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// import "../assets/plugins/bootstrap/css/bootstrap.min.css"
+// import "../assets/css/style.css"
+// import "../assets/css/dark-style.css"
+// import "../assets/css/color-styles.css"
+// import "../assets/css/skin-modes.css"
+// import "../assets/plugins/p-scroll/p-scroll.css"
+// import "../assets/css/sidemenu.css"
+// import "../assets/plugins/p-scroll/p-scroll.css"
+// import "../assets/plugins/iconfonts/plugin.css"
+// import "../assets/plugins/fontawesome-free/css/all.css"
+// import "../assets/plugins/sidebar/sidebar.css"
+// import "../assets/skins/color-skins/color15.css"
+// import "../assets/skins/demo.css"
+
 const Navbar = () => {
   return (
-    <div className="row">
-      <div className="col-xl-12 col-md-12">
-        <div className="card">
-          <div className="card-header">
-            <h3 className="card-title">Navigation Styles</h3>
-          </div>
-          <div className="card-body">
-            <ul className="nav1 mb-2">
-              <li className="nav-item1">
-                <NavLink className="nav-link active" to="/">
-                  <i className="si si-screen-desktop mr-2"></i>Home
-                </NavLink>
-              </li>
-              <li className="nav-item1">
-                <NavLink className="nav-link text-dark" to="#">
-                  <i className="si si-layers mr-2"></i>About
-                </NavLink>
-              </li>
-              <li className="nav-item1">
-                <NavLink className="nav-link text-dark" to="#">
-                  <i className="si si-screen-desktop mr-2"></i>Pages
-                </NavLink>
-              </li>
-            </ul>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary nav-style ">
-              <div className="container">
-                <NavLink className="navbar-brand" to="#">
-                  Sample Heading
-                </NavLink>
-                <ul className="navbar-nav ml-lg-auto">
-                  <li className="nav-item d-none d-lg-flex">
-                    <NavLink className="nav-link nav-link-icon" to="#">
-                      <i className="si si-heart"></i>
-                    </NavLink>
-                  </li>
-                  <li className="nav-item d-none d-lg-flex">
-                    <NavLink className="nav-link nav-link-icon" to="#">
-                      <i className="si si-envelope"></i>
-                    </NavLink>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <NavLink className="nav-link nav-link-icon" to="#">
-                      <i className="si si-settings"></i>
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 Navbar">
+      <div className="container-fluid">
+        <NavLink className="navbar-brand" to="#">
+          Logo
+        </NavLink>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <NavLink className="nav-link active" aria-current="page" to="/">
+              Home
+            </NavLink>
+            <NavLink className="nav-link" to="/Admin">
+              Admin
+            </NavLink>
+            <NavLink className="nav-link" to="/gramsevak">
+              GramSevak
+            </NavLink>
+            {/* <NavLink className="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</NavLink> */}
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -113,7 +113,7 @@ const Form = (props) => {
           <div className="form-content">
             {/* Login form */}
             <div className="login-form">
-              <div className="title">Login</div>
+              <div className="title">{props.props.title} Login</div>
               <h5>{flag}</h5>
               <div className="input-boxes">
                 <div className="input-box">
@@ -138,12 +138,11 @@ const Form = (props) => {
                     onChange={handleInputLogin}
                   />
                 </div>
-                <div className="button input-box">
-                  <i className="fas fa-envelop"></i>
-                  <button className="" type="submit" onClick={handleLogin}>
-                    Submit
+                
+                  <button className="form-btn" type="submit" onClick={handleLogin}>
+                    Login
                   </button>
-                </div>
+                
                 <div className="text">
                   Don't have an account ? <label for="flip">Sign Up now</label>{" "}
                 </div>
@@ -152,7 +151,7 @@ const Form = (props) => {
 
             {/* Registeration form */}
             <div className="Signup-form">
-              <div className="title">Register</div>
+              <div className="title">{props.props.title} Register</div>
               <h5>{flag}</h5>
               <div className="input-boxes">
                 <div className="input-box">
@@ -210,12 +209,11 @@ const Form = (props) => {
                     onChange={handleInputRegister}
                   />
                 </div>
-                <div className="button input-box">
-                  <i className="fas fa-envelop"></i>
-                  <button type="submit" onClick={handleRegister}>
-                    Submit
+                
+                  <button type="submit" class="form-btn" onClick={handleRegister}>
+                    Register
                   </button>
-                </div>
+                
                 <div className="text">
                   Already have an account? <label for="flip">Login now</label>
                 </div>

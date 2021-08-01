@@ -6,7 +6,8 @@ const GSRegLog = () => {
   const url ={
     url_reg: "/politician_image_building/gs-register.php" ,
     url_log: "/politician_image_building/gs-login.php",
-    url_page: "/gramsevak"
+    url_page: "/gramsevak",
+    title: "Gram Sevak"
   }
 
   //rendering jsx form

@@ -6,7 +6,8 @@ const AdminRegLog = () => {
   const url  = {
     url_reg:"/politician_image_building/admin-register.php" ,
     url_log:"/politician_image_building/admin-login.php",
-    url_page:"/admin"
+    url_page:"/admin",
+    title: "Admin"
   }
 
   //rendering jsx form
