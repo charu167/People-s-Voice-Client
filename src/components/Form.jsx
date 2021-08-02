@@ -3,8 +3,13 @@ import { NavLink, useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Form = (props) => {
+  let regx_email = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+  let regx_mobile = /^[89][0-9]{9}/;
+
   const history = useHistory();
-  const [flag, setFlag] = useState("");
+  const [flagRegister, setFlagRegister] = useState("");
+  const [flagLogin, setFlagLogin] = useState("");
 
   const [register, setRegister] = useState({
     register_name: "",
@@ -49,28 +54,36 @@ const Form = (props) => {
       !register.register_phone ||
       !register.register_address
     ) {
-      setFlag("Please fill all the fields");
+      setFlagRegister("Please fill all the fields");
     } else {
-      setFlag("");
-      formData.append("name", register.register_name);
-      formData.append("email", register.register_email);
-      formData.append("password", register.register_password);
-      formData.append("phone", register.register_phone);
-      formData.append("address", register.register_address);
+      if (!regx_email.test(register.register_email)) {
+        setFlagRegister("Invalid email");
+      } else if (register.register_name === register.register_password) {
+        setFlagRegister("Username and Password cannot be same");
+      } else if (!regx_mobile.test(register.register_phone)) {
+        setFlagRegister("Mobile number is invalid");
+      } else {
+        setFlagRegister("");
+        formData.append("name", register.register_name);
+        formData.append("email", register.register_email);
+        formData.append("password", register.register_password);
+        formData.append("phone", register.register_phone);
+        formData.append("address", register.register_address);
 
-      const url = props.props.url_reg;
+        const url = props.props.url_reg;
 
-      await axios
-        .post(url, formData)
-        .then((res) => {
-          if (res.data === 0) {
-            window.alert(`User Registered Successfully!`);
-            //   history.push(props.props.url_page)
-          }
-        })
-        .catch((err) => {
-          window.alert(`error`);
-        });
+        await axios
+          .post(url, formData)
+          .then((res) => {
+            if (res.data === 0) {
+              window.alert(`User Registered Successfully!`);
+              //   history.push(props.props.url_page)
+            }
+          })
+          .catch((err) => {
+            window.alert(`error`);
+          });
+      }
     }
   };
 
@@ -81,25 +94,29 @@ const Form = (props) => {
     let formData = new FormData();
 
     if (!login.login_email || !login.login_password) {
-      setFlag("Please fill all the fields");
+      setFlagLogin("Please fill all the fields");
     } else {
-      setFlag("");
-      formData.append("email", login.login_email);
-      formData.append("password", login.login_password);
+      if (!regx_email.test(login.login_email)) {
+        setFlagLogin("Inavlid email");
+      } else {
+        setFlagLogin("");
+        formData.append("email", login.login_email);
+        formData.append("password", login.login_password);
 
-      const url = props.props.url_log;
+        const url = props.props.url_log;
 
-      await axios
-        .post(url, formData)
-        .then((res) => {
-          if (res.data === 123) {
-            window.alert(`User logged in successfully!`);
-            history.push("/");
-          } else {
-            window.alert(`error`);
-          }
-        })
-        .catch((err) => console.log(err));
+        await axios
+          .post(url, formData)
+          .then((res) => {
+            if (res.data === 123) {
+              window.alert(`User logged in successfully!`);
+              history.push("/");
+            } else {
+              window.alert(`error`);
+            }
+          })
+          .catch((err) => console.log(err));
+      }
     }
   };
 
@@ -114,7 +131,6 @@ const Form = (props) => {
             {/* Login form */}
             <div className="login-form">
               <div className="title">{props.props.title} Login</div>
-              <h5>{flag}</h5>
               <div className="input-boxes">
                 <div className="input-box">
                   <i className="fas fa-envelop"></i>
@@ -138,11 +154,15 @@ const Form = (props) => {
                     onChange={handleInputLogin}
                   />
                 </div>
-                
-                  <button className="form-btn" type="submit" onClick={handleLogin}>
-                    Login
-                  </button>
-                
+
+                <button
+                  className="form-btn"
+                  type="submit"
+                  onClick={handleLogin}
+                >
+                  Login
+                </button>
+                <p className="flag">{flagLogin}</p>
                 <div className="text">
                   Don't have an account ? <label for="flip">Sign Up now</label>{" "}
                 </div>
@@ -152,7 +172,7 @@ const Form = (props) => {
             {/* Registeration form */}
             <div className="Signup-form">
               <div className="title">{props.props.title} Register</div>
-              <h5>{flag}</h5>
+
               <div className="input-boxes">
                 <div className="input-box">
                   <i className="fas fa-envelop"></i>
@@ -209,11 +229,11 @@ const Form = (props) => {
                     onChange={handleInputRegister}
                   />
                 </div>
-                
-                  <button type="submit" class="form-btn" onClick={handleRegister}>
-                    Register
-                  </button>
-                
+
+                <button type="submit" class="form-btn" onClick={handleRegister}>
+                  Register
+                </button>
+                <p className="flag">{flagRegister}</p>
                 <div className="text">
                   Already have an account? <label for="flip">Login now</label>
                 </div>
