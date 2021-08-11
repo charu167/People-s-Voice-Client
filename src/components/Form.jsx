@@ -109,10 +109,12 @@ const Form = (props) => {
           .post(url, formData)
           .then((res) => {
             if (res.data === 123) {
-              window.alert(`User logged in successfully!`);
+              // window.alert(`User logged in successfully!`);
               history.push("/");
-            } else {
-              window.alert(`error`);
+            } else if(res.data === 1){
+              setFlagLogin("Invalid Credentials")
+            } else{
+              setFlagLogin("User doesn't exist")
             }
           })
           .catch((err) => console.log(err));

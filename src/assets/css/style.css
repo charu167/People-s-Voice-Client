@@ -10105,7 +10105,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     content: '';
     display: block;
     position: absolute;
-    background: url("../images/purple_transparent.png");
+    /* background: url("../images/purple_transparent.png"); */
     background-repeat: repeat;
     width: 100%;
     height: 100%;
