@@ -1,4 +1,5 @@
 import React from "react";
+import $ from 'jquery'
 import { NavLink, useHistory, useRouteMatch } from "react-router-dom";
 
 const Sidebar = () => {
