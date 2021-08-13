@@ -1,0 +1,45 @@
+.outermost-container {
+  position: relative;
+  width: 970px;
+  height: 1000px;
+  background-color: burlywood;
+
+  margin-left: 285px;
+  margin-top: 59px;
+}
+
+
+
+
+.outer-container {
+  position: absolute;
+  width: 100%;
+  margin:auto;
+  margin-top: 100px;
+  background-color: cadetblue;
+  text-align: center;
+
+}
+
+.inner-container{
+  background-color: rgb(37, 30, 30);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+
+.link {
+  text-decoration: none;
+  color: whitesmoke;
+  
+  padding-bottom: 7px;
+  padding-top: 7px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.link:hover {
+  color: whitesmoke;
+}

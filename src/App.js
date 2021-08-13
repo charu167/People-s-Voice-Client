@@ -1,49 +1,69 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Route } from "react-router-dom";
 
 
-import Navbar from "./components/Navbar";
-import PageOne from "./components/PageOne";
-import GSRegLog from "./components/GSRegLog";
-import AdminRegLog from "./components/AdminRegLog";
-import Error from "./components/Error";
+// -Bootstrap.min css
+import "../src/assets/plugins/bootstrap/css/bootstrap.min.css"
+
+// Font Awesome
+import "../src/assets/plugins/fontawesome-free/css/all.css"
+
+//Dashboard css
+import "../src/assets/css/style.css";
+import "../src/assets/css/dark-style.css"
+import "../src/assets/css/color-styles.css"
+import "../src/assets/css/skin-modes.css"
+
+// p-scroll bar css
+import "../src/assets/plugins/p-scroll/p-scroll.css"
+
+// Sidemenu Css
+import "../src/assets/css/sidemenu.css"
+
+// Morris.js Charts Plugin
+import "../src/assets/plugins/morris/morris.css"
+
+// Font icons
+import "../src/assets/plugins/iconfonts/plugin.css"
+
+// Sidebar css
+import "../src/assets/plugins/sidebar/sidebar.css"
+
+// COLOR-SKINS
+import "../src/assets/skins/color-skins/color15.css"
+import "../src/assets/skins/demo.css"
+
+
+
 
 import "./css/styled.css";
-import "./css/navbar.css"
+import "./css/custom.css";
+import "./css/adminDashboard.css";
+import { Route } from "react-router-dom";
 
-// import './assets/plugins/bootstrap/css/bootstrap.min.css'
-// import "./assets/plugins/fontawesome-free/css/all.css"
-// import "./assets/css/style.css"
-// import "./assets/css/dark-style.css"
-// import
-// import
-// import
+import Gramsevak from "./components/Gramsevak";
+import User from "./components/User";
+import Admin from "./components/Admin";
+import PageOne from "./components/PageOne";
 
 function App() {
   return (
-    <>
-      {/* navbar */}
-      <Navbar />
-      {/* First page route */}
-      <Route exact path="/">
-        <PageOne />
-      </Route>
-      {/* Admin Registeration path */}
-      <Route path="/admin">
-        <AdminRegLog />
-      </Route>
-      {/* Gram Sevak Registeration Path */}
-      <Route path="/gramsevak">
-        <GSRegLog />
-      </Route>
+  <>
+    <Route exact path='/' >
+      <PageOne/>
+    </Route>
 
+    <Route path='/admin'>
+      <Admin/>
+    </Route>
 
-      {/* Error Page */}
-      {/* <Route path="">
-        <Error/>
-      </Route> */}
-    </>
+    <Route path='/gramsevak'>
+      <Gramsevak/>
+    </Route>
+
+    <Route path='/user'>
+      <User/>
+    </Route>
+  </>
   );
 }
 

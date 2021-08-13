@@ -13,6 +13,7 @@ body {
   /* justify-content: center; */
   background: #aee5ec;
   /* padding: 30px; */
+  height: 1000px;
 }
 .container {
   position: relative;
@@ -178,20 +179,7 @@ form .form-content label:hover {
 
 
  /* CSS by Charu */
-.link {
-  text-decoration: none;
-  color: whitesmoke;
-  /* background-color: wheat; */
 
-  padding-bottom: 7px;
-  padding-top: 7px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.link:hover {
-  color: whitesmoke;
-}
 
 .page-one {
   /* width: 700px; */
@@ -245,4 +233,29 @@ form .form-content label:hover {
   font-size: 12px;
   font-weight: bold;
   color: red;
+}
+
+
+.sidebar{
+  width: 280px;
+  height: 600px;
+  display: block;
+  margin-top: 59px;
+  /* border-top: 2px solid black; */
+}
+
+.bell-iocn{
+  margin-left: 200px;
+}
+
+.temp-title{
+  position: relative;
+  color: #044c57;
+  
+  margin-left: 400px;
+  margin-top: 200px;
+}
+
+.Navbar{
+  border-bottom: 2px solid black;
 }

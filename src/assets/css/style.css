@@ -3800,7 +3800,8 @@ button.close {
 }
 
 .card-blog-overlay {
-    background: url("../images/thumbnails/thumb2.jpg");
+    /* background: url("../images/thumbnails/thumb2.jpg"); */
+    margin: 0px;
     background-size: cover;
     position: relative;
 }
@@ -3832,12 +3833,14 @@ button.close {
 }
 
 .card-blog-overlay1 {
-    background: url("../images/thumbnails/thumb3.jpg");
+    /* background: url("../images/thumbnails/thumb3.jpg"); */
+    margin: 0px;
     background-size: cover;
 }
 
 .card-blog-overlay2 {
-    background: url("../images/photos/22.jpg");
+    /* background: url("../images/photos/22.jpg"); */
+    margin: 0px;
     background-size: cover;
 }
 
@@ -4110,7 +4113,8 @@ a.card-tabs-item.active {
 }
 
 .card-1 {
-    background-image: url("../images/photos/card.png");
+    /* background-image: url("../images/photos/card.png"); */
+    margin: 0px;
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -10096,7 +10100,8 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .custom-bg {
-    background-image: url("../images/photos/custom.jpg");
+    /* background-image: url("../images/photos/custom.jpg"); */
+    margin: 0px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -10106,6 +10111,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     display: block;
     position: absolute;
     /* background: url("../images/purple_transparent.png"); */
+    margin: 0px;
     background-repeat: repeat;
     width: 100%;
     height: 100%;
@@ -10132,9 +10138,10 @@ div.dataTables_wrapper div.dataTables_filter input {
     width: 100%;
     line-height: 1.4;
     padding: 50px 50px;
-    /*background-image: url('../images/white-waves.png');
+    /* /*background-image: url('../images/white-waves.png'); */
+    margin: 0px;
   background-repeat: no-repeat;
-  background-size:cover;*/
+  background-size:cover;
     background: #fff;
     text-align: center;
     border-radius: 12px;
@@ -12981,19 +12988,22 @@ img {
 }
 
 .about-img {
-    background: url("../images/about.jpg");
+    /* background: url("../images/about.jpg"); */
+    margin: 0px;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
 .login-img {
-    background: url("../images/login.jpg");
+    /* background: url("../images/login.jpg"); */
+    margin: 0px;
     background-size: cover;
 }
 
 .construction-img {
-    background: url("../images/construction.jpg");
+    /* background: url("../images/construction.jpg"); */
+    margin: 0px;
     background-size: cover;
 }
 
@@ -13263,7 +13273,8 @@ img {
 }
 
 .welcome-image {
-    background: url(../images/photos/bg1.jpg);
+    /* background: url(../images/photos/bg1.jpg); */
+    margin: 0px;
     background-size: cover;
 }
 
@@ -19435,8 +19446,8 @@ a.icon {
 
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url("../fonts/glyphicons-halflings-regular.eot");
-    src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+    src: url("../fonts/fonts/glyphicons-halflings-regular.eot");
+    src: url("../fonts/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -23514,7 +23525,8 @@ div.online-status .status.online {
 }
 
 .error-bg {
-    background-image: url("../images/photos/error.jpg");
+    /* background-image: url("../images/photos/error.jpg"); */
+    margin: 0px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -23550,9 +23562,10 @@ div.online-status .status.online {
     width: 100%;
     line-height: 1.4;
     padding: 50px 40px;
-    /*background-image: url('../images/white-waves.png');
+    /* /*background-image: url('../images/white-waves.png'); */
+    margin: 0px;
   background-repeat: no-repeat;
-  background-size:cover;*/
+  background-size:cover;
     background: #fff;
     text-align: center;
     border-radius: 7px;
@@ -25618,1527 +25631,1908 @@ button.bg-lime:focus {
 }
 
 .browser-android-browser {
-    background-image: url("../images/browsers/android-browser.svg");
+    /* background-image: url("../images/browsers/android-browser.svg"); */
+    margin: 0px;
 }
 
 .browser-aol-explorer {
-    background-image: url("../images/browsers/aol-explorer.svg");
+    /* background-image: url("../images/browsers/aol-explorer.svg"); */
+    margin: 0px;
 }
 
 .browser-blackberry {
-    background-image: url("../images/browsers/blackberry.svg");
+    /* background-image: url("../images/browsers/blackberry.svg"); */
+    margin: 0px;
 }
 
 .browser-camino {
-    background-image: url("../images/browsers/camino.svg");
+    /* background-image: url("../images/browsers/camino.svg"); */
+    margin: 0px;
 }
 
 .browser-chrome {
-    background-image: url("../images/browsers/chrome.svg");
+    /* background-image: url("../images/browsers/chrome.svg"); */
+    margin: 0px;
 }
 
 .browser-chromium {
-    background-image: url("../images/browsers/chromium.svg");
+    /* background-image: url("../images/browsers/chromium.svg"); */
+    margin: 0px;
 }
 
 .browser-dolphin {
-    background-image: url("../images/browsers/dolphin.svg");
+    /* background-image: url("../images/browsers/dolphin.svg"); */
+    margin: 0px;
 }
 
 .browser-edge {
-    background-image: url("../images/browsers/edge.svg");
+    /* background-image: url("../images/browsers/edge.svg"); */
+    margin: 0px;
 }
 
 .browser-firefox {
-    background-image: url("../images/browsers/firefox.svg");
+    /* background-image: url("../images/browsers/firefox.svg"); */
+    margin: 0px;
 }
 
 .browser-ie {
-    background-image: url("../images/browsers/ie.svg");
+    /* background-image: url("../images/browsers/ie.svg"); */
+    margin: 0px;
 }
 
 .browser-maxthon {
-    background-image: url("../images/browsers/maxthon.svg");
+    /* background-image: url("../images/browsers/maxthon.svg"); */
+    margin: 0px;
 }
 
 .browser-mozilla {
-    background-image: url("../images/browsers/mozilla.svg");
+    /* background-image: url("../images/browsers/mozilla.svg"); */
+    margin: 0px;
 }
 
 .browser-netscape {
-    background-image: url("../images/browsers/netscape.svg");
+    /* background-image: url("../images/browsers/netscape.svg"); */
+    margin: 0px;
 }
 
 .browser-opera {
-    background-image: url("../images/browsers/opera.svg");
+    /* background-image: url("../images/browsers/opera.svg"); */
+    margin: 0px;
 }
 
 .browser-safari {
-    background-image: url("../images/browsers/safari.svg");
+    /* background-image: url("../images/browsers/safari.svg"); */
+    margin: 0px;
 }
 
 .browser-sleipnir {
-    background-image: url("../images/browsers/sleipnir.svg");
+    /* background-image: url("../images/browsers/sleipnir.svg"); */
+    margin: 0px;
 }
 
 .browser-uc-browser {
-    background-image: url("../images/browsers/uc-browser.svg");
+    /* background-image: url("../images/browsers/uc-browser.svg"); */
+    margin: 0px;
 }
 
 .browser-vivaldi {
-    background-image: url("../images/browsers/vivaldi.svg");
+    /* background-image: url("../images/browsers/vivaldi.svg"); */
+    margin: 0px;
 }
 
 .flag-ad {
-    background-image: url("../images/flags/ad.svg");
+    /* background-image: url("../images/flags/ad.svg"); */
+    margin: 0px;
 }
 
 .flag-ae {
-    background-image: url("../images/flags/ae.svg");
+    /* background-image: url("../images/flags/ae.svg"); */
+    margin: 0px;
 }
 
 .flag-af {
-    background-image: url("../images/flags/af.svg");
+    /* background-image: url("../images/flags/af.svg"); */
+    margin: 0px;
 }
 
 .flag-ag {
-    background-image: url("../images/flags/ag.svg");
+    /* background-image: url("../images/flags/ag.svg"); */
+    margin: 0px;
 }
 
 .flag-ai {
-    background-image: url("../images/flags/ai.svg");
+    /* background-image: url("../images/flags/ai.svg"); */
+    margin: 0px;
 }
 
 .flag-al {
-    background-image: url("../images/flags/al.svg");
+    /* background-image: url("../images/flags/al.svg"); */
+    margin: 0px;
 }
 
 .flag-am {
-    background-image: url("../images/flags/am.svg");
+    /* background-image: url("../images/flags/am.svg"); */
+    margin: 0px;
 }
 
 .flag-ao {
-    background-image: url("../images/flags/ao.svg");
+    /* background-image: url("../images/flags/ao.svg"); */
+    margin: 0px;
 }
 
 .flag-aq {
-    background-image: url("../images/flags/aq.svg");
+    /* background-image: url("../images/flags/aq.svg"); */
+    margin: 0px;
 }
 
 .flag-ar {
-    background-image: url("../images/flags/ar.svg");
+    /* background-image: url("../images/flags/ar.svg"); */
+    margin: 0px;
 }
 
 .flag-as {
-    background-image: url("../images/flags/as.svg");
+    /* background-image: url("../images/flags/as.svg"); */
+    margin: 0px;
 }
 
 .flag-at {
-    background-image: url("../images/flags/at.svg");
+    /* background-image: url("../images/flags/at.svg"); */
+    margin: 0px;
 }
 
 .flag-au {
-    background-image: url("../images/flags/au.svg");
+    /* background-image: url("../images/flags/au.svg"); */
+    margin: 0px;
 }
 
 .flag-aw {
-    background-image: url("../images/flags/aw.svg");
+    /* background-image: url("../images/flags/aw.svg"); */
+    margin: 0px;
 }
 
 .flag-ax {
-    background-image: url("../images/flags/ax.svg");
+    /* background-image: url("../images/flags/ax.svg"); */
+    margin: 0px;
 }
 
 .flag-az {
-    background-image: url("../images/flags/az.svg");
+    /* background-image: url("../images/flags/az.svg"); */
+    margin: 0px;
 }
 
 .flag-ba {
-    background-image: url("../images/flags/ba.svg");
+    /* background-image: url("../images/flags/ba.svg"); */
+    margin: 0px;
 }
 
 .flag-bb {
-    background-image: url("../images/flags/bb.svg");
+    /* background-image: url("../images/flags/bb.svg"); */
+    margin: 0px;
 }
 
 .flag-bd {
-    background-image: url("../images/flags/bd.svg");
+    /* background-image: url("../images/flags/bd.svg"); */
+    margin: 0px;
 }
 
 .flag-be {
-    background-image: url("../images/flags/be.svg");
+    /* background-image: url("../images/flags/be.svg"); */
+    margin: 0px;
 }
 
 .flag-bf {
-    background-image: url("../images/flags/bf.svg");
+    /* background-image: url("../images/flags/bf.svg"); */
+    margin: 0px;
 }
 
 .flag-bg {
-    background-image: url("../images/flags/bg.svg");
+    /* background-image: url("../images/flags/bg.svg"); */
+    margin: 0px;
 }
 
 .flag-bh {
-    background-image: url("../images/flags/bh.svg");
+    /* background-image: url("../images/flags/bh.svg"); */
+    margin: 0px;
 }
 
 .flag-bi {
-    background-image: url("../images/flags/bi.svg");
+    /* background-image: url("../images/flags/bi.svg"); */
+    margin: 0px;
 }
 
 .flag-bj {
-    background-image: url("../images/flags/bj.svg");
+    /* background-image: url("../images/flags/bj.svg"); */
+    margin: 0px;
 }
 
 .flag-bl {
-    background-image: url("../images/flags/bl.svg");
+    /* background-image: url("../images/flags/bl.svg"); */
+    margin: 0px;
 }
 
 .flag-bm {
-    background-image: url("../images/flags/bm.svg");
+    /* background-image: url("../images/flags/bm.svg"); */
+    margin: 0px;
 }
 
 .flag-bn {
-    background-image: url("../images/flags/bn.svg");
+    /* background-image: url("../images/flags/bn.svg"); */
+    margin: 0px;
 }
 
 .flag-bo {
-    background-image: url("../images/flags/bo.svg");
+    /* background-image: url("../images/flags/bo.svg"); */
+    margin: 0px;
 }
 
 .flag-bq {
-    background-image: url("../images/flags/bq.svg");
+    /* background-image: url("../images/flags/bq.svg"); */
+    margin: 0px;
 }
 
 .flag-br {
-    background-image: url("../images/flags/br.svg");
+    /* background-image: url("../images/flags/br.svg"); */
+    margin: 0px;
 }
 
 .flag-bs {
-    background-image: url("../images/flags/bs.svg");
+    /* background-image: url("../images/flags/bs.svg"); */
+    margin: 0px;
 }
 
 .flag-bt {
-    background-image: url("../images/flags/bt.svg");
+    /* background-image: url("../images/flags/bt.svg"); */
+    margin: 0px;
 }
 
 .flag-bv {
-    background-image: url("../images/flags/bv.svg");
+    /* background-image: url("../images/flags/bv.svg"); */
+    margin: 0px;
 }
 
 .flag-bw {
-    background-image: url("../images/flags/bw.svg");
+    /* background-image: url("../images/flags/bw.svg"); */
+    margin: 0px;
 }
 
 .flag-by {
-    background-image: url("../images/flags/by.svg");
+    /* background-image: url("../images/flags/by.svg"); */
+    margin: 0px;
 }
 
 .flag-bz {
-    background-image: url("../images/flags/bz.svg");
+    /* background-image: url("../images/flags/bz.svg"); */
+    margin: 0px;
 }
 
 .flag-ca {
-    background-image: url("../images/flags/ca.svg");
+    /* background-image: url("../images/flags/ca.svg"); */
+    margin: 0px;
 }
 
 .flag-cc {
-    background-image: url("../images/flags/cc.svg");
+    /* background-image: url("../images/flags/cc.svg"); */
+    margin: 0px;
 }
 
 .flag-cd {
-    background-image: url("../images/flags/cd.svg");
+    /* background-image: url("../images/flags/cd.svg"); */
+    margin: 0px;
 }
 
 .flag-cf {
-    background-image: url("../images/flags/cf.svg");
+    /* background-image: url("../images/flags/cf.svg"); */
+    margin: 0px;
 }
 
 .flag-cg {
-    background-image: url("../images/flags/cg.svg");
+    /* background-image: url("../images/flags/cg.svg"); */
+    margin: 0px;
 }
 
 .flag-ch {
-    background-image: url("../images/flags/ch.svg");
+    /* background-image: url("../images/flags/ch.svg"); */
+    margin: 0px;
 }
 
 .flag-ci {
-    background-image: url("../images/flags/ci.svg");
+    /* background-image: url("../images/flags/ci.svg"); */
+    margin: 0px;
 }
 
 .flag-ck {
-    background-image: url("../images/flags/ck.svg");
+    /* background-image: url("../images/flags/ck.svg"); */
+    margin: 0px;
 }
 
 .flag-cl {
-    background-image: url("../images/flags/cl.svg");
+    /* background-image: url("../images/flags/cl.svg"); */
+    margin: 0px;
 }
 
 .flag-cm {
-    background-image: url("../images/flags/cm.svg");
+    /* background-image: url("../images/flags/cm.svg"); */
+    margin: 0px;
 }
 
 .flag-cn {
-    background-image: url("../images/flags/cn.svg");
+    /* background-image: url("../images/flags/cn.svg"); */
+    margin: 0px;
 }
 
 .flag-co {
-    background-image: url("../images/flags/co.svg");
+    /* background-image: url("../images/flags/co.svg"); */
+    margin: 0px;
 }
 
 .flag-cr {
-    background-image: url("../images/flags/cr.svg");
+    /* background-image: url("../images/flags/cr.svg"); */
+    margin: 0px;
 }
 
 .flag-cu {
-    background-image: url("../images/flags/cu.svg");
+    /* background-image: url("../images/flags/cu.svg"); */
+    margin: 0px;
 }
 
 .flag-cv {
-    background-image: url("../images/flags/cv.svg");
+    /* background-image: url("../images/flags/cv.svg"); */
+    margin: 0px;
 }
 
 .flag-cw {
-    background-image: url("../images/flags/cw.svg");
+    /* background-image: url("../images/flags/cw.svg"); */
+    margin: 0px;
 }
 
 .flag-cx {
-    background-image: url("../images/flags/cx.svg");
+    /* background-image: url("../images/flags/cx.svg"); */
+    margin: 0px;
 }
 
 .flag-cy {
-    background-image: url("../images/flags/cy.svg");
+    /* background-image: url("../images/flags/cy.svg"); */
+    margin: 0px;
 }
 
 .flag-cz {
-    background-image: url("../images/flags/cz.svg");
+    /* background-image: url("../images/flags/cz.svg"); */
+    margin: 0px;
 }
 
 .flag-de {
-    background-image: url("../images/flags/de.svg");
+    /* background-image: url("../images/flags/de.svg"); */
+    margin: 0px;
 }
 
 .flag-dj {
-    background-image: url("../images/flags/dj.svg");
+    /* background-image: url("../images/flags/dj.svg"); */
+    margin: 0px;
 }
 
 .flag-dk {
-    background-image: url("../images/flags/dk.svg");
+    /* background-image: url("../images/flags/dk.svg"); */
+    margin: 0px;
 }
 
 .flag-dm {
-    background-image: url("../images/flags/dm.svg");
+    /* background-image: url("../images/flags/dm.svg"); */
+    margin: 0px;
 }
 
 .flag-do {
-    background-image: url("../images/flags/do.svg");
+    /* background-image: url("../images/flags/do.svg"); */
+    margin: 0px;
 }
 
 .flag-dz {
-    background-image: url("../images/flags/dz.svg");
+    /* background-image: url("../images/flags/dz.svg"); */
+    margin: 0px;
 }
 
 .flag-ec {
-    background-image: url("../images/flags/ec.svg");
+    /* background-image: url("../images/flags/ec.svg"); */
+    margin: 0px;
 }
 
 .flag-ee {
-    background-image: url("../images/flags/ee.svg");
+    /* background-image: url("../images/flags/ee.svg"); */
+    margin: 0px;
 }
 
 .flag-eg {
-    background-image: url("../images/flags/eg.svg");
+    /* background-image: url("../images/flags/eg.svg"); */
+    margin: 0px;
 }
 
 .flag-eh {
-    background-image: url("../images/flags/eh.svg");
+    /* background-image: url("../images/flags/eh.svg"); */
+    margin: 0px;
 }
 
 .flag-er {
-    background-image: url("../images/flags/er.svg");
+    /* background-image: url("../images/flags/er.svg"); */
+    margin: 0px;
 }
 
 .flag-es {
-    background-image: url("../images/flags/es.svg");
+    /* background-image: url("../images/flags/es.svg"); */
+    margin: 0px;
 }
 
 .flag-et {
-    background-image: url("../images/flags/et.svg");
+    /* background-image: url("../images/flags/et.svg"); */
+    margin: 0px;
 }
 
 .flag-eu {
-    background-image: url("../images/flags/eu.svg");
+    /* background-image: url("../images/flags/eu.svg"); */
+    margin: 0px;
 }
 
 .flag-fi {
-    background-image: url("../images/flags/fi.svg");
+    /* background-image: url("../images/flags/fi.svg"); */
+    margin: 0px;
 }
 
 .flag-fj {
-    background-image: url("../images/flags/fj.svg");
+    /* background-image: url("../images/flags/fj.svg"); */
+    margin: 0px;
 }
 
 .flag-fk {
-    background-image: url("../images/flags/fk.svg");
+    /* background-image: url("../images/flags/fk.svg"); */
+    margin: 0px;
 }
 
 .flag-fm {
-    background-image: url("../images/flags/fm.svg");
+    /* background-image: url("../images/flags/fm.svg"); */
+    margin: 0px;
 }
 
 .flag-fo {
-    background-image: url("../images/flags/fo.svg");
+    /* background-image: url("../images/flags/fo.svg"); */
+    margin: 0px;
 }
 
 .flag-fr {
-    background-image: url("../images/flags/fr.svg");
+    /* background-image: url("../images/flags/fr.svg"); */
+    margin: 0px;
 }
 
 .flag-ga {
-    background-image: url("../images/flags/ga.svg");
+    /* background-image: url("../images/flags/ga.svg"); */
+    margin: 0px;
 }
 
 .flag-gb-eng {
-    background-image: url("../images/flags/gb-eng.svg");
+    /* background-image: url("../images/flags/gb-eng.svg"); */
+    margin: 0px;
 }
 
 .flag-gb-nir {
-    background-image: url("../images/flags/gb-nir.svg");
+    /* background-image: url("../images/flags/gb-nir.svg"); */
+    margin: 0px;
 }
 
 .flag-gb-sct {
-    background-image: url("../images/flags/gb-sct.svg");
+    /* background-image: url("../images/flags/gb-sct.svg"); */
+    margin: 0px;
 }
 
 .flag-gb-wls {
-    background-image: url("../images/flags/gb-wls.svg");
+    /* background-image: url("../images/flags/gb-wls.svg"); */
+    margin: 0px;
 }
 
 .flag-gb {
-    background-image: url("../images/flags/gb.svg");
+    /* background-image: url("../images/flags/gb.svg"); */
+    margin: 0px;
 }
 
 .flag-gd {
-    background-image: url("../images/flags/gd.svg");
+    /* background-image: url("../images/flags/gd.svg"); */
+    margin: 0px;
 }
 
 .flag-ge {
-    background-image: url("../images/flags/ge.svg");
+    /* background-image: url("../images/flags/ge.svg"); */
+    margin: 0px;
 }
 
 .flag-gf {
-    background-image: url("../images/flags/gf.svg");
+    /* background-image: url("../images/flags/gf.svg"); */
+    margin: 0px;
 }
 
 .flag-gg {
-    background-image: url("../images/flags/gg.svg");
+    /* background-image: url("../images/flags/gg.svg"); */
+    margin: 0px;
 }
 
 .flag-gh {
-    background-image: url("../images/flags/gh.svg");
+    /* background-image: url("../images/flags/gh.svg"); */
+    margin: 0px;
 }
 
 .flag-gi {
-    background-image: url("../images/flags/gi.svg");
+    /* background-image: url("../images/flags/gi.svg"); */
+    margin: 0px;
 }
 
 .flag-gl {
-    background-image: url("../images/flags/gl.svg");
+    /* background-image: url("../images/flags/gl.svg"); */
+    margin: 0px;
 }
 
 .flag-gm {
-    background-image: url("../images/flags/gm.svg");
+    /* background-image: url("../images/flags/gm.svg"); */
+    margin: 0px;
 }
 
 .flag-gn {
-    background-image: url("../images/flags/gn.svg");
+    /* background-image: url("../images/flags/gn.svg"); */
+    margin: 0px;
 }
 
 .flag-gp {
-    background-image: url("../images/flags/gp.svg");
+    /* background-image: url("../images/flags/gp.svg"); */
+    margin: 0px;
 }
 
 .flag-gq {
-    background-image: url("../images/flags/gq.svg");
+    /* background-image: url("../images/flags/gq.svg"); */
+    margin: 0px;
 }
 
 .flag-gr {
-    background-image: url("../images/flags/gr.svg");
+    /* background-image: url("../images/flags/gr.svg"); */
+    margin: 0px;
 }
 
 .flag-gs {
-    background-image: url("../images/flags/gs.svg");
+    /* background-image: url("../images/flags/gs.svg"); */
+    margin: 0px;
 }
 
 .flag-gt {
-    background-image: url("../images/flags/gt.svg");
+    /* background-image: url("../images/flags/gt.svg"); */
+    margin: 0px;
 }
 
 .flag-gu {
-    background-image: url("../images/flags/gu.svg");
+    /* background-image: url("../images/flags/gu.svg"); */
+    margin: 0px;
 }
 
 .flag-gw {
-    background-image: url("../images/flags/gw.svg");
+    /* background-image: url("../images/flags/gw.svg"); */
+    margin: 0px;
 }
 
 .flag-gy {
-    background-image: url("../images/flags/gy.svg");
+    /* background-image: url("../images/flags/gy.svg"); */
+    margin: 0px;
 }
 
 .flag-hk {
-    background-image: url("../images/flags/hk.svg");
+    /* background-image: url("../images/flags/hk.svg"); */
+    margin: 0px;
 }
 
 .flag-hm {
-    background-image: url("../images/flags/hm.svg");
+    /* background-image: url("../images/flags/hm.svg"); */
+    margin: 0px;
 }
 
 .flag-hn {
-    background-image: url("../images/flags/hn.svg");
+    /* background-image: url("../images/flags/hn.svg"); */
+    margin: 0px;
 }
 
 .flag-hr {
-    background-image: url("../images/flags/hr.svg");
+    /* background-image: url("../images/flags/hr.svg"); */
+    margin: 0px;
 }
 
 .flag-ht {
-    background-image: url("../images/flags/ht.svg");
+    /* background-image: url("../images/flags/ht.svg"); */
+    margin: 0px;
 }
 
 .flag-hu {
-    background-image: url("../images/flags/hu.svg");
+    /* background-image: url("../images/flags/hu.svg"); */
+    margin: 0px;
 }
 
 .flag-id {
-    background-image: url("../images/flags/id.svg");
+    /* background-image: url("../images/flags/id.svg"); */
+    margin: 0px;
 }
 
 .flag-ie {
-    background-image: url("../images/flags/ie.svg");
+    /* background-image: url("../images/flags/ie.svg"); */
+    margin: 0px;
 }
 
 .flag-il {
-    background-image: url("../images/flags/il.svg");
+    /* background-image: url("../images/flags/il.svg"); */
+    margin: 0px;
 }
 
 .flag-im {
-    background-image: url("../images/flags/im.svg");
+    /* background-image: url("../images/flags/im.svg"); */
+    margin: 0px;
 }
 
 .flag-in {
-    background-image: url("../images/flags/in.svg");
+    /* background-image: url("../images/flags/in.svg"); */
+    margin: 0px;
 }
 
 .flag-io {
-    background-image: url("../images/flags/io.svg");
+    /* background-image: url("../images/flags/io.svg"); */
+    margin: 0px;
 }
 
 .flag-iq {
-    background-image: url("../images/flags/iq.svg");
+    /* background-image: url("../images/flags/iq.svg"); */
+    margin: 0px;
 }
 
 .flag-ir {
-    background-image: url("../images/flags/ir.svg");
+    /* background-image: url("../images/flags/ir.svg"); */
+    margin: 0px;
 }
 
 .flag-is {
-    background-image: url("../images/flags/is.svg");
+    /* background-image: url("../images/flags/is.svg"); */
+    margin: 0px;
 }
 
 .flag-it {
-    background-image: url("../images/flags/it.svg");
+    /* background-image: url("../images/flags/it.svg"); */
+    margin: 0px;
 }
 
 .flag-je {
-    background-image: url("../images/flags/je.svg");
+    /* background-image: url("../images/flags/je.svg"); */
+    margin: 0px;
 }
 
 .flag-jm {
-    background-image: url("../images/flags/jm.svg");
+    /* background-image: url("../images/flags/jm.svg"); */
+    margin: 0px;
 }
 
 .flag-jo {
-    background-image: url("../images/flags/jo.svg");
+    /* background-image: url("../images/flags/jo.svg"); */
+    margin: 0px;
 }
 
 .flag-jp {
-    background-image: url("../images/flags/jp.svg");
+    /* background-image: url("../images/flags/jp.svg"); */
+    margin: 0px;
 }
 
 .flag-ke {
-    background-image: url("../images/flags/ke.svg");
+    /* background-image: url("../images/flags/ke.svg"); */
+    margin: 0px;
 }
 
 .flag-kg {
-    background-image: url("../images/flags/kg.svg");
+    /* background-image: url("../images/flags/kg.svg"); */
+    margin: 0px;
 }
 
 .flag-kh {
-    background-image: url("../images/flags/kh.svg");
+    /* background-image: url("../images/flags/kh.svg"); */
+    margin: 0px;
 }
 
 .flag-ki {
-    background-image: url("../images/flags/ki.svg");
+    /* background-image: url("../images/flags/ki.svg"); */
+    margin: 0px;
 }
 
 .flag-km {
-    background-image: url("../images/flags/km.svg");
+    /* background-image: url("../images/flags/km.svg"); */
+    margin: 0px;
 }
 
 .flag-kn {
-    background-image: url("../images/flags/kn.svg");
+    /* background-image: url("../images/flags/kn.svg"); */
+    margin: 0px;
 }
 
 .flag-kp {
-    background-image: url("../images/flags/kp.svg");
+    /* background-image: url("../images/flags/kp.svg"); */
+    margin: 0px;
 }
 
 .flag-kr {
-    background-image: url("../images/flags/kr.svg");
+    /* background-image: url("../images/flags/kr.svg"); */
+    margin: 0px;
 }
 
 .flag-kw {
-    background-image: url("../images/flags/kw.svg");
+    /* background-image: url("../images/flags/kw.svg"); */
+    margin: 0px;
 }
 
 .flag-ky {
-    background-image: url("../images/flags/ky.svg");
+    /* background-image: url("../images/flags/ky.svg"); */
+    margin: 0px;
 }
 
 .flag-kz {
-    background-image: url("../images/flags/kz.svg");
+    /* background-image: url("../images/flags/kz.svg"); */
+    margin: 0px;
 }
 
 .flag-la {
-    background-image: url("../images/flags/la.svg");
+    /* background-image: url("../images/flags/la.svg"); */
+    margin: 0px;
 }
 
 .flag-lb {
-    background-image: url("../images/flags/lb.svg");
+    /* background-image: url("../images/flags/lb.svg"); */
+    margin: 0px;
 }
 
 .flag-lc {
-    background-image: url("../images/flags/lc.svg");
+    /* background-image: url("../images/flags/lc.svg"); */
+    margin: 0px;
 }
 
 .flag-li {
-    background-image: url("../images/flags/li.svg");
+    /* background-image: url("../images/flags/li.svg"); */
+    margin: 0px;
 }
 
 .flag-lk {
-    background-image: url("../images/flags/lk.svg");
+    /* background-image: url("../images/flags/lk.svg"); */
+    margin: 0px;
 }
 
 .flag-lr {
-    background-image: url("../images/flags/lr.svg");
+    /* background-image: url("../images/flags/lr.svg"); */
+    margin: 0px;
 }
 
 .flag-ls {
-    background-image: url("../images/flags/ls.svg");
+    /* background-image: url("../images/flags/ls.svg"); */
+    margin: 0px;
 }
 
 .flag-lt {
-    background-image: url("../images/flags/lt.svg");
+    /* background-image: url("../images/flags/lt.svg"); */
+    margin: 0px;
 }
 
 .flag-lu {
-    background-image: url("../images/flags/lu.svg");
+    /* background-image: url("../images/flags/lu.svg"); */
+    margin: 0px;
 }
 
 .flag-lv {
-    background-image: url("../images/flags/lv.svg");
+    /* background-image: url("../images/flags/lv.svg"); */
+    margin: 0px;
 }
 
 .flag-ly {
-    background-image: url("../images/flags/ly.svg");
+    /* background-image: url("../images/flags/ly.svg"); */
+    margin: 0px;
 }
 
 .flag-ma {
-    background-image: url("../images/flags/ma.svg");
+    /* background-image: url("../images/flags/ma.svg"); */
+    margin: 0px;
 }
 
 .flag-mc {
-    background-image: url("../images/flags/mc.svg");
+    /* background-image: url("../images/flags/mc.svg"); */
+    margin: 0px;
 }
 
 .flag-md {
-    background-image: url("../images/flags/md.svg");
+    /* background-image: url("../images/flags/md.svg"); */
+    margin: 0px;
 }
 
 .flag-me {
-    background-image: url("../images/flags/me.svg");
+    /* background-image: url("../images/flags/me.svg"); */
+    margin: 0px;
 }
 
 .flag-mf {
-    background-image: url("../images/flags/mf.svg");
+    /* background-image: url("../images/flags/mf.svg"); */
+    margin: 0px;
 }
 
 .flag-mg {
-    background-image: url("../images/flags/mg.svg");
+    /* background-image: url("../images/flags/mg.svg"); */
+    margin: 0px;
 }
 
 .flag-mh {
-    background-image: url("../images/flags/mh.svg");
+    /* background-image: url("../images/flags/mh.svg"); */
+    margin: 0px;
 }
 
 .flag-mk {
-    background-image: url("../images/flags/mk.svg");
+    /* background-image: url("../images/flags/mk.svg"); */
+    margin: 0px;
 }
 
 .flag-ml {
-    background-image: url("../images/flags/ml.svg");
+    /* background-image: url("../images/flags/ml.svg"); */
+    margin: 0px;
 }
 
 .flag-mm {
-    background-image: url("../images/flags/mm.svg");
+    /* background-image: url("../images/flags/mm.svg"); */
+    margin: 0px;
 }
 
 .flag-mn {
-    background-image: url("../images/flags/mn.svg");
+    /* background-image: url("../images/flags/mn.svg"); */
+    margin: 0px;
 }
 
 .flag-mo {
-    background-image: url("../images/flags/mo.svg");
+    /* background-image: url("../images/flags/mo.svg"); */
+    margin: 0px;
 }
 
 .flag-mp {
-    background-image: url("../images/flags/mp.svg");
+    /* background-image: url("../images/flags/mp.svg"); */
+    margin: 0px;
 }
 
 .flag-mq {
-    background-image: url("../images/flags/mq.svg");
+    /* background-image: url("../images/flags/mq.svg"); */
+    margin: 0px;
 }
 
 .flag-mr {
-    background-image: url("../images/flags/mr.svg");
+    /* background-image: url("../images/flags/mr.svg"); */
+    margin: 0px;
 }
 
 .flag-ms {
-    background-image: url("../images/flags/ms.svg");
+    /* background-image: url("../images/flags/ms.svg"); */
+    margin: 0px;
 }
 
 .flag-mt {
-    background-image: url("../images/flags/mt.svg");
+    /* background-image: url("../images/flags/mt.svg"); */
+    margin: 0px;
 }
 
 .flag-mu {
-    background-image: url("../images/flags/mu.svg");
+    /* background-image: url("../images/flags/mu.svg"); */
+    margin: 0px;
 }
 
 .flag-mv {
-    background-image: url("../images/flags/mv.svg");
+    /* background-image: url("../images/flags/mv.svg"); */
+    margin: 0px;
 }
 
 .flag-mw {
-    background-image: url("../images/flags/mw.svg");
+    /* background-image: url("../images/flags/mw.svg"); */
+    margin: 0px;
 }
 
 .flag-mx {
-    background-image: url("../images/flags/mx.svg");
+    /* background-image: url("../images/flags/mx.svg"); */
+    margin: 0px;
 }
 
 .flag-my {
-    background-image: url("../images/flags/my.svg");
+    /* background-image: url("../images/flags/my.svg"); */
+    margin: 0px;
 }
 
 .flag-mz {
-    background-image: url("../images/flags/mz.svg");
+    /* background-image: url("../images/flags/mz.svg"); */
+    margin: 0px;
 }
 
 .flag-na {
-    background-image: url("../images/flags/na.svg");
+    /* background-image: url("../images/flags/na.svg"); */
+    margin: 0px;
 }
 
 .flag-nc {
-    background-image: url("../images/flags/nc.svg");
+    /* background-image: url("../images/flags/nc.svg"); */
+    margin: 0px;
 }
 
 .flag-ne {
-    background-image: url("../images/flags/ne.svg");
+    /* background-image: url("../images/flags/ne.svg"); */
+    margin: 0px;
 }
 
 .flag-nf {
-    background-image: url("../images/flags/nf.svg");
+    /* background-image: url("../images/flags/nf.svg"); */
+    margin: 0px;
 }
 
 .flag-ng {
-    background-image: url("../images/flags/ng.svg");
+    /* background-image: url("../images/flags/ng.svg"); */
+    margin: 0px;
 }
 
 .flag-ni {
-    background-image: url("../images/flags/ni.svg");
+    /* background-image: url("../images/flags/ni.svg"); */
+    margin: 0px;
 }
 
 .flag-nl {
-    background-image: url("../images/flags/nl.svg");
+    /* background-image: url("../images/flags/nl.svg"); */
+    margin: 0px;
 }
 
 .flag-no {
-    background-image: url("../images/flags/no.svg");
+    /* background-image: url("../images/flags/no.svg"); */
+    margin: 0px;
 }
 
 .flag-np {
-    background-image: url("../images/flags/np.svg");
+    /* background-image: url("../images/flags/np.svg"); */
+    margin: 0px;
 }
 
 .flag-nr {
-    background-image: url("../images/flags/nr.svg");
+    /* background-image: url("../images/flags/nr.svg"); */
+    margin: 0px;
 }
 
 .flag-nu {
-    background-image: url("../images/flags/nu.svg");
+    /* background-image: url("../images/flags/nu.svg"); */
+    margin: 0px;
 }
 
 .flag-nz {
-    background-image: url("../images/flags/nz.svg");
+    /* background-image: url("../images/flags/nz.svg"); */
+    margin: 0px;
 }
 
 .flag-om {
-    background-image: url("../images/flags/om.svg");
+    /* background-image: url("../images/flags/om.svg"); */
+    margin: 0px;
 }
 
 .flag-pa {
-    background-image: url("../images/flags/pa.svg");
+    /* background-image: url("../images/flags/pa.svg"); */
+    margin: 0px;
 }
 
 .flag-pe {
-    background-image: url("../images/flags/pe.svg");
+    /* background-image: url("../images/flags/pe.svg"); */
+    margin: 0px;
 }
 
 .flag-pf {
-    background-image: url("../images/flags/pf.svg");
+    /* background-image: url("../images/flags/pf.svg"); */
+    margin: 0px;
 }
 
 .flag-pg {
-    background-image: url("../images/flags/pg.svg");
+    /* background-image: url("../images/flags/pg.svg"); */
+    margin: 0px;
 }
 
 .flag-ph {
-    background-image: url("../images/flags/ph.svg");
+    /* background-image: url("../images/flags/ph.svg"); */
+    margin: 0px;
 }
 
 .flag-pk {
-    background-image: url("../images/flags/pk.svg");
+    /* background-image: url("../images/flags/pk.svg"); */
+    margin: 0px;
 }
 
 .flag-pl {
-    background-image: url("../images/flags/pl.svg");
+    /* background-image: url("../images/flags/pl.svg"); */
+    margin: 0px;
 }
 
 .flag-pm {
-    background-image: url("../images/flags/pm.svg");
+    /* background-image: url("../images/flags/pm.svg"); */
+    margin: 0px;
 }
 
 .flag-pn {
-    background-image: url("../images/flags/pn.svg");
+    /* background-image: url("../images/flags/pn.svg"); */
+    margin: 0px;
 }
 
 .flag-pr {
-    background-image: url("../images/flags/pr.svg");
+    /* background-image: url("../images/flags/pr.svg"); */
+    margin: 0px;
 }
 
 .flag-ps {
-    background-image: url("../images/flags/ps.svg");
+    /* background-image: url("../images/flags/ps.svg"); */
+    margin: 0px;
 }
 
 .flag-pt {
-    background-image: url("../images/flags/pt.svg");
+    /* background-image: url("../images/flags/pt.svg"); */
+    margin: 0px;
 }
 
 .flag-pw {
-    background-image: url("../images/flags/pw.svg");
+    /* background-image: url("../images/flags/pw.svg"); */
+    margin: 0px;
 }
 
 .flag-py {
-    background-image: url("../images/flags/py.svg");
+    /* background-image: url("../images/flags/py.svg"); */
+    margin: 0px;
 }
 
 .flag-qa {
-    background-image: url("../images/flags/qa.svg");
+    /* background-image: url("../images/flags/qa.svg"); */
+    margin: 0px;
 }
 
 .flag-re {
-    background-image: url("../images/flags/re.svg");
+    /* background-image: url("../images/flags/re.svg"); */
+    margin: 0px;
 }
 
 .flag-ro {
-    background-image: url("../images/flags/ro.svg");
+    /* background-image: url("../images/flags/ro.svg"); */
+    margin: 0px;
 }
 
 .flag-rs {
-    background-image: url("../images/flags/rs.svg");
+    /* background-image: url("../images/flags/rs.svg"); */
+    margin: 0px;
 }
 
 .flag-ru {
-    background-image: url("../images/flags/ru.svg");
+    /* background-image: url("../images/flags/ru.svg"); */
+    margin: 0px;
 }
 
 .flag-rw {
-    background-image: url("../images/flags/rw.svg");
+    /* background-image: url("../images/flags/rw.svg"); */
+    margin: 0px;
 }
 
 .flag-sa {
-    background-image: url("../images/flags/sa.svg");
+    /* background-image: url("../images/flags/sa.svg"); */
+    margin: 0px;
 }
 
 .flag-sb {
-    background-image: url("../images/flags/sb.svg");
+    /* background-image: url("../images/flags/sb.svg"); */
+    margin: 0px;
 }
 
 .flag-sc {
-    background-image: url("../images/flags/sc.svg");
+    /* background-image: url("../images/flags/sc.svg"); */
+    margin: 0px;
 }
 
 .flag-sd {
-    background-image: url("../images/flags/sd.svg");
+    /* background-image: url("../images/flags/sd.svg"); */
+    margin: 0px;
 }
 
 .flag-se {
-    background-image: url("../images/flags/se.svg");
+    /* background-image: url("../images/flags/se.svg"); */
+    margin: 0px;
 }
 
 .flag-sg {
-    background-image: url("../images/flags/sg.svg");
+    /* background-image: url("../images/flags/sg.svg"); */
+    margin: 0px;
 }
 
 .flag-sh {
-    background-image: url("../images/flags/sh.svg");
+    /* background-image: url("../images/flags/sh.svg"); */
+    margin: 0px;
 }
 
 .flag-si {
-    background-image: url("../images/flags/si.svg");
+    /* background-image: url("../images/flags/si.svg"); */
+    margin: 0px;
 }
 
 .flag-sj {
-    background-image: url("../images/flags/sj.svg");
+    /* background-image: url("../images/flags/sj.svg"); */
+    margin: 0px;
 }
 
 .flag-sk {
-    background-image: url("../images/flags/sk.svg");
+    /* background-image: url("../images/flags/sk.svg"); */
+    margin: 0px;
 }
 
 .flag-sl {
-    background-image: url("../images/flags/sl.svg");
+    /* background-image: url("../images/flags/sl.svg"); */
+    margin: 0px;
 }
 
 .flag-sm {
-    background-image: url("../images/flags/sm.svg");
+    /* background-image: url("../images/flags/sm.svg"); */
+    margin: 0px;
 }
 
 .flag-sn {
-    background-image: url("../images/flags/sn.svg");
+    /* background-image: url("../images/flags/sn.svg"); */
+    margin: 0px;
 }
 
 .flag-so {
-    background-image: url("../images/flags/so.svg");
+    /* background-image: url("../images/flags/so.svg"); */
+    margin: 0px;
 }
 
 .flag-sr {
-    background-image: url("../images/flags/sr.svg");
+    /* background-image: url("../images/flags/sr.svg"); */
+    margin: 0px;
 }
 
 .flag-ss {
-    background-image: url("../images/flags/ss.svg");
+    /* background-image: url("../images/flags/ss.svg"); */
+    margin: 0px;
 }
 
 .flag-st {
-    background-image: url("../images/flags/st.svg");
+    /* background-image: url("../images/flags/st.svg"); */
+    margin: 0px;
 }
 
 .flag-sv {
-    background-image: url("../images/flags/sv.svg");
+    /* background-image: url("../images/flags/sv.svg"); */
+    margin: 0px;
 }
 
 .flag-sx {
-    background-image: url("../images/flags/sx.svg");
+    /* background-image: url("../images/flags/sx.svg"); */
+    margin: 0px;
 }
 
 .flag-sy {
-    background-image: url("../images/flags/sy.svg");
+    /* background-image: url("../images/flags/sy.svg"); */
+    margin: 0px;
 }
 
 .flag-sz {
-    background-image: url("../images/flags/sz.svg");
+    /* background-image: url("../images/flags/sz.svg"); */
+    margin: 0px;
 }
 
 .flag-tc {
-    background-image: url("../images/flags/tc.svg");
+    /* background-image: url("../images/flags/tc.svg"); */
+    margin: 0px;
 }
 
 .flag-td {
-    background-image: url("../images/flags/td.svg");
+    /* background-image: url("../images/flags/td.svg"); */
+    margin: 0px;
 }
 
 .flag-tf {
-    background-image: url("../images/flags/tf.svg");
+    /* background-image: url("../images/flags/tf.svg"); */
+    margin: 0px;
 }
 
 .flag-tg {
-    background-image: url("../images/flags/tg.svg");
+    /* background-image: url("../images/flags/tg.svg"); */
+    margin: 0px;
 }
 
 .flag-th {
-    background-image: url("../images/flags/th.svg");
+    /* background-image: url("../images/flags/th.svg"); */
+    margin: 0px;
 }
 
 .flag-tj {
-    background-image: url("../images/flags/tj.svg");
+    /* background-image: url("../images/flags/tj.svg"); */
+    margin: 0px;
 }
 
 .flag-tk {
-    background-image: url("../images/flags/tk.svg");
+    /* background-image: url("../images/flags/tk.svg"); */
+    margin: 0px;
 }
 
 .flag-tl {
-    background-image: url("../images/flags/tl.svg");
+    /* background-image: url("../images/flags/tl.svg"); */
+    margin: 0px;
 }
 
 .flag-tm {
-    background-image: url("../images/flags/tm.svg");
+    /* background-image: url("../images/flags/tm.svg"); */
+    margin: 0px;
 }
 
 .flag-tn {
-    background-image: url("../images/flags/tn.svg");
+    /* background-image: url("../images/flags/tn.svg"); */
+    margin: 0px;
 }
 
 .flag-to {
-    background-image: url("../images/flags/to.svg");
+    /* background-image: url("../images/flags/to.svg"); */
+    margin: 0px;
 }
 
 .flag-tr {
-    background-image: url("../images/flags/tr.svg");
+    /* background-image: url("../images/flags/tr.svg"); */
+    margin: 0px;
 }
 
 .flag-tt {
-    background-image: url("../images/flags/tt.svg");
+    /* background-image: url("../images/flags/tt.svg"); */
+    margin: 0px;
 }
 
 .flag-tv {
-    background-image: url("../images/flags/tv.svg");
+    /* background-image: url("../images/flags/tv.svg"); */
+    margin: 0px;
 }
 
 .flag-tw {
-    background-image: url("../images/flags/tw.svg");
+    /* background-image: url("../images/flags/tw.svg"); */
+    margin: 0px;
 }
 
 .flag-tz {
-    background-image: url("../images/flags/tz.svg");
+    /* background-image: url("../images/flags/tz.svg"); */
+    margin: 0px;
 }
 
 .flag-ua {
-    background-image: url("../images/flags/ua.svg");
+    /* background-image: url("../images/flags/ua.svg"); */
+    margin: 0px;
 }
 
 .flag-ug {
-    background-image: url("../images/flags/ug.svg");
+    /* background-image: url("../images/flags/ug.svg"); */
+    margin: 0px;
 }
 
 .flag-um {
-    background-image: url("../images/flags/um.svg");
+    /* background-image: url("../images/flags/um.svg"); */
+    margin: 0px;
 }
 
 .flag-un {
-    background-image: url("../images/flags/un.svg");
+    /* background-image: url("../images/flags/un.svg"); */
+    margin: 0px;
 }
 
 .flag-us {
-    background-image: url("../images/flags/us.svg");
+    /* background-image: url("../images/flags/us.svg"); */
+    margin: 0px;
 }
 
 .flag-uy {
-    background-image: url("../images/flags/uy.svg");
+    /* background-image: url("../images/flags/uy.svg"); */
+    margin: 0px;
 }
 
 .flag-uz {
-    background-image: url("../images/flags/uz.svg");
+    /* background-image: url("../images/flags/uz.svg"); */
+    margin: 0px;
 }
 
 .flag-va {
-    background-image: url("../images/flags/va.svg");
+    /* background-image: url("../images/flags/va.svg"); */
+    margin: 0px;
 }
 
 .flag-vc {
-    background-image: url("../images/flags/vc.svg");
+    /* background-image: url("../images/flags/vc.svg"); */
+    margin: 0px;
 }
 
 .flag-ve {
-    background-image: url("../images/flags/ve.svg");
+    /* background-image: url("../images/flags/ve.svg"); */
+    margin: 0px;
 }
 
 .flag-vg {
-    background-image: url("../images/flags/vg.svg");
+    /* background-image: url("../images/flags/vg.svg"); */
+    margin: 0px;
 }
 
 .flag-vi {
-    background-image: url("../images/flags/vi.svg");
+    /* background-image: url("../images/flags/vi.svg"); */
+    margin: 0px;
 }
 
 .flag-vn {
-    background-image: url("../images/flags/vn.svg");
+    /* background-image: url("../images/flags/vn.svg"); */
+    margin: 0px;
 }
 
 .flag-vu {
-    background-image: url("../images/flags/vu.svg");
+    /* background-image: url("../images/flags/vu.svg"); */
+    margin: 0px;
 }
 
 .flag-wf {
-    background-image: url("../images/flags/wf.svg");
+    /* background-image: url("../images/flags/wf.svg"); */
+    margin: 0px;
 }
 
 .flag-ws {
-    background-image: url("../images/flags/ws.svg");
+    /* background-image: url("../images/flags/ws.svg"); */
+    margin: 0px;
 }
 
 .flag-ye {
-    background-image: url("../images/flags/ye.svg");
+    /* background-image: url("../images/flags/ye.svg"); */
+    margin: 0px;
 }
 
 .flag-yt {
-    background-image: url("../images/flags/yt.svg");
+    /* background-image: url("../images/flags/yt.svg"); */
+    margin: 0px;
 }
 
 .flag-za {
-    background-image: url("../images/flags/za.svg");
+    /* background-image: url("../images/flags/za.svg"); */
+    margin: 0px;
 }
 
 .flag-zm {
-    background-image: url("../images/flags/zm.svg");
+    /* background-image: url("../images/flags/zm.svg"); */
+    margin: 0px;
 }
 
 .flag-zw {
-    background-image: url("../images/flags/zw.svg");
+    /* background-image: url("../images/flags/zw.svg"); */
+    margin: 0px;
 }
 
 .payment-2checkout-dark {
-    background-image: url("../images/payments/2checkout-dark.svg");
+    /* background-image: url("../images/payments/2checkout-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-2checkout {
-    background-image: url("../images/payments/2checkout.svg");
+    /* background-image: url("../images/payments/2checkout.svg"); */
+    margin: 0px;
 }
 
 .payment-alipay-dark {
-    background-image: url("../images/payments/alipay-dark.svg");
+    /* background-image: url("../images/payments/alipay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-alipay {
-    background-image: url("../images/payments/alipay.svg");
+    /* background-image: url("../images/payments/alipay.svg"); */
+    margin: 0px;
 }
 
 .payment-amazon-dark {
-    background-image: url("../images/payments/amazon-dark.svg");
+    /* background-image: url("../images/payments/amazon-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-amazon {
-    background-image: url("../images/payments/amazon.svg");
+    /* background-image: url("../images/payments/amazon.svg"); */
+    margin: 0px;
 }
 
 .payment-americanexpress-dark {
-    background-image: url("../images/payments/americanexpress-dark.svg");
+    /* background-image: url("../images/payments/americanexpress-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-americanexpress {
-    background-image: url("../images/payments/americanexpress.svg");
+    /* background-image: url("../images/payments/americanexpress.svg"); */
+    margin: 0px;
 }
 
 .payment-applepay-dark {
-    background-image: url("../images/payments/applepay-dark.svg");
+    /* background-image: url("../images/payments/applepay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-applepay {
-    background-image: url("../images/payments/applepay.svg");
+    /* background-image: url("../images/payments/applepay.svg"); */
+    margin: 0px;
 }
 
 .payment-bancontact-dark {
-    background-image: url("../images/payments/bancontact-dark.svg");
+    /* background-image: url("../images/payments/bancontact-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-bancontact {
-    background-image: url("../images/payments/bancontact.svg");
+    /* background-image: url("../images/payments/bancontact.svg"); */
+    margin: 0px;
 }
 
 .payment-bitcoin-dark {
-    background-image: url("../images/payments/bitcoin-dark.svg");
+    /* background-image: url("../images/payments/bitcoin-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-bitcoin {
-    background-image: url("../images/payments/bitcoin.svg");
+    /* background-image: url("../images/payments/bitcoin.svg"); */
+    margin: 0px;
 }
 
 .payment-bitpay-dark {
-    background-image: url("../images/payments/bitpay-dark.svg");
+    /* background-image: url("../images/payments/bitpay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-bitpay {
-    background-image: url("../images/payments/bitpay.svg");
+    /* background-image: url("../images/payments/bitpay.svg"); */
+    margin: 0px;
 }
 
 .payment-cirrus-dark {
-    background-image: url("../images/payments/cirrus-dark.svg");
+    /* background-image: url("../images/payments/cirrus-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-cirrus {
-    background-image: url("../images/payments/cirrus.svg");
+    /* background-image: url("../images/payments/cirrus.svg"); */
+    margin: 0px;
 }
 
 .payment-clickandbuy-dark {
-    background-image: url("../images/payments/clickandbuy-dark.svg");
+    /* background-image: url("../images/payments/clickandbuy-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-clickandbuy {
-    background-image: url("../images/payments/clickandbuy.svg");
+    /* background-image: url("../images/payments/clickandbuy.svg"); */
+    margin: 0px;
 }
 
 .payment-coinkite-dark {
-    background-image: url("../images/payments/coinkite-dark.svg");
+    /* background-image: url("../images/payments/coinkite-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-coinkite {
-    background-image: url("../images/payments/coinkite.svg");
+    /* background-image: url("../images/payments/coinkite.svg"); */
+    margin: 0px;
 }
 
 .payment-dinersclub-dark {
-    background-image: url("../images/payments/dinersclub-dark.svg");
+    /* background-image: url("../images/payments/dinersclub-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-dinersclub {
-    background-image: url("../images/payments/dinersclub.svg");
+    /* background-image: url("../images/payments/dinersclub.svg"); */
+    margin: 0px;
 }
 
 .payment-directdebit-dark {
-    background-image: url("../images/payments/directdebit-dark.svg");
+    /* background-image: url("../images/payments/directdebit-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-directdebit {
-    background-image: url("../images/payments/directdebit.svg");
+    /* background-image: url("../images/payments/directdebit.svg"); */
+    margin: 0px;
 }
 
 .payment-discover-dark {
-    background-image: url("../images/payments/discover-dark.svg");
+    /* background-image: url("../images/payments/discover-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-discover {
-    background-image: url("../images/payments/discover.svg");
+    /* background-image: url("../images/payments/discover.svg"); */
+    margin: 0px;
 }
 
 .payment-dwolla-dark {
-    background-image: url("../images/payments/dwolla-dark.svg");
+    /* background-image: url("../images/payments/dwolla-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-dwolla {
-    background-image: url("../images/payments/dwolla.svg");
+    /* background-image: url("../images/payments/dwolla.svg"); */
+    margin: 0px;
 }
 
 .payment-ebay-dark {
-    background-image: url("../images/payments/ebay-dark.svg");
+    /* background-image: url("../images/payments/ebay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-ebay {
-    background-image: url("../images/payments/ebay.svg");
+    /* background-image: url("../images/payments/ebay.svg"); */
+    margin: 0px;
 }
 
 .payment-eway-dark {
-    background-image: url("../images/payments/eway-dark.svg");
+    /* background-image: url("../images/payments/eway-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-eway {
-    background-image: url("../images/payments/eway.svg");
+    /* background-image: url("../images/payments/eway.svg"); */
+    margin: 0px;
 }
 
 .payment-giropay-dark {
-    background-image: url("../images/payments/giropay-dark.svg");
+    /* background-image: url("../images/payments/giropay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-giropay {
-    background-image: url("../images/payments/giropay.svg");
+    /* background-image: url("../images/payments/giropay.svg"); */
+    margin: 0px;
 }
 
 .payment-googlewallet-dark {
-    background-image: url("../images/payments/googlewallet-dark.svg");
+    /* background-image: url("../images/payments/googlewallet-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-googlewallet {
-    background-image: url("../images/payments/googlewallet.svg");
+    /* background-image: url("../images/payments/googlewallet.svg"); */
+    margin: 0px;
 }
 
 .payment-ingenico-dark {
-    background-image: url("../images/payments/ingenico-dark.svg");
+    /* background-image: url("../images/payments/ingenico-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-ingenico {
-    background-image: url("../images/payments/ingenico.svg");
+    /* background-image: url("../images/payments/ingenico.svg"); */
+    margin: 0px;
 }
 
 .payment-jcb-dark {
-    background-image: url("../images/payments/jcb-dark.svg");
+    /* background-image: url("../images/payments/jcb-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-jcb {
-    background-image: url("../images/payments/jcb.svg");
+    /* background-image: url("../images/payments/jcb.svg"); */
+    margin: 0px;
 }
 
 .payment-klarna-dark {
-    background-image: url("../images/payments/klarna-dark.svg");
+    /* background-image: url("../images/payments/klarna-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-klarna {
-    background-image: url("../images/payments/klarna.svg");
+    /* background-image: url("../images/payments/klarna.svg"); */
+    margin: 0px;
 }
 
 .payment-laser-dark {
-    background-image: url("../images/payments/laser-dark.svg");
+    /* background-image: url("../images/payments/laser-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-laser {
-    background-image: url("../images/payments/laser.svg");
+    /* background-image: url("../images/payments/laser.svg"); */
+    margin: 0px;
 }
 
 .payment-maestro-dark {
-    background-image: url("../images/payments/maestro-dark.svg");
+    /* background-image: url("../images/payments/maestro-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-maestro {
-    background-image: url("../images/payments/maestro.svg");
+    /* background-image: url("../images/payments/maestro.svg"); */
+    margin: 0px;
 }
 
 .payment-mastercard-dark {
-    background-image: url("../images/payments/mastercard-dark.svg");
+    /* background-image: url("../images/payments/mastercard-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-mastercard {
-    background-image: url("../images/payments/mastercard.svg");
+    /* background-image: url("../images/payments/mastercard.svg"); */
+    margin: 0px;
 }
 
 .payment-monero-dark {
-    background-image: url("../images/payments/monero-dark.svg");
+    /* background-image: url("../images/payments/monero-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-monero {
-    background-image: url("../images/payments/monero.svg");
+    /* background-image: url("../images/payments/monero.svg"); */
+    margin: 0px;
 }
 
 .payment-neteller-dark {
-    background-image: url("../images/payments/neteller-dark.svg");
+    /* background-image: url("../images/payments/neteller-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-neteller {
-    background-image: url("../images/payments/neteller.svg");
+    /* background-image: url("../images/payments/neteller.svg"); */
+    margin: 0px;
 }
 
 .payment-ogone-dark {
-    background-image: url("../images/payments/ogone-dark.svg");
+    /* background-image: url("../images/payments/ogone-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-ogone {
-    background-image: url("../images/payments/ogone.svg");
+    /* background-image: url("../images/payments/ogone.svg"); */
+    margin: 0px;
 }
 
 .payment-okpay-dark {
-    background-image: url("../images/payments/okpay-dark.svg");
+    /* background-image: url("../images/payments/okpay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-okpay {
-    background-image: url("../images/payments/okpay.svg");
+    /* background-image: url("../images/payments/okpay.svg"); */
+    margin: 0px;
 }
 
 .payment-paybox-dark {
-    background-image: url("../images/payments/paybox-dark.svg");
+    /* background-image: url("../images/payments/paybox-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-paybox {
-    background-image: url("../images/payments/paybox.svg");
+    /* background-image: url("../images/payments/paybox.svg"); */
+    margin: 0px;
 }
 
 .payment-paymill-dark {
-    background-image: url("../images/payments/paymill-dark.svg");
+    /* background-image: url("../images/payments/paymill-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-paymill {
-    background-image: url("../images/payments/paymill.svg");
+    /* background-image: url("../images/payments/paymill.svg"); */
+    margin: 0px;
 }
 
 .payment-payone-dark {
-    background-image: url("../images/payments/payone-dark.svg");
+    /* background-image: url("../images/payments/payone-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-payone {
-    background-image: url("../images/payments/payone.svg");
+    /* background-image: url("../images/payments/payone.svg"); */
+    margin: 0px;
 }
 
 .payment-payoneer-dark {
-    background-image: url("../images/payments/payoneer-dark.svg");
+    /* background-image: url("../images/payments/payoneer-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-payoneer {
-    background-image: url("../images/payments/payoneer.svg");
+    /* background-image: url("../images/payments/payoneer.svg"); */
+    margin: 0px;
 }
 
 .payment-paypal-dark {
-    background-image: url("../images/payments/paypal-dark.svg");
+    /* background-image: url("../images/payments/paypal-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-paypal {
-    background-image: url("../images/payments/paypal.svg");
+    /* background-image: url("../images/payments/paypal.svg"); */
+    margin: 0px;
 }
 
 .payment-paysafecard-dark {
-    background-image: url("../images/payments/paysafecard-dark.svg");
+    /* background-image: url("../images/payments/paysafecard-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-paysafecard {
-    background-image: url("../images/payments/paysafecard.svg");
+    /* background-image: url("../images/payments/paysafecard.svg"); */
+    margin: 0px;
 }
 
 .payment-payu-dark {
-    background-image: url("../images/payments/payu-dark.svg");
+    /* background-image: url("../images/payments/payu-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-payu {
-    background-image: url("../images/payments/payu.svg");
+    /* background-image: url("../images/payments/payu.svg"); */
+    margin: 0px;
 }
 
 .payment-payza-dark {
-    background-image: url("../images/payments/payza-dark.svg");
+    /* background-image: url("../images/payments/payza-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-payza {
-    background-image: url("../images/payments/payza.svg");
+    /* background-image: url("../images/payments/payza.svg"); */
+    margin: 0px;
 }
 
 .payment-ripple-dark {
-    background-image: url("../images/payments/ripple-dark.svg");
+    /* background-image: url("../images/payments/ripple-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-ripple {
-    background-image: url("../images/payments/ripple.svg");
+    /* background-image: url("../images/payments/ripple.svg"); */
+    margin: 0px;
 }
 
 .payment-sage-dark {
-    background-image: url("../images/payments/sage-dark.svg");
+    /* background-image: url("../images/payments/sage-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-sage {
-    background-image: url("../images/payments/sage.svg");
+    /* background-image: url("../images/payments/sage.svg"); */
+    margin: 0px;
 }
 
 .payment-sepa-dark {
-    background-image: url("../images/payments/sepa-dark.svg");
+    /* background-image: url("../images/payments/sepa-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-sepa {
-    background-image: url("../images/payments/sepa.svg");
+    /* background-image: url("../images/payments/sepa.svg"); */
+    margin: 0px;
 }
 
 .payment-shopify-dark {
-    background-image: url("../images/payments/shopify-dark.svg");
+    /* background-image: url("../images/payments/shopify-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-shopify {
-    background-image: url("../images/payments/shopify.svg");
+    /* background-image: url("../images/payments/shopify.svg"); */
+    margin: 0px;
 }
 
 .payment-skrill-dark {
-    background-image: url("../images/payments/skrill-dark.svg");
+    /* background-image: url("../images/payments/skrill-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-skrill {
-    background-image: url("../images/payments/skrill.svg");
+    /* background-image: url("../images/payments/skrill.svg"); */
+    margin: 0px;
 }
 
 .payment-solo-dark {
-    background-image: url("../images/payments/solo-dark.svg");
+    /* background-image: url("../images/payments/solo-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-solo {
-    background-image: url("../images/payments/solo.svg");
+    /* background-image: url("../images/payments/solo.svg"); */
+    margin: 0px;
 }
 
 .payment-square-dark {
-    background-image: url("../images/payments/square-dark.svg");
+    /* background-image: url("../images/payments/square-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-square {
-    background-image: url("../images/payments/square.svg");
+    /* background-image: url("../images/payments/square.svg"); */
+    margin: 0px;
 }
 
 .payment-stripe-dark {
-    background-image: url("../images/payments/stripe-dark.svg");
+    /* background-image: url("../images/payments/stripe-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-stripe {
-    background-image: url("../images/payments/stripe.svg");
+    /* background-image: url("../images/payments/stripe.svg"); */
+    margin: 0px;
 }
 
 .payment-switch-dark {
-    background-image: url("../images/payments/switch-dark.svg");
+    /* background-image: url("../images/payments/switch-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-switch {
-    background-image: url("../images/payments/switch.svg");
+    /* background-image: url("../images/payments/switch.svg"); */
+    margin: 0px;
 }
 
 .payment-ukash-dark {
-    background-image: url("../images/payments/ukash-dark.svg");
+    /* background-image: url("../images/payments/ukash-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-ukash {
-    background-image: url("../images/payments/ukash.svg");
+    /* background-image: url("../images/payments/ukash.svg"); */
+    margin: 0px;
 }
 
 .payment-unionpay-dark {
-    background-image: url("../images/payments/unionpay-dark.svg");
+    /* background-image: url("../images/payments/unionpay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-unionpay {
-    background-image: url("../images/payments/unionpay.svg");
+    /* background-image: url("../images/payments/unionpay.svg"); */
+    margin: 0px;
 }
 
 .payment-verifone-dark {
-    background-image: url("../images/payments/verifone-dark.svg");
+    /* background-image: url("../images/payments/verifone-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-verifone {
-    background-image: url("../images/payments/verifone.svg");
+    /* background-image: url("../images/payments/verifone.svg"); */
+    margin: 0px;
 }
 
 .payment-verisign-dark {
-    background-image: url("../images/payments/verisign-dark.svg");
+    /* background-image: url("../images/payments/verisign-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-verisign {
-    background-image: url("../images/payments/verisign.svg");
+    /* background-image: url("../images/payments/verisign.svg"); */
+    margin: 0px;
 }
 
 .payment-visa-dark {
-    background-image: url("../images/payments/visa-dark.svg");
+    /* background-image: url("../images/payments/visa-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-visa {
-    background-image: url("../images/payments/visa.svg");
+    /* background-image: url("../images/payments/visa.svg"); */
+    margin: 0px;
 }
 
 .payment-webmoney-dark {
-    background-image: url("../images/payments/webmoney-dark.svg");
+    /* background-image: url("../images/payments/webmoney-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-webmoney {
-    background-image: url("../images/payments/webmoney.svg");
+    /* background-image: url("../images/payments/webmoney.svg"); */
+    margin: 0px;
 }
 
 .payment-westernunion-dark {
-    background-image: url("../images/payments/westernunion-dark.svg");
+    /* background-image: url("../images/payments/westernunion-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-westernunion {
-    background-image: url("../images/payments/westernunion.svg");
+    /* background-image: url("../images/payments/westernunion.svg"); */
+    margin: 0px;
 }
 
 .payment-worldpay-dark {
-    background-image: url("../images/payments/worldpay-dark.svg");
+    /* background-image: url("../images/payments/worldpay-dark.svg"); */
+    margin: 0px;
 }
 
 .payment-worldpay {
-    background-image: url("../images/payments/worldpay.svg");
+    /* background-image: url("../images/payments/worldpay.svg"); */
+    margin: 0px;
 }
 
 .bg-colorsvg {

@@ -122,11 +122,13 @@ const Form = (props) => {
     }
   };
 
+  
+
   //Rendering jsx
   return (
     <>
       <div className="container">
-        <input type="checkbox" id="flip" />
+        <input type="checkbox" checked id="flip" />
         <div className="cover"></div>
         <form action="#">
           <div className="form-content">

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'themify';
-  src: url("../fonts/themify/themify.eot?-fvbane");
-  src: url("../fonts/themify/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("../fonts/themify/themify.woff?-fvbane") format("woff"), url("../fonts/themify/themify.ttf?-fvbane") format("truetype"), url("../fonts/themify/themify.svg?-fvbane#themify") format("svg");
+  src: url("../iconfonts/fonts/themify/themify.eot?-fvbane");
+  src: url("../iconfonts/fonts/themify/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("../iconfonts/fonts/themify/themify.woff?-fvbane") format("woff"), url("../iconfonts/fonts/themify/themify.ttf?-fvbane") format("truetype"), url("../iconfonts/fonts/themify/themify.svg?-fvbane#themify") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1450,8 +1450,8 @@
  */
 @font-face {
   font-family: 'weathericons';
-  src: url("../fonts/weathericons/weathericons-regular-webfont.eot");
-  src: url("../fonts/weathericons/weathericons-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/weathericons/weathericons-regular-webfont.woff2") format("woff2"), url("../fonts/weathericons/weathericons-regular-webfont.woff") format("woff"), url("../fonts/weathericons/weathericons-regular-webfont.ttf") format("truetype"), url("../fonts/weathericons/weathericons-regular-webfont.svg#weather_iconsregular") format("svg");
+  src: url("../iconfonts/fonts/weathericons/weathericons-regular-webfont.eot");
+  src: url("../iconfonts/fonts/weathericons/weathericons-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../iconfonts/fonts/weathericons/weathericons-regular-webfont.woff2") format("woff2"), url("../iconfonts/fonts/weathericons/weathericons-regular-webfont.woff") format("woff"), url("../iconfonts/fonts/weathericons/weathericons-regular-webfont.ttf") format("truetype"), url("../iconfonts/fonts/weathericons/weathericons-regular-webfont.svg#weather_iconsregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -12833,12 +12833,12 @@
 .si-social-steam:before {
   content: "\e620";
 }
-@font-face {
+/* @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
+  src: url('../fonts/fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+} */
 .glyphicon {
   position: relative;
   top: 1px;
