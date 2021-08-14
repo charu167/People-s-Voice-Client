@@ -5,6 +5,10 @@ import { NavLink, useHistory, useRouteMatch } from "react-router-dom";
 const Sidebar = () => {
   const { path, url } = useRouteMatch();
 
+  const dropDown = () =>{
+    document.getElementById("dropdown").classList.toggle("show")
+  }
+
   return (
     <>
       {/* <div className="flex-shrink-0 p-3 bg-white Sidebar" >
@@ -73,7 +77,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li className="nav-links-li">
-            <div className="icon-link">
+            <div className="icon-link" id="dropdown">
               <NavLink className="nav-links-navlink" to="#">
                 <i className="nav-links-i bx bx-box"></i>
                 <span className="link-name">Complaint</span>
@@ -83,14 +87,14 @@ const Sidebar = () => {
           </li>
 
           <li className="nav-links-li">
-            <div className="icon-link">
+            <div className="icon-link"  onClick={dropDown}>
               <NavLink className="nav-links-navlink" to="#">
               <i class='nav-links-i bx bx-ghost'></i>
                 <span className="link-name">Gramsevak</span>
               </NavLink>
               <i className="nav-links-i bx bx-chevron-down"></i>
             </div>
-            <ul className="sub-menu">
+            <ul className="sub-menu" id="dropdown">
               <li className="nav-links-li">
                 <NavLink className="nav-links-navlink" to="#">
                   Registeration
