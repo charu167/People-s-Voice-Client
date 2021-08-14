@@ -236,13 +236,7 @@ form .form-content label:hover {
 }
 
 
-.sidebar{
-  width: 280px;
-  height: 600px;
-  display: block;
-  margin-top: 59px;
-  /* border-top: 2px solid black; */
-}
+
 
 .bell-iocn{
   margin-left: 200px;

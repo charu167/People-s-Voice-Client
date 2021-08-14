@@ -1,4 +1,8 @@
 import "./App.css";
+import "./css/sidebar.css"
+import "./css/styled.css";
+import "./css/custom.css";
+import "./css/adminDashboard.css";
 
 
 // -Bootstrap.min css
@@ -35,9 +39,7 @@ import "../src/assets/skins/demo.css"
 
 
 
-import "./css/styled.css";
-import "./css/custom.css";
-import "./css/adminDashboard.css";
+
 import { Route } from "react-router-dom";
 
 import Gramsevak from "./components/Gramsevak";
