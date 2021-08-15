@@ -13,7 +13,8 @@ const GSRegLog = () => {
   return (
     <div className="outermost-container">
       <div className="outer-container">
-        <Form props={url} />
+        {/* <Form props={url} /> */}
+        <h1>Grmsevak Registeration</h1>
       </div>
     </div>
   );

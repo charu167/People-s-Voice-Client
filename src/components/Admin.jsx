@@ -18,12 +18,13 @@ const Admin = () => {
   return (
     <>
       <Route path={`${path}`}>
+        <Sidebar />
+      </Route>
+      
+      <Route path={`${path}`}>
         <Navbar />
       </Route>
 
-      <Route path={`${path}`}>
-        <Sidebar />
-      </Route>
 
       <Route exact path={`${path}`}>
         <AdminDashboard />

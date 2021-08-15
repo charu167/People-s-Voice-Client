@@ -1,115 +1,138 @@
-import React from "react";
-import $ from "jquery";
-import { NavLink, useHistory, useRouteMatch } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useRouteMatch } from "react-router-dom";
 
 const Sidebar = () => {
   const { path, url } = useRouteMatch();
+  const [inactive, setInactive] = useState(true);
+  const [expand, setExpand] = useState(false);
 
-  const dropDown = () =>{
-    document.getElementById("dropdown").classList.toggle("show")
-  }
+  useEffect(() => {
+    if (inactive) {
+      document.querySelectorAll(".sub-menu").forEach((el) => {
+        el.classList.remove("active");
+      });
+    }
+  });
 
   return (
-    <>
-      {/* <div className="flex-shrink-0 p-3 bg-white Sidebar" >
-        <NavLink
-          to={`${url}`}
-          className="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom"
-        >
-          
-          <span className="fs-5 fw-semibold">Dashboard</span>
-        </NavLink>
-        <ul className="list-unstyled ps-0">
-          <li className="mb-1">
-            <button
-              className="btn btn-toggle align-items-center rounded collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#home-collapse"
-              aria-expanded="false"
-            >
-              Gramsevak
-            </button>
-            <div className="collapse" id="home-collapse" >
-              <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li>
-                  <NavLink to={`${url}/gsreg`} className="link-dark rounded">
-                    Registeration
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to={`${url}/gslist`} className="link-dark rounded">
-                    Gramsevak List
-                  </NavLink>
-                </li>
-                
-              </ul>
-            </div>
-          </li>
-          <li className="mb-1">
-            <NavLink to={`${url}/complainreg`}> 
-              Complaint registeration
-            </NavLink>
-          </li>
-          <li className="mb-1">
-            <NavLink to={`${url}/userdetail`}> 
-              User details
-            </NavLink>
-          </li>
-          <li className="mb-1">
-            <NavLink to={`${url}/reports`}> 
-              Reports
-            </NavLink>
-          </li>
-          
-        </ul>
+    <div className={`side-bar ${inactive ? "inactive" : ""}`}>
+      <div className="top-section">
+        <div className="logo" onClick={() => setInactive(!inactive)}>
+          <i class="fas fa-bars"></i>
+        </div>
+        {/* <div className="toggle-menu-btn" onClick={() => setInactive(!inactive)}>
+          {inactive ? (
+            <i class="bx bx-right-arrow-alt"></i>
+          ) : (
+            <i class="bx bx-left-arrow-alt"></i>
+          )}
+        </div> */}
+      </div>
+      {/* <div className="search-box">
+        <button className="search-btn">
+          <i class="bx bx-search-alt"></i>
+        </button>
+        <input type="text" placeholder="search..." />
       </div> */}
 
-      <div className="sidebar">
-        <div className="logo-details">
-          <i className="nav-links-i bx bxl-react"></i>
-          <span className="logo-name">People's Voice</span>
-        </div>
-        <ul className="nav-links">
-          <li className="nav-links-li">
-            <NavLink className="nav-links-navlink" to="#">
-              <i className="nav-links-i bx bxs-dashboard"></i>
-              <span className="link-name">Dashboard</span>
+      {/* <div className="divider"></div> */}
+
+      <div className="main-menu">
+        <ul>
+          <li
+            className="menu-item-major"
+            onClick={() => {
+              if (inactive) {
+                setInactive(false);
+              }
+            }}
+          >
+            <NavLink className="menu-item" to={`${url}`}>
+              <div className="menu-icon">
+                {/* <i class="bx bxs-dashboard"></i> */}
+                <i class="fab fa-gripfire"></i>
+              </div>
+              <span>Dashboard</span>
             </NavLink>
           </li>
-          <li className="nav-links-li">
-            <div className="icon-link" id="dropdown">
-              <NavLink className="nav-links-navlink" to="#">
-                <i className="nav-links-i bx bx-box"></i>
-                <span className="link-name">Complaint</span>
-              </NavLink>
-              <i className="nav-links-i bx bx-chevron-down"></i>
-            </div>
-          </li>
-
-          <li className="nav-links-li">
-            <div className="icon-link"  onClick={dropDown}>
-              <NavLink className="nav-links-navlink" to="#">
-              <i class='nav-links-i bx bx-ghost'></i>
-                <span className="link-name">Gramsevak</span>
-              </NavLink>
-              <i className="nav-links-i bx bx-chevron-down"></i>
-            </div>
-            <ul className="sub-menu" id="dropdown">
-              <li className="nav-links-li">
-                <NavLink className="nav-links-navlink" to="#">
-                  Registeration
-                </NavLink>
+          <li
+            className="menu-item-major"
+            onClick={() => {
+              if (inactive) {
+                setInactive(false);
+              }
+            }}
+          >
+            <NavLink
+              className="menu-item"
+              onClick={() => setExpand(!expand)}
+              to="#"
+            >
+              <div className="menu-icon">
+                {/* <i class="bx bx-ghost"></i> */}
+                <i class="fas fa-users"></i>
+              </div>
+              <span>Gramsevak</span>
+            </NavLink>
+            <ul className={`sub-menu ${expand ? "active" : ""}`}>
+              <li>
+                <NavLink to={`${url}/gsreg`}>Registeration</NavLink>
               </li>
-              <li className="nav-links-li">
-                <NavLink className="nav-links-navlink" to="#">
-                  List
-                </NavLink>
+              <li>
+                <NavLink to={`${url}/gslist`}>List</NavLink>
               </li>
             </ul>
           </li>
+          <li
+            className="menu-item-major"
+            onClick={() => {
+              if (inactive) {
+                setInactive(false);
+              }
+            }}
+          >
+            <NavLink className="menu-item" to={`${url}/complainreg`}>
+              <div className="menu-icon">
+                {/* <i class="bx bx-box"></i> */}
+                <i class="fas fa-box-open"></i>
+              </div>
+              <span>Complaint</span>
+            </NavLink>
+          </li>
+          <li
+            className="menu-item-major"
+            onClick={() => {
+              if (inactive) {
+                setInactive(false);
+              }
+            }}
+          >
+            <NavLink className="menu-item" to={`${url}/userdetail`}>
+              <div className="menu-icon">
+                <i class="bx bxs-user-detail"></i>
+              </div>
+              <span>User Details</span>
+            </NavLink>
+          </li>
+          <li
+            className="menu-item-major"
+            onClick={() => {
+              if (inactive) {
+                setInactive(false);
+              }
+            }}
+          >
+            <NavLink className="menu-item" to={`${url}/reports`}>
+              <div className="menu-icon">
+                {/* <i class="bx bxs-report"></i> */}
+                <i class="fas fa-flag-checkered"></i>
+              </div>
+              <span>Reports</span>
+            </NavLink>
+          </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
