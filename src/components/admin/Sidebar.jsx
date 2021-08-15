@@ -124,25 +124,12 @@ const Sidebar = () => {
               }
             }}
           >
-            <NavLink
-              className="menu-item"
-              onClick={() => setExpandReports(!expandReports)}
-              to="#"
-            >
+            <NavLink className="menu-item" to={`${url}/reports`}>
               <div className="menu-icon">
-                {/* <i class="bx bx-ghost"></i> */}
                 <i class="fas fa-flag-checkered"></i>
               </div>
               <span>Reports</span>
             </NavLink>
-            <ul className={`sub-menu ${expandReports ? "active" : ""}`}>
-              <li>
-                <NavLink to={`${url}/#`}>Location Wise</NavLink>
-              </li>
-              <li>
-                <NavLink to={`${url}/#`}>Type Wise</NavLink>
-              </li>
-            </ul>
           </li>
         </ul>
       </div>

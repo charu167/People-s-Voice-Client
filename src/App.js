@@ -2,10 +2,11 @@ import "./App.css";
 import "./css/sidebar.css";
 import "./css/styled.css";
 import "./css/custom.css";
-
-import "./css/gslist.css"
+import "./css/gsreg.css";
+import "./css/gslist.css";
 import "./css/navbar.css";
 import "./css/adminDashboard.css";
+import "./css/complainReg.css";
 
 // -Bootstrap.min css
 import "../src/assets/plugins/bootstrap/css/bootstrap.min.css";

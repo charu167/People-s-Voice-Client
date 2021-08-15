@@ -1,15 +1,28 @@
 import React from "react";
-import { FaFacebookSquare,  FaInstagramSquare,  FaYoutubeSquare} from 'react-icons/fa'
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaYoutubeSquare,
+} from "react-icons/fa";
 // import $ from "jquery";
 import { NavLink, useRouteMatch } from "react-router-dom";
 
 const Navbar = () => {
   const { path, url } = useRouteMatch();
+  let elem = document.documentElement;
 
+  const goFS = document.getElementById("full");
+
+  // goFS.addEventListener(
+  //   "click",
+  //   function () {
+  //     document.body.requestFullscreen();
+  //   },
+  //   false
+  // );
   return (
     <>
       <nav className="main-nav">
-
         {/* LOGO */}
         <div className="logo">
           <h2>
@@ -21,10 +34,18 @@ const Navbar = () => {
         {/* main links */}
         <div className="menu-links">
           <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="#">About</NavLink></li>
-            <li><NavLink to="#">Contact</NavLink></li>
-            <li><NavLink to="#">Services</NavLink></li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">Contact</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">Services</NavLink>
+            </li>
           </ul>
         </div>
 
@@ -32,42 +53,25 @@ const Navbar = () => {
         <div className="media-links">
           <ul className="media-social">
             <li>
-              <NavLink to={`${url}/priority`}><i class="far fa-bell"></i></NavLink>
+              <NavLink to={`${url}/priority`}>
+                <i class="far fa-bell"></i>
+              </NavLink>
             </li>
-            
+
             <li>
-              <NavLink to={`${url}/settings`}><i class="fas fa-cog"></i></NavLink>
+              <NavLink to={`${url}/settings`}>
+                <i class="fas fa-cog"></i>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="#" id="full">
+                <i class="bx bx-fullscreen"></i>
+              </NavLink>
             </li>
           </ul>
         </div>
       </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       {/* <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 border-bottom-5 fixed-top Navbar">
       <div className="d-flex justify-content-around">

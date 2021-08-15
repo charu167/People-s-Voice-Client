@@ -1,10 +1,10 @@
 .outermost-container {
   position: relative;
   width: 94%;
-  height: 100vh;
+  /* height: 100vh; */
   /* background-color: #48dbfb;
   background-image: linear-gradient(315deg, #48dbfb 0%, #d3d3d3 74%); */
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,6 @@
 .inner-container{
   width: 100%;
   position: absolute;
-  margin: 10px 0px;
-  /* background-color: brown; */
+  margin: 0px 0px;
+  background-color: white;
 }

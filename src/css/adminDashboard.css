@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantata+One&display=swap");
 
 .dashboard {
   display: flex;
@@ -14,43 +16,54 @@
   text-align: center;
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 9%;
+  margin-top: 5%;
+  /* border: 1px solid black; */
 }
 
 .dashboard .dashboard-item .dashboard-title {
   font-size: 35px;
-  color: rgb(53, 49, 44);
+  color: black;
+  background: rgb(183, 207, 224);
+  background: radial-gradient(
+    circle,
+    rgba(183, 207, 224, 1) 0%,
+    rgba(114, 151, 152, 1) 0%,
+    rgba(255, 255, 255, 1) 92%
+  );
+
+
+  margin-bottom: 2.5rem;
   font-weight: 600;
-  border-bottom: 1px solid gray;
+  font-family: "Cantata One", serif;
   
 }
 
 .dashboard .dashboard-item .dashboard-data {
   width: 100%;
-  height: 200px;
-  /* background-color: white; */
+  /* height: 200px; */
+  background-color: rgb(255, 255, 255);
+  margin: 0px ;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .dashboard .dashboard-item .dashboard-data .dash-card {
-  width: 100%;
-  height: 130px;
-  background-color: thistle;
-  margin: 0px 0px;
+  width: 15rem;
+  height: 8rem;
 
+  margin: 0px 10px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
+  padding: 24px 24px;
 
-  background: rgb(164, 176, 184);
-  background: radial-gradient(
-    circle,
-    rgba(164, 176, 184, 1) 0%,
-    rgba(183, 207, 224, 1) 0%,
-    rgba(254, 254, 254, 1) 100%
-  );
+  background-color: white;
+  box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
 
   padding: 5px;
 }
@@ -59,23 +72,33 @@
   /* background-color: tomato; */
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 
   /* border-radius: 10px; */
 }
 
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half span {
-  font-size: 30px;
+  font-size: 20px;
+  color: rgb(103, 163, 163);
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
   /* background-color: black; */
-  color: rgb(37, 26, 37);
+  /* color: rgb(37, 26, 37); */
 }
 
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a {
   color: rgb(37, 26, 37);
   font-size: 30px;
+  transition: 0.5s;
 }
 
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a:hover {
   color: rgb(173, 147, 173);
+}
+
+.dashboard i {
+  font-size: 55px;
+  /* color: blue; */
+  transform: rotateY(180deg);
 }

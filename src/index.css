@@ -1,12 +1,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  /* background-color: transparent; */
+  /* background-color: white; */
 }
 
 body {
   overflow-y: hidden;
   overflow-x: hidden;
+  /* background-color: black; */
 }
 
 ::-webkit-scrollbar {

@@ -10,6 +10,7 @@ import GSList from "./admin/GSList";
 import ComplaintReg from "./admin/ComplaintReg";
 import UserDetails from "./admin/UserDetails";
 import Settings from "./admin/Settings";
+import Reports from "./admin/Reports";
 
 const Admin = () => {
   const { path, url } = useRouteMatch();
@@ -49,9 +50,9 @@ const Admin = () => {
         <UserDetails/>
       </Route>
 
-      {/* <Route path={`${path}/reports`}>
+      <Route path={`${path}/reports`}>
         <Reports/>
-      </Route> */}
+      </Route>
 
       <Route path={`${path}/settings`}>
         <Settings/>
