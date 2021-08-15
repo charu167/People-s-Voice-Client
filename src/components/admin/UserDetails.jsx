@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const UserDetails = () =>{
-    return(
-        <>
-            <h1 className="temp-title">User details</h1>
-        </>
-    )
-}
+const UserDetails = () => {
+  return (
+    <>
+      <div className="outermost-container">
+        <h1 className="">User details</h1>
+      </div>
+    </>
+  );
+};
 
-export default UserDetails
+export default UserDetails;

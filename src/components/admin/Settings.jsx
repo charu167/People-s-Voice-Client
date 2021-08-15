@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Settings = () =>{
-    return(
-        <>
-            <h1 className="temp-title">Admin settings</h1>
-        </>
-    )
-}
+const Settings = () => {
+  return (
+    <>
+      <div className="outermost-container">
+        <h1 className="">Admin settings</h1>
+      </div>
+    </>
+  );
+};
 
-export default Settings
+export default Settings;

@@ -9,7 +9,6 @@ import GSRegLog from "./admin/GSRegLog";
 import GSList from "./admin/GSList";
 import ComplaintReg from "./admin/ComplaintReg";
 import UserDetails from "./admin/UserDetails";
-import Reports from "./admin/Reports";
 import Settings from "./admin/Settings";
 
 const Admin = () => {
@@ -50,9 +49,9 @@ const Admin = () => {
         <UserDetails/>
       </Route>
 
-      <Route path={`${path}/reports`}>
+      {/* <Route path={`${path}/reports`}>
         <Reports/>
-      </Route>
+      </Route> */}
 
       <Route path={`${path}/settings`}>
         <Settings/>

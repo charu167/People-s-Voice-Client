@@ -1,5 +1,81 @@
-.container1{
-    margin: 20px;
-    background-color: cadetblue;
-    text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* background-color: burlywood; */
+  font-family: "Noto Serif", serif;
+}
+
+.dashboard .dashboard-item {
+  /* background-color: teal; */
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.dashboard .dashboard-item .dashboard-title {
+  font-size: 35px;
+  color: rgb(53, 49, 44);
+  font-weight: 600;
+  border-bottom: 1px solid gray;
+  
+}
+
+.dashboard .dashboard-item .dashboard-data {
+  width: 100%;
+  height: 200px;
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.dashboard .dashboard-item .dashboard-data .dash-card {
+  width: 100%;
+  height: 130px;
+  background-color: thistle;
+  margin: 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background: rgb(164, 176, 184);
+  background: radial-gradient(
+    circle,
+    rgba(164, 176, 184, 1) 0%,
+    rgba(183, 207, 224, 1) 0%,
+    rgba(254, 254, 254, 1) 100%
+  );
+
+  padding: 5px;
+}
+
+.dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half {
+  /* background-color: tomato; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  /* border-radius: 10px; */
+}
+
+.dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half span {
+  font-size: 30px;
+  /* background-color: black; */
+  color: rgb(37, 26, 37);
+}
+
+.dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a {
+  color: rgb(37, 26, 37);
+  font-size: 30px;
+}
+
+.dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a:hover {
+  color: rgb(173, 147, 173);
 }

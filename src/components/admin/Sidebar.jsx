@@ -5,6 +5,7 @@ const Sidebar = () => {
   const { path, url } = useRouteMatch();
   const [inactive, setInactive] = useState(true);
   const [expand, setExpand] = useState(false);
+  const [expandReports, setExpandReports] = useState(false);
 
   useEffect(() => {
     if (inactive) {
@@ -114,6 +115,7 @@ const Sidebar = () => {
               <span>User Details</span>
             </NavLink>
           </li>
+
           <li
             className="menu-item-major"
             onClick={() => {
@@ -122,13 +124,25 @@ const Sidebar = () => {
               }
             }}
           >
-            <NavLink className="menu-item" to={`${url}/reports`}>
+            <NavLink
+              className="menu-item"
+              onClick={() => setExpandReports(!expandReports)}
+              to="#"
+            >
               <div className="menu-icon">
-                {/* <i class="bx bxs-report"></i> */}
+                {/* <i class="bx bx-ghost"></i> */}
                 <i class="fas fa-flag-checkered"></i>
               </div>
               <span>Reports</span>
             </NavLink>
+            <ul className={`sub-menu ${expandReports ? "active" : ""}`}>
+              <li>
+                <NavLink to={`${url}/#`}>Location Wise</NavLink>
+              </li>
+              <li>
+                <NavLink to={`${url}/#`}>Type Wise</NavLink>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

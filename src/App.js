@@ -2,6 +2,8 @@ import "./App.css";
 import "./css/sidebar.css";
 import "./css/styled.css";
 import "./css/custom.css";
+
+import "./css/gslist.css"
 import "./css/navbar.css";
 import "./css/adminDashboard.css";
 

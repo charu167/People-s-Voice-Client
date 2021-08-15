@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const ComplaintReg = () =>{
-    return(
-        <>
-            <h1 className="temp-title">Complaint Registeration form</h1>
-        </>
-    )
-}
+const ComplaintReg = () => {
+  return (
+    <>
+      <div className="outermost-container ">
+        <h1 className="">Complaint Registeration form</h1>
+      </div>
+    </>
+  );
+};
 
-export default ComplaintReg
+export default ComplaintReg;
