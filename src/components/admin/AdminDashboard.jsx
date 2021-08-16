@@ -1,10 +1,27 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
+import axios from 'axios'
 
 const AdminDashboard = () => {
+
+  let data;
+  
+
   return (
     <>
-      <div className="outermost-container">
+      <motion.div
+        className="outermost-container"
+        initial={{ y: 500 }}
+        animate={{
+          y: 0,
+          transition: { duration: 0.5, type: "spring" },
+        }}
+        exit={{
+          y: -500,
+          transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
+        }}
+      >
         <div className="inner-container">
           <div className="dashboard">
             <div className="dashboard-item">
@@ -101,9 +118,11 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
+
+// const AdminDashboard = MotionHoc(AdminDashboardComponent);
 
 export default AdminDashboard;

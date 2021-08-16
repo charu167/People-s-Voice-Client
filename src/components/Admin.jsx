@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, useRouteMatch } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./admin/Navbar";
 import AdminDashboard from "./admin/AdminDashboard";
@@ -17,46 +18,47 @@ const Admin = () => {
 
   return (
     <>
-      <Route path={`${path}`}>
-        <Sidebar />
-      </Route>
-      
-      <Route path={`${path}`}>
-        <Navbar />
-      </Route>
+      <AnimatePresence exitBeforeEnter>
+        <Route path={`${path}`}>
+          <Sidebar />
+        </Route>
 
+        <Route path={`${path}`}>
+          <Navbar />
+        </Route>
 
-      <Route exact path={`${path}`}>
-        <AdminDashboard />
-      </Route>
+        <Route exact path={`${path}`}>
+          <AdminDashboard />
+        </Route>
 
-      <Route path={`${path}/priority`}>
-        <PriorityComplaints />
-      </Route>
+        <Route path={`${path}/priority`}>
+          <PriorityComplaints />
+        </Route>
 
-      <Route path={`${path}/gsreg`}>
-          <GSRegLog/>
-      </Route>
+        <Route path={`${path}/gsreg`}>
+          <GSRegLog />
+        </Route>
 
-      <Route path={`${path}/gslist`}>
-        <GSList/>
-      </Route>
+        <Route path={`${path}/gslist`}>
+          <GSList />
+        </Route>
 
-      <Route path={`${path}/complainreg`}>
-        <ComplaintReg/>
-      </Route>
+        <Route path={`${path}/complainreg`}>
+          <ComplaintReg />
+        </Route>
 
-      <Route path={`${path}/userdetail`}>
-        <UserDetails/>
-      </Route>
+        <Route path={`${path}/userdetail`}>
+          <UserDetails />
+        </Route>
 
-      <Route path={`${path}/reports`}>
-        <Reports/>
-      </Route>
+        <Route path={`${path}/reports`}>
+          <Reports />
+        </Route>
 
-      <Route path={`${path}/settings`}>
-        <Settings/>
-      </Route>
+        <Route path={`${path}/settings`}>
+          <Settings />
+        </Route>
+      </AnimatePresence>
     </>
   );
 };

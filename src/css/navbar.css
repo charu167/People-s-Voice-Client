@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap");
 
 .main-nav {
   width: 100%;
@@ -15,6 +16,7 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     background-color: #2f4353;
 background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+font-family: 'STIX Two Text', serif;
 }
 
 .main-nav .logo {
@@ -24,8 +26,8 @@ background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
   align-items: center;
   color: #2C3539;
   padding-top: 10px;
-  font-family: 'STIX Two Text', serif;
   
+  /* font-family: "STIX Two Text", serif; */
 }
 
 .main-nav .logo h2 span{
@@ -49,10 +51,11 @@ background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
   color: #2C3539;
   font-size: 23px;
   transition: 0.5s;
+  font-family: 'STIX Two Text', serif;
 }
 
 .main-nav .menu-links ul li a:hover{
-  color: #E7DADA;
+  color: rgb(223, 203, 203);
 }
 
 .main-nav .media-links {
@@ -73,5 +76,5 @@ background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
 }
 
 .main-nav .media-links ul li a i:hover{
-  color: #E7DADA;
+  color: silver;
 }

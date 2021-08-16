@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Settings = () => {
-  return (
-    <>
+const MotionHoc = (component) => {
+  return function HOC() {
+    return (
       <motion.div
-        className="outermost-container"
         initial={{ y: 500 }}
         animate={{
           y: 0,
@@ -16,10 +15,10 @@ const Settings = () => {
           transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
         }}
       >
-        <h1 className="inner-container">Admin settings</h1>
+        <component />
       </motion.div>
-    </>
-  );
+    );
+  };
 };
 
-export default Settings;
+export default MotionHoc;

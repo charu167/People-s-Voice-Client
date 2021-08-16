@@ -9,6 +9,7 @@
   align-items: center;
   /* background-color: burlywood; */
   font-family: "Noto Serif", serif;
+  
 }
 
 .dashboard .dashboard-item {
@@ -23,7 +24,8 @@
 
 .dashboard .dashboard-item .dashboard-title {
   font-size: 35px;
-  color: black;
+  color: rgb(37, 26, 37);
+  /* color: black; */
   background: rgb(183, 207, 224);
   background: radial-gradient(
     circle,
@@ -34,7 +36,7 @@
 
 
   margin-bottom: 2.5rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-family: "Cantata One", serif;
   
 }
@@ -61,9 +63,10 @@
   padding: 24px 24px;
 
   background-color: white;
-  box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
+  /* box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
   -webkit-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38); */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 
   padding: 5px;
 }
@@ -94,7 +97,8 @@
 }
 
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a:hover {
-  color: rgb(173, 147, 173);
+  color: silver;
+  
 }
 
 .dashboard i {

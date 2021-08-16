@@ -1,9 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const PriorityComplaints = () => {
   return (
-    <div className="outermost-container">
+    <motion.div
+      className="outermost-container"
+      initial={{ y: 500 }}
+      animate={{
+        y: 0,
+        transition: { duration: 0.5, type: "spring" },
+      }}
+      exit={{
+        y: -500,
+        transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
+      }}
+    >
       <div className="inner-container">
         <div className="dashboard">
           <div className="dashboard-item">
@@ -15,7 +27,9 @@ const PriorityComplaints = () => {
                   <h1>69</h1>
                 </div>
                 <div className="dash-card-half">
-                  <NavLink to="#"><i class="bx bxl-flutter"></i></NavLink>
+                  <NavLink to="#">
+                    <i class="bx bxl-flutter"></i>
+                  </NavLink>
                 </div>
               </div>
               <div className="dash-card">
@@ -24,7 +38,9 @@ const PriorityComplaints = () => {
                   <h1>69</h1>
                 </div>
                 <div className="dash-card-half">
-                  <NavLink to="#"><i class="bx bxl-flutter"></i></NavLink>
+                  <NavLink to="#">
+                    <i class="bx bxl-flutter"></i>
+                  </NavLink>
                 </div>
               </div>
               <div className="dash-card">
@@ -33,14 +49,16 @@ const PriorityComplaints = () => {
                   <h1>69</h1>
                 </div>
                 <div className="dash-card-half">
-                  <NavLink to="#"><i class="bx bxl-flutter"></i></NavLink>
+                  <NavLink to="#">
+                    <i class="bx bxl-flutter"></i>
+                  </NavLink>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

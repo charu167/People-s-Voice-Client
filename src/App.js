@@ -7,6 +7,7 @@ import "./css/gslist.css";
 import "./css/navbar.css";
 import "./css/adminDashboard.css";
 import "./css/complainReg.css";
+import "./css/pageOne.css";
 
 // -Bootstrap.min css
 import "../src/assets/plugins/bootstrap/css/bootstrap.min.css";

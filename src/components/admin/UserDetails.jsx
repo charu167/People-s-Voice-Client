@@ -1,9 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const UserDetails = () => {
   return (
     <>
-      <div className="outermost-container">
+      <motion.div
+        className="outermost-container"
+        initial={{ y: 500 }}
+        animate={{
+          y: 0,
+          transition: { duration: 0.5, type: "spring" },
+        }}
+        exit={{
+          y: -500,
+          transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
+        }}
+      >
         <div className="gs-table">
           <div className="col-xl-12 col-lg-12">
             <div className="card">
@@ -94,7 +106,7 @@ const UserDetails = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

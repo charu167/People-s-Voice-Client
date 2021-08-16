@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 // import Form from "../Form";
 
 const GSRegLog = () => {
@@ -11,55 +12,144 @@ const GSRegLog = () => {
 
   //rendering jsx form
   return (
-    <div className="outermost-container">
+    <motion.div
+      className="outermost-container"
+      initial={{ y: 500 }}
+      animate={{
+        y: 0,
+        transition: { duration: 0.5, type: "spring" },
+      }}
+      exit={{
+        y: -500,
+        transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
+      }}
+    >
       <div className="inner-container">
-        <div className="gsreg">
-          <div className="title">
-            <h1>Gram Sevak Registeration</h1>
-          </div>
-          <form method="post" className="gsform">
-            <input
-              type="text"
-              name="gsname"
-              id=""
-              placeholder="Name"
-              autoComplete="OFF"
-            />
-            <input
-              type="text"
-              name="address"
-              id=""
-              placeholder="Address"
-              autoComplete="OFF"
-            />
-            <input
-              type="number"
-              name="gsphone"
-              id=""
-              placeholder="Phone number"
-              autoComplete="OFF"
-            />
-            <input
-              type="email"
-              name="gsemail"
-              id=""
-              placeholder="Email"
-              autoComplete="OFF"
-            />
-            <input
-              type="password"
-              name="gspassword"
-              id=""
-              placeholder="Password"
-              autoComplete="OFF"
-            />
-            <button type="submit">
-              Submit
-            </button>
+        <div className="gs">
+          <input type="checkbox" checked id="flip" />
+          <div className="cover"></div>
+          <form action="#">
+            <div className="form-content">
+              {/* Login form */}
+              <div className="login-form">
+                <div className="title"> Login</div>
+                <div className="input-boxes">
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="email"
+                      placeholder="Enter your email id"
+                      required
+                      name="login_email"
+                      // value={login.login_email}
+                      // onChange={handleInputLogin}
+                    />
+                  </div>
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="password"
+                      placeholder="Enter your password"
+                      required
+                      name="login_password"
+                      // value={login.login_password}
+                      // onChange={handleInputLogin}
+                    />
+                  </div>
+
+                  <button
+                    className="form-btn"
+                    type="submit"
+                    // onClick={handleLogin}
+                  >
+                    Login
+                  </button>
+                  <p className="flag"></p>
+                  <div className="text">
+                    Don't have an account ?{" "}
+                    <label for="flip">Sign Up now</label>{" "}
+                  </div>
+                </div>
+              </div>
+
+              {/* Registeration form */}
+              <div className="Signup-form">
+                <div className="title">Gramsevak Register</div>
+
+                <div className="input-boxes">
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      required
+                      name="name"
+                      // value={register.register_name}
+                      // onChange={handleInputRegister}
+                    />
+                  </div>
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      required
+                      name="address"
+                      // value={register.register_email}
+                      // onChange={handleInputRegister}
+                    />
+                  </div>
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      required
+                      name="phone"
+                      // value={register.register_password}
+                      // onChange={handleInputRegister}
+                    />
+                  </div>
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      required
+                      name="email"
+                      // value={register.register_address}
+                      // onChange={handleInputRegister}
+                    />
+                  </div>
+                  
+                  <div className="input-box">
+                    <i className="fas fa-envelop"></i>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      required
+                      name="password"
+                      // value={register.register_address}
+                      // onChange={handleInputRegister}
+                    />
+                  </div>
+                  
+
+                  <button
+                    type="submit"
+                    class="form-btn"
+                    // onClick={handleRegister}
+                  >
+                    Register
+                  </button>
+                  {/* <p className="flag"></p> */}
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

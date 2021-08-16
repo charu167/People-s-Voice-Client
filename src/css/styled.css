@@ -1,61 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
-  /* font-family: "Poppins", sans-serif; */
-}
 
-body {
-  /* min-height: 100vh; */
-  /* display: flex; */
-  /* align-items:center; */
-  /* justify-content: center; */
-  /* background: white; */
-  /* padding: 30px; */
-  height: 1000px;
-}
-.container {
-  position: relative;
-  max-width: 850px;
-  width: 850px;
+.gs {
+  /* position: absolute; */
+  width: 700px;
   background: #fff;
+  margin: 7rem auto;
   padding: 40px 30px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   perspective: 2800px;
-  margin-top: 50px;
 }
 
-.container .cover {
+.gs .cover {
   position: absolute;
   top: 0;
   left: 50%;
   height: 100%;
   width: 50%;
-  background: #106772;
+  background-color: #2f4353;
+  background-image: linear-gradient(-315deg, #2f4353 0%, #d2ccc4 74%);
   z-index: 98;
   transition: all 1s ease;
   transform-origin: left;
   transform-style: preserve-3d;
 }
 
-.container .cover::before {
+.gs .cover::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
 }
-.container #flip:checked ~ .cover {
+.gs #flip:checked ~ .cover {
   transform: rotateY(-180deg);
 }
 
-.container form {
+.gs form {
   height: 100%;
   width: 100%;
   background: #fff;
 }
 
-.container .form-content {
+.gs .form-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +48,6 @@ body {
 
 .form-content .login-form .form-content .Signup-form {
   width: calc(100% / 2 - 25px);
-  /*background: red; */
 }
 
 form .form-content .title {
@@ -166,90 +150,17 @@ form .form-content label:hover {
   visibility: hidden;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
- /* CSS by Charu */
-
-
-.page-one {
-  /* width: 700px; */
-  /* height: 150px; */
-  margin: auto;
-  margin-top: 50px;
-  width: 850px;
-  /* background-color: teal; */
-}
-
-.form-btn {
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  padding-bottom: 7px;
-  padding-top: 7px;
-  padding-left: 100px;
-  padding-right: 100px;
-  border-radius: 6px;
+.gs .form-btn {
+  margin-top: 1rem;
+  padding: 7px 0px;
   border: none;
-
-  color: #fff;
-  background: #449ba7;
-
-  transition: all 0.4s ease;
+  width: 100%;
+  font-size: 20px;
+  color: silver;
+  background-image: linear-gradient(315deg, #2b1331 0%, #b9abcf 74%);
+  transition: background-image 0.5s ease-in-out;
 }
 
-.form-btn:hover {
-  background: #044c57;
-}
-
-.page-one-btn {
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  padding-bottom: 7px;
-  padding-top: 7px;
-
-  border: none;
-
-  color: #fff;
-  background: #449ba7;
-  transition: all 0.4s ease;
-}
-
-.page-one-btn:hover {
-  background: #044c57;
-}
-
-.flag{
-  font-size: 12px;
-  font-weight: bold;
-  color: red;
-}
-
-
-
-
-.bell-iocn{
-  margin-left: 200px;
-}
-
-.temp-title{
-  position: relative;
-  color: #044c57;
-  
-  margin-left: 400px;
-  margin-top: 200px;
-}
-
-.Navbar{
-  border-bottom: 2px solid black;
+.gs .form-btn:hover {
+  background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
 }

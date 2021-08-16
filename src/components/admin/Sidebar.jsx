@@ -21,22 +21,7 @@ const Sidebar = () => {
         <div className="logo" onClick={() => setInactive(!inactive)}>
           <i class="fas fa-bars"></i>
         </div>
-        {/* <div className="toggle-menu-btn" onClick={() => setInactive(!inactive)}>
-          {inactive ? (
-            <i class="bx bx-right-arrow-alt"></i>
-          ) : (
-            <i class="bx bx-left-arrow-alt"></i>
-          )}
-        </div> */}
       </div>
-      {/* <div className="search-box">
-        <button className="search-btn">
-          <i class="bx bx-search-alt"></i>
-        </button>
-        <input type="text" placeholder="search..." />
-      </div> */}
-
-      {/* <div className="divider"></div> */}
 
       <div className="main-menu">
         <ul>
@@ -50,27 +35,14 @@ const Sidebar = () => {
           >
             <NavLink className="menu-item" to={`${url}`}>
               <div className="menu-icon">
-                {/* <i class="bx bxs-dashboard"></i> */}
                 <i class="fab fa-gripfire"></i>
               </div>
               <span>Dashboard</span>
             </NavLink>
           </li>
-          <li
-            className="menu-item-major"
-            onClick={() => {
-              if (inactive) {
-                setInactive(false);
-              }
-            }}
-          >
-            <NavLink
-              className="menu-item"
-              onClick={() => setExpand(!expand)}
-              to="#"
-            >
+          <li className="menu-item-major" onClick={() => setExpand(!expand)}>
+            <NavLink className="menu-item" to="#">
               <div className="menu-icon">
-                {/* <i class="bx bx-ghost"></i> */}
                 <i class="fas fa-users"></i>
               </div>
               <span>Gramsevak</span>
@@ -94,7 +66,6 @@ const Sidebar = () => {
           >
             <NavLink className="menu-item" to={`${url}/complainreg`}>
               <div className="menu-icon">
-                {/* <i class="bx bx-box"></i> */}
                 <i class="fas fa-box-open"></i>
               </div>
               <span>Complaint</span>
