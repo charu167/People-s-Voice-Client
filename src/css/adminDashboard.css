@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(222, 229, 233);
+  background-color: #add8e6;
   font-family: "Noto Serif", serif;
 }
 
@@ -21,14 +21,17 @@
 }
 
 .dashboard .dashboard-item .dashboard-title {
-  font-size: 20px;
-  color: rgb(37, 26, 37);
-  /* background-color: teal; */
+  color: #000000;
+  font-size: 23px;
+  background-color: teal;
   text-align: left;
-  padding-left: 70px;
-  margin-bottom: 1.5rem;
-
-  font-family: "Cantata One", serif;
+  padding: 4px 0px;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 5px 8px -3px rgba(0, 0, 0, 0.10);
 }
 
 .dashboard .dashboard-item .dashboard-data {
@@ -90,10 +93,10 @@
   a
   .dash-btn {
   border: none;
-  padding: 5px 5px;
-  background-color: teal;
+  padding: 5px 30px;
+  background-color:  #282C35;
   border-radius: 5px;
-  color: rgb(0, 0, 0);
+  color: #e5e4e2;
   transition: all 0.3s ease-in-out;
 }
 

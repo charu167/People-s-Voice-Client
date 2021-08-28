@@ -7,7 +7,7 @@
 /* SIDEBAR */
 .side-bar {
   /* background-image: linear-gradient(-315deg, #2f4353 0%, #d2ccc4 74%); */
-  background-color: rgb(45, 52, 70);
+  background-color:  #000000;
   opacity: 1;
   position: fixed;
   height: 100%;
@@ -31,7 +31,7 @@
 
 .side-bar .top-section .logo {
   font-size: 20px;
-  color: rgb(120, 129, 149);
+  color: #8ca2ac;
   overflow: hidden;
   display: inline-block;
   cursor: pointer;
@@ -99,7 +99,7 @@
 }
 
 .side-bar .main-menu .menu-item {
-  color: rgb(120, 129, 149);
+  color: #8ca2ac;
   font-family: "Lora", serif;
   font-size: 18px;
   margin: 0;
