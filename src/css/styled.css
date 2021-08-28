@@ -17,7 +17,7 @@
   height: 100%;
   width: 50%;
   background-color: #2f4353;
-  background-image: linear-gradient(-315deg, #2f4353 0%, #d2ccc4 74%);
+  /* background-image: linear-gradient(-315deg, #2f4353 0%, #d2ccc4 74%); */
   z-index: 98;
   transition: all 1s ease;
   transform-origin: left;
@@ -119,23 +119,6 @@ form .form-content .text a {
 form .form-content .text a:hover {
   text-decoration: underline;
 }
-form .form-content .button {
-  color: #fff;
-  margin-top: 40px;
-}
-
-form .form-content .button {
-  color: #fff;
-  background: #449ba7;
-  border-radius: 6px;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-form .form-content .button:hover {
-  background: #044c57;
-}
 
 form .form-content label {
   color: #044c57;
@@ -156,11 +139,13 @@ form .form-content label:hover {
   border: none;
   width: 100%;
   font-size: 20px;
-  color: silver;
-  background-image: linear-gradient(315deg, #2b1331 0%, #b9abcf 74%);
-  transition: background-image 0.5s ease-in-out;
+  color: rgb(119, 27, 27);
+  /* background-image: linear-gradient(315deg, #2b1331 0%, #b9abcf 74%); */
+  background-color: rgba(158, 60, 60, 0.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .gs .form-btn:hover {
-  background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+  /* background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%); */
+  background-color: teal;
 }
