@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #add8e6;
+  background-color: #f1f3f6;
   font-family: "Noto Serif", serif;
 }
 
@@ -31,7 +31,8 @@
   margin-left: 10px;
   margin-right: 10px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 10px 5px 8px -3px rgba(0, 0, 0, 0.10);
+  box-shadow: 10px 5px 8px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(224, 215, 215);
 }
 
 .dashboard .dashboard-item .dashboard-data {
@@ -55,8 +56,8 @@
 
   background-color: rgb(255, 254, 254);
 
-  box-shadow: 10px 10px 8px -3px rgba(0, 0, 0, 0.22);
-
+  box-shadow: 10px 10px 8px -3px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgb(224, 215, 215);
   padding: 5px;
 }
 
@@ -94,7 +95,7 @@
   .dash-btn {
   border: none;
   padding: 5px 30px;
-  background-color:  #282C35;
+  background-color: #282c35;
   border-radius: 5px;
   color: #e5e4e2;
   transition: all 0.3s ease-in-out;
@@ -106,10 +107,10 @@
   .dash-card
   .dash-card-half
   a
-  .dash-btn:hover{
-    color: rgb(228, 230, 231);
-    background-color: rgb(13, 75, 75);
-  }
+  .dash-btn:hover {
+  color: rgb(228, 230, 231);
+  background-color: rgb(13, 75, 75);
+}
 
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a:hover {
   color: silver;
