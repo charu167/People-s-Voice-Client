@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -15,16 +15,17 @@ import Reports from "./admin/Reports";
 
 const Admin = () => {
   const { path, url } = useRouteMatch();
+  const [a, setA] = useState(0);
 
   return (
     <>
       <AnimatePresence exitBeforeEnter>
         <Route path={`${path}`}>
-          <Sidebar />
+          <Sidebar changeNav = {a => setA(a)} variable = {a} />
         </Route>
 
         <Route path={`${path}`}>
-          <Navbar />
+          <Navbar prop={a ? '' : 'inactive'} />
         </Route>
 
         <Route exact path={`${path}`}>

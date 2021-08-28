@@ -5,20 +5,13 @@
 .main-nav {
   width: 100%;
   height: 4rem;
-  /* background-image: linear-gradient(to right, white,#150c31); */
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   z-index: 2;
   display: grid;
-  grid-template-columns: 5rem 1fr 2fr 1fr;
-  align-items: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  background-color: #2f4353;
-  background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
-  /* background-color: #b1bfd8;
-  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%); */
-
+  grid-template-columns: 0rem 1fr 2fr 1fr;
+  /* align-items: center; */
   font-family: "STIX Two Text", serif;
 }
 
@@ -29,13 +22,50 @@
   align-items: center;
   color: #2c3539;
   padding-top: 10px;
-
-  /* font-family: "STIX Two Text", serif; */
+  
 }
 
-.main-nav .logo h2 span {
+.main-nav .logo h2{
+  background-color: rgb(24 29 40);
+  font-variant: small-caps;
   font-size: 40px;
+  width: 250px;
+  height: 90%;
+  color: rgb(39, 218, 218);
+  padding-left: 5px;
+  transition: all 0.5s ease-in-out;
+
 }
+
+
+.main-nav .logo.inactive h2{
+  opacity: 0;
+  width: 80px;
+  overflow: hidden;
+  height: 0px;
+  font-size: 5px;
+}
+
+.main-nav .logo i{
+  position: absolute;
+  background-color: rgb(24 29 40);
+  font-size: 40px;
+  height: 100%;
+  top: 0px;
+  /* width: 0px; */
+  color: rgb(39, 218, 218);
+  padding-left: 15px;
+  padding-top: 13px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-nav .logo.inactive i{
+  opacity: 1;
+  width: 80px;
+}
+
+
 
 .main-nav .menu-links {
   grid-column: 3/4;
@@ -51,14 +81,14 @@
 .main-nav .menu-links ul li a {
   font-family: "Lora", serif;
   text-transform: capitalize;
-  color: #2c3539;
+  color: #000000;
   font-size: 23px;
-  transition: 0.5s;
+  transition: 0.1s;
   font-family: "STIX Two Text", serif;
 }
 
 .main-nav .menu-links ul li a:hover {
-  color: rgb(223, 203, 203);
+  color: rgb(29, 100, 105);
 }
 
 .main-nav .media-links {
@@ -69,15 +99,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 5px;
 }
 
 .main-nav .media-links ul li a i {
-  color: #2c3539;
+  color: #000000;
   font-size: 23px;
   padding-top: 15px;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 .main-nav .media-links ul li a i:hover {
-  color: silver;
+  color: rgb(29, 100, 105);
 }

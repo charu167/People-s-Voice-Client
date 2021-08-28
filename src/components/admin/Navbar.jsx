@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -7,28 +7,25 @@ import {
 // import $ from "jquery";
 import { NavLink, useRouteMatch } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const { path, url } = useRouteMatch();
   let elem = document.documentElement;
 
   const goFS = document.getElementById("full");
 
-  // goFS.addEventListener(
-  //   "click",
-  //   function () {
-  //     document.body.requestFullscreen();
-  //   },
-  //   false
-  // );
+  const[b, setB] = useState('inactive')
+  if(props.prop.a === 1){
+    setB('active')
+  }
+  
+  
   return (
     <>
       <nav className="main-nav">
         {/* LOGO */}
-        <div className="logo">
-          <h2>
-            <span>P</span>EOPLE'S
-            <span> V</span>OICE
-          </h2>
+        <div className={`logo ${props.prop}`}>
+          <h2>People's Voice</h2>
+          <i class="bx bx-podcast"></i>
         </div>
 
         {/* main links */}

@@ -30,33 +30,36 @@ const AdminDashboard = () => {
                 <div className="dash-card">
                   <div className="dash-card-half">
                     <span>New</span>
-                    <h1>69</h1>
+                    <h1>123</h1>
                   </div>
                   <div className="dash-card-half">
                     <NavLink to="#">
-                      <i class="bx bxl-flutter"></i>
+                      {/* <i class="bx bxl-flutter"></i> */}
+                      <button className="dash-btn">details</button> 
                     </NavLink>
                   </div>
                 </div>
                 <div className="dash-card">
                   <div className="dash-card-half">
                     <span>In Process</span>
-                    <h1>69</h1>
+                    <h1>123</h1>
                   </div>
                   <div className="dash-card-half">
                     <NavLink to="#">
-                      <i class="bx bxl-flutter"></i>
+                      {/* <i class="bx bxl-flutter"></i> */}
+                      <button className="dash-btn">details</button> 
                     </NavLink>
                   </div>
                 </div>
                 <div className="dash-card">
                   <div className="dash-card-half">
                     <span>Completed</span>
-                    <h1>69</h1>
+                    <h1>123</h1>
                   </div>
                   <div className="dash-card-half">
                     <NavLink to="#">
-                      <i class="bx bxl-flutter"></i>
+                      {/* <i class="bx bxl-flutter"></i> */}
+                      <button className="dash-btn">details</button> 
                     </NavLink>
                   </div>
                 </div>

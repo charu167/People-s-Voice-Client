@@ -5,11 +5,9 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  /* background-color: burlywood; */
+  background-color: rgb(222, 229, 233);
   font-family: "Noto Serif", serif;
-  
 }
 
 .dashboard .dashboard-item {
@@ -23,50 +21,38 @@
 }
 
 .dashboard .dashboard-item .dashboard-title {
-  font-size: 35px;
+  font-size: 20px;
   color: rgb(37, 26, 37);
-  /* color: black; */
-  background: rgb(183, 207, 224);
-  background: radial-gradient(
-    circle,
-    rgba(183, 207, 224, 1) 0%,
-    rgba(114, 151, 152, 1) 0%,
-    rgba(255, 255, 255, 1) 92%
-  );
+  /* background-color: teal; */
+  text-align: left;
+  padding-left: 70px;
+  margin-bottom: 1.5rem;
 
-
-  margin-bottom: 2.5rem;
-  /* font-weight: 600; */
   font-family: "Cantata One", serif;
-  
 }
 
 .dashboard .dashboard-item .dashboard-data {
   width: 100%;
-  /* height: 200px; */
-  background-color: rgb(255, 255, 255);
-  margin: 0px ;
+  background-color: transparent;
+  margin: 0px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 .dashboard .dashboard-item .dashboard-data .dash-card {
-  width: 15rem;
-  height: 8rem;
+  width: 25rem;
+  height: 10rem;
 
   margin: 0px 10px;
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 24px 24px;
 
-  background-color: white;
-  /* box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
-  -webkit-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 7px 10px 73px -5px rgba(0, 0, 0, 0.38); */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 254, 254);
+
+  box-shadow: 10px 10px 8px -3px rgba(0, 0, 0, 0.22);
 
   padding: 5px;
 }
@@ -92,13 +78,38 @@
 
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a {
   color: rgb(37, 26, 37);
-  font-size: 30px;
+  font-size: 20px;
   transition: 0.5s;
 }
 
+.dashboard
+  .dashboard-item
+  .dashboard-data
+  .dash-card
+  .dash-card-half
+  a
+  .dash-btn {
+  border: none;
+  padding: 5px 5px;
+  background-color: teal;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard
+  .dashboard-item
+  .dashboard-data
+  .dash-card
+  .dash-card-half
+  a
+  .dash-btn:hover{
+    color: rgb(228, 230, 231);
+    background-color: rgb(13, 75, 75);
+  }
+
 .dashboard .dashboard-item .dashboard-data .dash-card .dash-card-half a:hover {
   color: silver;
-  
 }
 
 .dashboard i {

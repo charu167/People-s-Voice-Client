@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useRouteMatch } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const { path, url } = useRouteMatch();
   const [inactive, setInactive] = useState(true);
   const [expand, setExpand] = useState(false);
@@ -18,7 +18,10 @@ const Sidebar = () => {
   return (
     <div className={`side-bar ${inactive ? "inactive" : ""}`}>
       <div className="top-section">
-        <div className="logo" onClick={() => setInactive(!inactive)}>
+        <div className="logo" onClick={() => {
+          setInactive(!inactive)
+          props.changeNav(!props.variable)
+          }}>
           <i class="fas fa-bars"></i>
         </div>
       </div>
@@ -45,7 +48,9 @@ const Sidebar = () => {
               <div className="menu-icon">
                 <i class="fas fa-users"></i>
               </div>
-              <span>Gramsevak</span>
+              <span>
+                Gramsevak <i class='bx bx-right-arrow'></i>
+              </span>
             </NavLink>
             <ul className={`sub-menu ${expand ? "active" : ""}`}>
               <li>
