@@ -70,33 +70,7 @@ const Navbar = (props) => {
         </div>
       </nav>
 
-      {/* <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 border-bottom-5 fixed-top Navbar">
-      <div className="d-flex justify-content-around">
-        <NavLink className="navbar-brand" to="#">
-          Logo
-        </NavLink>
-
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <NavLink className="nav-link active" aria-current="page" to="/">
-              Home
-            </NavLink>
-          </div>
-
-          <div className="navbar-nav">
-            <NavLink className="nav-link bell-icon" aria-current="page" to={`${path}/priority`}>
-              <img src="https://img.icons8.com/material-two-tone/24/000000/bell--v2.png" />
-            </NavLink>
-          </div>
-          
-          <div className="navbar-nav">
-            <NavLink className="nav-link bell-icon" aria-current="page" to={`${path}/settings`}>
-            <img src="https://img.icons8.com/material-sharp/24/000000/settings.png"/>
-            </NavLink>
-          </div>
-        </div>
-      </div>
-    </nav> */}
+      
     </>
   );
 };
