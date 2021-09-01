@@ -49,7 +49,7 @@ const Sidebar = (props) => {
                 <i class="fas fa-users"></i>
               </div>
               <span>
-                Gramsevak <i class='bx bx-right-arrow'></i>
+                Gramsevak <i class='bx bx-down-arrow'></i>
               </span>
             </NavLink>
             <ul className={`sub-menu ${expand ? "active" : ""}`}>

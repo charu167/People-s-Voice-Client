@@ -4,7 +4,7 @@
 
 .main-nav {
   width: 100%;
-  height: 4rem;
+  height: 4.4rem;
   background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
@@ -12,8 +12,7 @@
   display: grid;
   grid-template-columns: 0rem 1fr 2fr 1fr;
   align-items: center;
-  font-family: "STIX Two Text", serif;
-  
+  /* font-family: "STIX Two Text", serif; */
 }
 
 .main-nav .logo {
@@ -22,29 +21,28 @@
   grid-column: 2/3;
   justify-content: start;
   align-items: center;
-  color: #2c3539;
+  color: #ebc38b;
   /* padding-top: 30px; */
-  height: 100%;
-  background-color: gray;
+  height: 101%;
+  background-color: #1f2431;
+  text-align: center;
 }
 
-.main-nav .logo h2{
+.main-nav .logo h2 {
   position: absolute;
-  background-color:#161327;
-  font-variant: small-caps;
-  font-size: 40px;
-  width: 250px;
-  height: 110%;
+  background-color: #1f2431;
+  /* font-variant: small-caps; */
+  font-size: 31px;
+  width: 240px;
+  height: 101%;
   margin-top: 22px;
-  color: rgb(255, 255, 255);
+  color: #f9f9f9;
   padding-left: 5px;
   padding-top: 15px;
-  transition: all 0.5s ease-in-out;
-
+  transition: all 0.2s ease-in-out;
 }
 
-
-.main-nav .logo.inactive h2{
+.main-nav .logo.inactive h2 {
   opacity: 0;
   width: 80px;
   overflow: hidden;
@@ -52,26 +50,24 @@
   font-size: 5px;
 }
 
-.main-nav .logo i{
+.main-nav .logo i {
   position: absolute;
-  background-color: #161327;
+  background-color: #1F2431;
   font-size: 40px;
   height: 100%;
   top: 0px;
   /* width: 0px; */
   color: rgb(255, 255, 255);
-  padding-left: 15px;
+  padding-left: 0px;
   padding-top: 13px;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.main-nav .logo.inactive i{
+.main-nav .logo.inactive i {
   opacity: 1;
   width: 80px;
 }
-
-
 
 .main-nav .menu-links {
   grid-column: 3/4;

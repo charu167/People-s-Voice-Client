@@ -23,16 +23,16 @@
 .dashboard .dashboard-item .dashboard-title {
   color: #000000;
   font-size: 23px;
-  background-color: teal;
+  
   text-align: left;
   padding: 4px 0px;
   padding-left: 10px;
   margin-bottom: 1rem;
   margin-left: 10px;
   margin-right: 10px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 10px 5px 8px -3px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgb(224, 215, 215);
+  /* background-color: rgb(255, 255, 255); */
+  /* box-shadow: 10px 5px 8px -3px rgba(0, 0, 0, 0.1); */
+  /* border: 1px solid rgb(224, 215, 215); */
 }
 
 .dashboard .dashboard-item .dashboard-data {

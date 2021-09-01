@@ -24,7 +24,7 @@ const Navbar = (props) => {
       <nav className="main-nav">
         {/* LOGO */}
         <div className={`logo ${props.prop}`}>
-          <h2>People's Voice</h2>
+          <h2>LOGO</h2>
           <i class="bx bx-podcast"></i>
         </div>
 

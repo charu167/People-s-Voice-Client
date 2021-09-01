@@ -38,7 +38,7 @@ const GSList = () => {
                         <th>Phone Number</th>
                         <th>Email ID</th>
                         <th>Status</th>
-                        <th>Profile</th>
+                        {/* <th>Profile</th> */}
                         {/* <th>Profile</th> */}
                       </tr>
                     </thead>
@@ -60,7 +60,7 @@ const GSList = () => {
                           </span>
                         </td>
                         {/* <td>USA</td> */}
-                        <td>
+                        {/* <td>
                           <a
                             href="javascript:void(0)"
                             className="mr-3"
@@ -97,7 +97,7 @@ const GSList = () => {
                           >
                             <i className="fe fe-trash-2 text-dark fs-16"></i>
                           </a>
-                        </td>
+                        </td> */}
                       </tr>
                     </tbody>
                   </table>
