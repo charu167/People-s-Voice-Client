@@ -1,24 +1,10 @@
 import React, { useState } from "react";
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaYoutubeSquare,
-} from "react-icons/fa";
-// import $ from "jquery";
+
 import { NavLink, useRouteMatch } from "react-router-dom";
 
 const Navbar = (props) => {
   const { path, url } = useRouteMatch();
-  let elem = document.documentElement;
 
-  const goFS = document.getElementById("full");
-
-  const[b, setB] = useState('inactive')
-  if(props.prop.a === 1){
-    setB('active')
-  }
-  
-  
   return (
     <>
       <nav className="main-nav">
@@ -69,8 +55,6 @@ const Navbar = (props) => {
           </ul>
         </div>
       </nav>
-
-      
     </>
   );
 };
