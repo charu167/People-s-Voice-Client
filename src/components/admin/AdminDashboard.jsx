@@ -1,12 +1,49 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
-import axios from 'axios'
+import axios from "axios";
+
+import Card from "../utilities/Card";
+import BarChart from "../utilities/BarChart";
 
 const AdminDashboard = () => {
+  const paths = ["new", "inprocess", "completed"];
 
-  let data;
-  
+  const cardData = [
+    {
+      color: "red",
+      title: "New",
+      count: 210,
+      path: "new",
+      icon: <i class="bx bx-loader-circle"></i>,
+    },
+    {
+      color: "blue",
+      title: "In Process",
+      count: 340,
+      path: "inprocess",
+      icon: <i class="bx bx-loader-circle"></i>,
+    },
+    {
+      color: "yellow",
+      title: "Completed",
+      count: 520,
+      path: "completed",
+      icon: <i class="bx bx-loader-circle"></i>,
+    },
+  ];
+
+  const Cards = cardData.map((e) => {
+    return (
+      <Card
+        color={e.color}
+        title={e.title}
+        count={e.count}
+        path={e.path}
+        icon={e.icon}
+      />
+    );
+  });
 
   return (
     <>
@@ -22,102 +59,16 @@ const AdminDashboard = () => {
           transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
         }}
       >
-        <div className="inner-container">
-          <div className="dashboard">
-            <div className="dashboard-item">
-              <div className="dashboard-title">Complaint Dashboard</div>
-              <div className="dashboard-data">
-                <div className="dash-card">
-                  <div className="dash-card-half">
-                    <span>New</span>
-                    <h1>123</h1>
-                  </div>
-                  <div className="dash-card-half">
-                    <NavLink to="#">
-                      {/* <i class="bx bxl-flutter"></i> */}
-                      <button className="dash-btn">details</button> 
-                    </NavLink>
-                  </div>
-                </div>
-                <div className="dash-card">
-                  <div className="dash-card-half">
-                    <span>In Process</span>
-                    <h1>123</h1>
-                  </div>
-                  <div className="dash-card-half">
-                    <NavLink to="#">
-                      {/* <i class="bx bxl-flutter"></i> */}
-                      <button className="dash-btn">details</button> 
-                    </NavLink>
-                  </div>
-                </div>
-                <div className="dash-card">
-                  <div className="dash-card-half">
-                    <span>Completed</span>
-                    <h1>123</h1>
-                  </div>
-                  <div className="dash-card-half">
-                    <NavLink to="#">
-                      {/* <i class="bx bxl-flutter"></i> */}
-                      <button className="dash-btn">details</button> 
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="dashboard">
+          <div className="dashboard-item">
+            <div className="dashboard-title">Complaint Dashboard</div>
+            <div className="dashboard-data">{Cards}</div>
+          </div>
 
-            <div className="dashboard-item">
-              <div className="dashboard-title">Monthly Analysis</div>
-              <div className="dashboard-data">
-                <div className="dash-card"></div>
-                <div className="dash-card"></div>
-              </div>
-            </div>
-
-            <div className="dashboard-item">
-              <div className="dashboard-title">Latest Complaints</div>
-              <div className="dashboard-data">
-                <div class="col-xl-8 col-md-12 col-lg-12">
-                  <div class="card">
-                    <div class="table-responsive">
-                      <table class="table card-table table-vcenter text-nowrap">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Complaint Point</th>
-                            <th>Phone</th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <a href="store.html" class="text-inherit">
-                                Test1
-                              </a>
-                            </td>
-                            <td>Pune</td>
-                            <td>
-                              {/* <span class="status-icon bg-success"></span>{" "} */}
-                              Completed
-                            </td>
-                            <td class="num-font text-center">1234567890</td>
-                            <td class="text-center">
-                              <a
-                                href="javascript:void(0)"
-                                class="btn btn-success btn-sm"
-                              >
-                                Allocated
-                              </a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="dashboard-item">
+            <div className="dashboard-title">Monthly Analysis</div>
+            <div className="dashboard-data">
+              <BarChart />
             </div>
           </div>
         </div>

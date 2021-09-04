@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+import Table from "../utilities/Table";
+
 const Reports = () => {
+  const [titles, settitles] = useState(["Complain ID", "Name", "Location"]);
+
+  const [data, setData] = useState([
+    [1, "test1", "testLocation1"],
+    [2, "test2", "testLocation2"],
+    [3, "test2", "area51"],
+    [4, "test2", "mariana trench"],
+    [5, "test2", "barmuda triangle"],
+    [6, "test2", "cape of good hope"],
+    [7, "test2", "testAdrress2"],
+    [8, "test2", "testAdrress2"],
+  ]);
+
   return (
     <motion.div
       className="outermost-container"
@@ -15,16 +30,7 @@ const Reports = () => {
         transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
       }}
     >
-      <div className="inner-container">
-        <div className="report">
-          <div className="title">
-            <h1>Repors</h1>
-          </div>
-          <div className="dropdown">
-            <button>Categoris</button>
-          </div>
-        </div>
-      </div>
+      <Table titles={titles} data={data} header={'Reports'}/>
     </motion.div>
   );
 };

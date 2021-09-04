@@ -1,7 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Table from "../utilities/Table";
+import ToggleSwitch from "../utilities/ToggleSwitch";
 
 const UserDetails = () => {
+  const [titles, settitles] = useState([
+    "Sr. No.",
+    "Name",
+    "Address",
+    "Phone",
+    "Email",
+    "Status",
+  ]);
+
+  const [data, setData] = useState([
+    [
+      1,
+      "test1",
+      "testAdrress1",
+      "1234567890",
+      "test1@gmail.com",
+      <ToggleSwitch checked = {true} />,
+    ],
+    [
+      2,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch checked = {true}/>,
+    ],
+    [
+      3,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch />,
+    ],
+    [
+      4,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch />,
+    ],
+    [
+      5,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch />,
+    ],
+    [
+      6,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch />,
+    ],
+    [
+      7,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch />,
+    ],
+    [
+      8,
+      "test2",
+      "testAdrress2",
+      "0987654321",
+      "test2@gmail.com",
+      <ToggleSwitch />,
+    ],
+  ]);
+
   return (
     <>
       <motion.div
@@ -16,96 +94,7 @@ const UserDetails = () => {
           transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
         }}
       >
-        <div className="gs-table">
-          <div className="col-xl-12 col-lg-12">
-            <div className="card">
-              <div className="card-header">
-                <h3 className="card-title">Users List</h3>
-              </div>
-              <div className="options">
-                <div className="search-box">Search</div>
-                <div className="item-count">Item Count</div>
-                <div className="pagination">Pagination</div>
-              </div>
-              <div className="card-body">
-                <div className="table-responsive">
-                  <table className="table card-table table-vcenter  border text-nowrap">
-                    <thead>
-                      <tr>
-                        <th className="w-1">Sr. No.</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Phone Number</th>
-                        <th>Email ID</th>
-                        <th>Status</th>
-                        <th>Profile</th>
-                        {/* <th>Profile</th> */}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <span className="text-muted num-font">1</span>
-                        </td>
-                        <td>Citizen 1</td>
-                        <td>Pune</td>
-                        <td className="num-font">1234567890</td>
-                        <td>
-                          {/* <i className="mdi mdi-av-timer text-muted mr-1 num-font"></i> */}
-                          test@test.com
-                        </td>
-                        <td>
-                          <span className="badge badge-pill badge-primary">
-                            Normal
-                          </span>
-                        </td>
-                        {/* <td>USA</td> */}
-                        <td>
-                          <a
-                            href="javascript:void(0)"
-                            className="mr-3"
-                            data-toggle="tooltip"
-                            title=""
-                            data-original-title="Edit"
-                          >
-                            <i className="fe fe-edit-2 text-dark fs-16"></i>
-                          </a>
-                          <a
-                            href="javascript:void(0)"
-                            className="mr-3"
-                            data-toggle="tooltip"
-                            title=""
-                            data-original-title="Check"
-                          >
-                            <i className="fe fe-file text-dark fs-16"></i>
-                          </a>
-                          <a
-                            href="javascript:void(0)"
-                            className="mr-3"
-                            data-toggle="tooltip"
-                            title=""
-                            data-original-title="Add"
-                          >
-                            <i className="fe fe-folder-plus text-dark fs-16"></i>
-                          </a>
-                          <a
-                            href="javascript:void(0)"
-                            className="mr-3"
-                            data-toggle="tooltip"
-                            title=""
-                            data-original-title="Delete"
-                          >
-                            <i className="fe fe-trash-2 text-dark fs-16"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Table titles={titles} data={data} header={"User Details"} />
       </motion.div>
     </>
   );
