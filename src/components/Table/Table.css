@@ -1,0 +1,194 @@
+.table-container {
+    background-color: white;
+    margin-top: 50px;
+    width: 90%;
+    padding: 20px 30px;
+  }
+  
+  /* top section */
+  .table-container .top-section{
+    /* background-color: rgb(172, 226, 226); */
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Table header */
+  .table-container .top-section .header{
+    /* background-color: thistle; */
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    color: #323332;
+  }
+  
+  /* Utilities */
+  .table-container .utilities {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+    margin-bottom: 10px;
+    color: #989898;
+  }
+  
+  .table-container .utilities .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+  
+  .table-container .utilities .search input {
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #ccc9c9;
+    padding: 7px 25px;
+  }
+  
+  .table-container .utilities .search i {
+    padding-left: 5px;
+    display: block;
+  }
+  
+  .table-container .utilities .items-per-page {
+    background-color: rgb(255, 255, 255);
+    /* width: 170px; */
+  }
+  
+  .table-container .utilities .items-per-page .dropdown {
+    position: absolute;
+    list-style: none;
+    max-height: 0px;
+    overflow: hidden;
+    z-index: 3;
+    width: 180px;
+  }
+  
+  .table-container .utilities .items-per-page .dropdown li {
+    background-color: rgb(255, 255, 255);
+    padding: 4px 4px;
+    cursor: pointer;
+    padding: 5px 25px;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+  }
+  
+  .table-container .utilities .items-per-page .dropdown li:hover {
+    color: black;
+  }
+  
+  .table-container .utilities .items-per-page .dropdown.active {
+    overflow: visible;
+    max-height: 300px;
+  }
+  
+  .table-container .utilities .items-per-page{
+    margin-left: 250px;
+    width: 180px;
+  }
+  
+  .table-container .utilities .items-per-page button {
+    padding: 7px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #ccc9c9;
+    cursor: pointer;
+    width: 180px;
+    color: #989898;
+    /* margin-left: 300px; */
+  }
+  
+  .table-container .utilities .items-per-page button i {
+    font-size: 15px;
+    padding-left: 3px;
+  }
+  
+  .table-container .utilities .current-render-number{
+    background-color: white;
+    margin-left: 70px;
+  }
+  
+  .table-container .utilities .current-render-number button{
+    width: 180px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #CCC9C9;
+    color: #989898;
+  }
+  
+  .table-container .utilities .current-render-number button i{
+    padding: 0px 0px;
+    /* border: 1px solid #CCC9C9; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+    transition: all 0.1s ease-in-out;
+    padding: 0px 8px;
+    cursor: pointer;
+  }
+  
+  .table-container .utilities .current-render-number button i:hover{
+    background-color: whitesmoke;
+  }
+  
+  
+  
+  
+  /* main table */
+  .table-container .table {
+    width: 100%;
+  }
+  
+  .table-container .table tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+  
+  .table-container .table .table-head {
+    background-color: #f1f3f6;
+    color: #828b9d;
+  }
+  
+  .table-container .table .table-head th {
+    padding: 10px 10px;
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  .table-container .table .table-data {
+    text-align: center;
+    /* background-color: darkturquoise; */
+    border-bottom: 1px solid #e9e9e9;
+    color: #989898;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .table-container .table .table-data:hover {
+    background-color: whitesmoke;
+  }
+  
+  .table-container .table .table-data td {
+    width: 100%;
+    font-size: 13px;
+  }
+  
