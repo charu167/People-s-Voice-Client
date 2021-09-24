@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import Table from "../../components/Table/Table";
 import data from "./CompletedData";
 import { titles } from "./CompletedData";
 
 const Completed = () => {
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedin");
+  if (!k) {
+    history.push("/gramsevak/login");
+  }
+
   return (
     <motion.div
       className="outermost-container"

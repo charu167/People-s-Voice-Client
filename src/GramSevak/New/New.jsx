@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { useHistory } from "react-router-dom";
 import Table from "../../components/Table/Table";
 import axios from "axios";
-import data, {titles} from "./NewData";
-
+import data, { titles } from "./NewData";
 
 const New = () => {
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedin");
+  if (!k) {
+    history.push("/gramsevak/login");
+  }
+
   let dbdata = [];
 
   const url = "/politician_image_building/retrieveComplaints.php";

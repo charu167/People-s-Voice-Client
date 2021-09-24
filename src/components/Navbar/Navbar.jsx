@@ -7,7 +7,7 @@ const Navbar = (props) => {
 
   const mediaLinksData = [
     { icon: <i class="bx bxs-bell"></i>, path: "#" },
-    { icon: <i class="bx bxs-cog"></i>, path: "/admin/settings" },
+    { icon: <i class="bx bxs-cog"></i>, path: props.path },
     { icon: <i class="bx bx-fullscreen"></i>, path: "/" },
   ];
 

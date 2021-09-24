@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import { useHistory } from "react-router-dom";
 import Table from "../../components/Table/Table";
 import data, { titles } from "./UserDetailsData";
 
 const UserDetails = () => {
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedin");
+  if (!k) {
+    history.push("/gramsevak/login");
+  }
+
   return (
     <motion.div
       className="outermost-container"

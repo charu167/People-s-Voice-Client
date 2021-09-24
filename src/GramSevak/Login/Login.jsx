@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import axios from "axios";
-import "./Login.css";
+// import "./Login.css";
 
 const Login = () => {
-  const url = "/politician_image_building/Admin Dashboard/Login/Login.php";
+  const url = "/politician_image_building/Gramsevak Dashboard/Login/Login.php";
 
   const history = useHistory();
 
@@ -35,9 +35,10 @@ const Login = () => {
     axios
       .post(url, formdata)
       .then((res) => {
+        console.log(res.data);
         if (res.data === 1) {
           sessionStorage.setItem("loggedin", 1);
-          history.push("/admin");
+          history.push("/gramsevak");
         } else if (res.data === 0) {
           window.alert("wrong credentials");
         } else if (res.data === -1) {

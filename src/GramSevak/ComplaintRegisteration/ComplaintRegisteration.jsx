@@ -1,9 +1,16 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 import "./ComplaintRegisteration.css";
 
 const ComplaintRegisteration = () => {
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedin");
+  if (!k) {
+    history.push("/gramsevak/login");
+  }
+
   const url = "/politician_image_building/complaintReg.php";
 
   const [inputs, setInputs] = useState({

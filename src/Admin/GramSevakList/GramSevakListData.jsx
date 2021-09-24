@@ -6,7 +6,14 @@ let dbdata = [];
 const url = "/politician_image_building/retrieveGramSevakData.php";
 axios.get(url).then((res) =>
   res.data.map((e) => {
-    dbdata.push([e.ID, e.Name, e.address, e.phone, e.email, <ToggleSwitch />]);
+    dbdata.push([
+      e.ID,
+      e.Name,
+      e.address,
+      e.phone,
+      e.email,
+      <ToggleSwitch checked={true} />,
+    ]);
   })
 );
 

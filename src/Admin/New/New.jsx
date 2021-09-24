@@ -11,9 +11,6 @@ const New = () => {
   if (!sessionStorage.getItem("loggedin")) {
     history.push("/admin/login");
   }
-  useEffect(() => {
-    console.log("re-rendered");
-  });
 
   return (
     <motion.div

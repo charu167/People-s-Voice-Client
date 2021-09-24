@@ -3,6 +3,7 @@ import { Route, useRouteMatch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 //Importing components
+import Login from "../../GramSevak/Login/Login";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import GramSevakDashboard from "../../GramSevak/Dashboard/Dashboard";
@@ -24,6 +25,10 @@ const Gramsevak = () => {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
+        <Route exact path={`${path}/login`}>
+          <Login />
+        </Route>
+
         <Route path={`${path}`}>
           <Sidebar
             changeNav={(a) => setA(a)}
@@ -35,7 +40,11 @@ const Gramsevak = () => {
         </Route>
 
         <Route path={`${path}`}>
-          <Navbar prop={a ? "" : "inactive"} logo={"GramSevak"} />
+          <Navbar
+            prop={a ? "" : "inactive"}
+            logo={"GramSevak"}
+            path={"/gramsevak/settings"}
+          />
         </Route>
 
         <Route exact path={`${path}`}>

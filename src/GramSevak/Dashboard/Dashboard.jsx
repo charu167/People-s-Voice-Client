@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import Card from "../../components/Cards/Cards";
 import BarChart from "../../components/Charts/BarChart";
@@ -6,6 +7,12 @@ import "./Dashboard.css";
 import { cardData, BarChartLabels, BarChartDataSets } from "./DashBoardData";
 
 const GramSevakDashboard = () => {
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedin");
+  if (!k) {
+    history.push("/gramsevak/login");
+  }
+
   const Cards = cardData.map((e) => {
     return (
       <Card
