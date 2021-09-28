@@ -4,6 +4,9 @@ import axios from "axios";
 let newCard = [];
 let inProcessCard = [];
 let completedCard = [];
+let newdata=[];
+let inprodata=[];
+let completedata=[];
 
 const url_new =
   "/politician_image_building/Admin Dashboard/Complaints Count/NewCount.php";
@@ -11,15 +14,36 @@ const url_inprocess =
   "/politician_image_building/Admin Dashboard/Complaints Count/InPRocessCount.php";
 const url_completed =
   "/politician_image_building/Admin Dashboard/Complaints Count/CompletedCount.php";
-
+const url_newdata = 
+  "/politician_image_building/Admin Dashboard/Chart/chartnewData.php";
+const url_inprodata = 
+  "/politician_image_building/Admin Dashboard/Chart/chartinproData.php";
+const url_completedata = 
+  "/politician_image_building/Admin Dashboard/Chart/chartcompleteData.php";
 axios.get(url_new).then((res) => {
   newCard.push(res.data);
 });
+
 axios.get(url_inprocess).then((res) => {
   inProcessCard.push(res.data);
 });
 axios.get(url_completed).then((res) => {
   completedCard.push(res.data);
+});
+axios.get(url_newdata).then((res) => {
+  for(const i of res.data){
+    newdata.push(parseInt(i));
+  }
+});
+axios.get(url_inprodata).then((res) => {
+  for(const i of res.data){
+    inprodata.push(parseInt(i));
+  }
+});
+axios.get(url_completedata).then((res) => {
+  for(const i of res.data){
+    completedata.push(parseInt(i));
+  }
 });
 
 const cardData = [
@@ -64,17 +88,17 @@ const BarChartLabels = [
 const BarChartDataSets = [
   {
     label: "new",
-    data: [10, 20, 30, 25, 47, 50, 12, 46, 46, 67, 34, 56],
-    backgroundColor: [" #F75D81"],
+    data: newdata,
+    backgroundColor: ["#F75D81"],
   },
   {
     label: "in process",
-    data: [12, 25, 20, 45, 47, 40, 45, 73, 34, 56, 49, 52],
-    backgroundColor: [" #42A5F6"],
+    data: inprodata,
+    backgroundColor: ["#42A5F6"],
   },
   {
     label: "completed",
-    data: [5, 10, 14, 30, 28, 34, 29, 40, 36, 49, 28, 29],
+    data: completedata,
     backgroundColor: ["#7ED320"],
   },
 ];

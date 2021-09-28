@@ -7,6 +7,7 @@ import Table from "../../components/Table/Table";
 import { titles, dbdata } from "./NewData";
 
 const New = () => {
+  console.log(dbdata)
   const history = useHistory();
   if (!sessionStorage.getItem("loggedin")) {
     history.push("/admin/login");

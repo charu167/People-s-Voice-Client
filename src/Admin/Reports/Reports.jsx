@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
-
 import Table from "../../components/Table/Table";
 import data, { titles } from "./ReportsData";
 

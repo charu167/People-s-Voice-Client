@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import swal from "sweetalert";
 const titles = ["Complain ID", "Name", "Location", "Action Button"];
 
 let dbdata = [];
@@ -21,12 +21,25 @@ const dataPush = async () => {
               .put(url_put, e.ID)
               .then((response) => {
                 if (response) {
-                  window.alert("success");
-                  console.log(response.data);
+                  swal("Good job!", "The complaint is completed!", "success");
+                  // console.log(response.data);
+                }
+                else{
+                  swal({
+                    title: "Oh No!",
+                    text: "An Error Occured",
+                    icon: "error",
+                    button: "OK",
+                  })
                 }
               })
               .catch((error) => {
-                window.alert("error");
+                swal({
+                  title: "Oh No!",
+                  text: "An Error Occured",
+                  icon: "error",
+                  button: "OK",
+                })
               });
           }}
         >

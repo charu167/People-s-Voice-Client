@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from 'sweetalert';
 
 const titles = ["Complain ID", "Name", "Location", "Action Button"];
 
@@ -21,11 +22,24 @@ const dataPush = async () => {
               .put(url_put, e.ID)
               .then((response) => {
                 if (response) {
-                  window.alert("success");
+                  swal("Good job!", "The complaint is in process now!", "success");
+                }
+                else{
+                  swal({
+                    title: "Oh No!",
+                    text: "An Error Occured",
+                    icon: "error",
+                    button: "OK",
+                  })
                 }
               })
               .catch((error) => {
-                window.alert("error");
+                swal({
+                  title: "Oh No!",
+                  text: "An Error Occured",
+                  icon: "error",
+                  button: "OK",
+                })
               });
           }}
         >
@@ -34,6 +48,7 @@ const dataPush = async () => {
       ]);
     });
   });
+  console.log(dbdata)
 };
 
 dataPush();

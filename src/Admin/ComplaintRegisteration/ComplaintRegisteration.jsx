@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { useHistory } from "react-router";
 import "./ComplaintRegisteration.css";
+import swal from 'sweetalert';
 
 const ComplaintRegisteration = () => {
   const url = "/politician_image_building/complaintReg.php";
@@ -31,6 +32,35 @@ const ComplaintRegisteration = () => {
 
   const Register = async (event) => {
     event.preventDefault();
+    if(inputs.name === "" || inputs.phone === null || inputs.email === "" || inputs.address === "" || inputs.location === "" 
+    || inputs.complaint_type === "" || inputs.complaint_description===""){
+      swal({
+        title: "Oh No!",
+        text: "Please enter all the fields",
+        icon: "error",
+        button: "OK",
+      });
+    }
+    else{
+      let pattern_phone = new RegExp(/^[6789][0-9]{9}/);
+      let pattern_email = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+      if (inputs.phone.length != 10 || !pattern_phone.test(inputs.phone)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Phone number",
+          icon: "error",
+          button: "OK",
+        });
+      }
+      else if(!pattern_email.test(inputs.email)){
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Email address",
+          icon: "error",
+          button: "OK",
+        });
+      }
+      else{
 
     let formdata = new FormData();
 
@@ -46,10 +76,25 @@ const ComplaintRegisteration = () => {
       .post(url, formdata)
       .then((res) => {
         if (res.data) {
-          window.alert("Registered");
+          swal("Good job!", "You've registered a complaint!", "success");
+        }
+        else{
+          swal({
+            title: "Oh No!",
+            text: "An Error Occured",
+            icon: "error",
+            button: "OK",
+          })
         }
       })
-      .catch((err) => window.alert("error"));
+      .catch((err) => swal({
+        title: "Oh No!",
+        text: "An Error Occured",
+        icon: "error",
+        button: "OK",
+      }));
+    }
+    }
   };
 
   return (

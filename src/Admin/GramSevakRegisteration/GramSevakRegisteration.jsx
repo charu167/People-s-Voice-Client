@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./GramSevakRegisteration.css";
+import swal from 'sweetalert';
 
 const GramSevakRegisteration = () => {
   const history = useHistory();
@@ -44,10 +45,23 @@ const GramSevakRegisteration = () => {
       .post(url, formdata)
       .then((res) => {
         if (res.data) {
-          window.alert("Registered");
+          swal("Good job!", "You've registered a Gramsevak!", "success");
+        }
+        else{
+          swal({
+            title: "Oh No!",
+            text: "An Error Occured",
+            icon: "error",
+            button: "OK",
+          })
         }
       })
-      .catch((err) => window.alert("arror"));
+      .catch((err) => swal({
+        title: "Oh No!",
+        text: "An Error Occured",
+        icon: "error",
+        button: "OK",
+      }));
   };
 
   return (
@@ -66,7 +80,7 @@ const GramSevakRegisteration = () => {
       <div className="form-container">
         <div className="cover"></div>
         <form className="form">
-          <span className="title">Complaint Registeration</span>
+          <span className="title">Gramsevak Registeration</span>
 
           <input
             onChange={handleInputs}

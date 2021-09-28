@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 import "./ComplaintRegisteration.css";
+import swal from 'sweetalert';
 
 const ComplaintRegisteration = () => {
   const history = useHistory();
@@ -48,10 +49,23 @@ const ComplaintRegisteration = () => {
       .post(url, formdata)
       .then((res) => {
         if (res.data) {
-          window.alert("Registered");
+          swal("Good job!", "You've registered a complaint!", "success");
+        }
+        else{
+          swal({
+            title: "Oh No!",
+            text: "An Error Occured",
+            icon: "error",
+            button: "OK",
+          })
         }
       })
-      .catch((err) => window.alert("error"));
+      .catch((err) =>swal({
+        title: "Oh No!",
+        text: "An Error Occured",
+        icon: "error",
+        button: "OK",
+      }));
   };
 
   return (

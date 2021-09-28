@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import axios from "axios";
+import swal from 'sweetalert';
+
+
 // import "./Login.css";
 
 const Login = () => {
@@ -40,9 +43,19 @@ const Login = () => {
           sessionStorage.setItem("loggedin", 1);
           history.push("/gramsevak");
         } else if (res.data === 0) {
-          window.alert("wrong credentials");
+          swal({
+            title: "Incorrect Credentials",
+            text: "Please enter valid Credentials!",
+            icon: "error",
+            button: "OK",
+          });
         } else if (res.data === -1) {
-          window.alert("fill in all the details");
+          swal({
+            title: "Missing Info!",
+            text: "Please enter all the details",
+            icon: "error",
+            button: "OK",
+          });
         }
       })
       .catch((err) => {
