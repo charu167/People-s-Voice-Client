@@ -4,10 +4,18 @@ import { motion } from "framer-motion";
 import Card from "../../components/Cards/Cards";
 import BarChart from "../../components/Charts/BarChart";
 import "./Dashboard.css";
-import { cardData, BarChartLabels, BarChartDataSets } from "./DashBoardData";
+import {
+  newData,
+  cardData,
+  BarChartLabels,
+  BarChartDataSets,
+  chartdata,
+} from "./DashBoardData";
 import { useHistory } from "react-router";
 
 const AdminDashboard = () => {
+  console.log(chartdata);
+  console.log(newData);
   const history = useHistory();
   let k = sessionStorage.getItem("loggedin");
   if (!k) {

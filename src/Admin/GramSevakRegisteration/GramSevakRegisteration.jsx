@@ -66,7 +66,7 @@ const GramSevakRegisteration = () => {
       <div className="form-container">
         <div className="cover"></div>
         <form className="form">
-          <span className="title">Complaint Registeration</span>
+          <span className="title">Gramsevak Registeration</span>
 
           <input
             onChange={handleInputs}

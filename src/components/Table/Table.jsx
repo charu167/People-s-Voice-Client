@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import "./Table.css";
 const Table = (props) => {
   //Dropdown button
@@ -28,8 +29,8 @@ const Table = (props) => {
   //each row in table coming from props
   const rows = props.data
     .filter((row) => row[0] >= index && row[0] <= index + itemsPerPageInterval)
-    .map((filteredRow) => (
-      <tr className="table-data">
+    .map((filteredRow, index) => (
+      <tr key={index} className="table-data">
         {filteredRow.map((e) => (
           <td>{e}</td>
         ))}
@@ -39,6 +40,30 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
+      <div
+        style={!props.additional ? { display: "none" } : { display: "flex" }}
+        className="additional"
+      >
+        {/* excel */}
+        <div className="excel">
+          <ReactHTMLTableToExcel
+            className="btn"
+            table="Table"
+            filename="empToEx"
+            sheet="Sheet"
+            buttonText="Download as Excel"
+          />
+        </div>
+        <div className="excel">
+          <ReactHTMLTableToExcel
+            className="btn"
+            table="Table"
+            filename="empToEx"
+            sheet="Sheet"
+            buttonText="Download as Excel"
+          />
+        </div>
+      </div>
       {/* table header */}
       <div className="top-section">
         <div className="header">
@@ -47,12 +72,6 @@ const Table = (props) => {
 
         {/* Utilities */}
         <div className="utilities">
-          {/* search */}
-          <div className="search">
-            <i class="bx bx-search-alt"></i>
-            <input type="search" name="search" placeholder="Search" />
-          </div>
-
           {/* items per page */}
           <div className="items-per-page">
             <button onClick={() => setDropdown(!dropdown)}>
@@ -93,13 +112,21 @@ const Table = (props) => {
               ></i>
             </button>
           </div>
+
+          {/* search */}
+          <div className="search">
+            <i class="bx bx-search-alt"></i>
+            <input type="search" name="search" placeholder="Search" />
+          </div>
         </div>
       </div>
 
       {/* Main Table */}
-      <table className="table">
-        <tr className="table-head">{titles}</tr>
-        {rows}
+      <table className="table" id="Table">
+        <thead>
+          <tr className="table-head">{titles}</tr>
+        </thead>
+        <tbody>{rows}</tbody>
       </table>
     </div>
   );

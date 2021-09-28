@@ -4,7 +4,8 @@ const titles = ["Complain ID", "Name", "Location", "Action Button"];
 
 let dbdata = [];
 
-const url_get = "/politician_image_building/Admin Dashboard/Complaints Retrieval/NewComplaintsRetrieve.php";
+const url_get =
+  "/politician_image_building/Admin Dashboard/Complaints Retrieval/NewComplaintsRetrieve.php";
 const url_put =
   "/politician_image_building/Admin Dashboard/Complaint Status Handling/NewToInProcess.php";
 

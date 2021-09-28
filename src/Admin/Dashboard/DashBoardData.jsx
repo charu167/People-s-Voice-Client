@@ -4,6 +4,10 @@ import axios from "axios";
 let newCard = [];
 let inProcessCard = [];
 let completedCard = [];
+let chartdata = [];
+
+const url_chart =
+  "/politician_image_building/Admin Dashboard/Chart/chartData.php";
 
 const url_new =
   "/politician_image_building/Admin Dashboard/Complaints Count/NewCount.php";
@@ -20,6 +24,17 @@ axios.get(url_inprocess).then((res) => {
 });
 axios.get(url_completed).then((res) => {
   completedCard.push(res.data);
+});
+
+// New data
+let newData = [];
+axios.get(url_chart).then((res) => {
+  for (let i = 0; i < 12; i++) {
+    if (res.data[i] !== []) {
+      console.log(res.data[i][0]);
+    }
+    // newData.push(res.data[8][0].ct);
+  }
 });
 
 const cardData = [
@@ -80,4 +95,4 @@ const BarChartDataSets = [
 ];
 
 // export default DashBoardData;
-export { cardData, BarChartDataSets, BarChartLabels };
+export { newData, cardData, BarChartDataSets, BarChartLabels, chartdata };

@@ -23,7 +23,7 @@ const Reports = () => {
         transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
       }}
     >
-      <Table titles={titles} data={data} header={"Reports"} />
+      <Table titles={titles} data={data} header={"Reports"} additional={true} />
     </motion.div>
   );
 };
