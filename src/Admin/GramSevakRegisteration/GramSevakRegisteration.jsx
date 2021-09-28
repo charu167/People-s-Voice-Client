@@ -1,17 +1,24 @@
+//IMPORTING CSS
+import "./GramSevakRegisteration.css";
+
+//IMPORINTG LIBRARIES
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import "./GramSevakRegisteration.css";
+import swal from "sweetalert";
 
 const GramSevakRegisteration = () => {
+  //LOGIN CHECK
   const history = useHistory();
   if (!sessionStorage.getItem("loggedin")) {
     history.push("/admin/login");
   }
 
+  //POST REQUEST URL
   const url = "/politician_image_building/gramsevakReg.php";
 
+  //INPUTS
   const [inputs, setInputs] = useState({
     name: "",
     phone: null,
@@ -21,6 +28,7 @@ const GramSevakRegisteration = () => {
     confirm_password: "",
   });
 
+  //CONNECTING INPUTS AND INPUTS USESTATE
   let name, value;
   const handleInputs = (event) => {
     name = event.target.name;
@@ -29,27 +37,94 @@ const GramSevakRegisteration = () => {
     setInputs({ ...inputs, [name]: value });
   };
 
+  //VALIDATION
+  function validation() {
+    if (
+      inputs.name === "" ||
+      inputs.phone === null ||
+      inputs.email === "" ||
+      inputs.address === "" ||
+      inputs.password === "" ||
+      inputs.confirm_password === ""
+    ) {
+      swal({
+        title: "Oh no!",
+        text: "Please fill all the details.",
+        icon: "error",
+      });
+      return false;
+    } else {
+      const regexPhone = new RegExp(/^[6789][0-9]{9}/);
+      const regexEmail = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+      if (inputs.phone.lenght !== 10 && !regexPhone.test(inputs.phone)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Phone number",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else if (!regexEmail.test(inputs.email)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Email address",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else if (inputs.password !== inputs.confirm_password) {
+        swal({
+          title: "Oh No!",
+          text: "Password and confirm password should match",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  //POST REQUEST
   const Register = async (event) => {
     event.preventDefault();
 
-    let formdata = new FormData();
+    if (validation()) {
+      let formdata = new FormData();
 
-    formdata.append("name", inputs.name);
-    formdata.append("email", inputs.email);
-    formdata.append("password", inputs.password);
-    formdata.append("address", inputs.address);
-    formdata.append("phone", inputs.phone);
+      formdata.append("name", inputs.name);
+      formdata.append("email", inputs.email);
+      formdata.append("password", inputs.password);
+      formdata.append("address", inputs.address);
+      formdata.append("phone", inputs.phone);
 
-    await axios
-      .post(url, formdata)
-      .then((res) => {
-        if (res.data) {
-          window.alert("Registered");
-        }
-      })
-      .catch((err) => window.alert("arror"));
+      await axios
+        .post(url, formdata)
+        .then((res) => {
+          if (res.data) {
+            swal("Good job!", "You've registered a Gramsevak!", "success");
+          } else {
+            swal({
+              title: "Oh No!",
+              text: "An Error Occured",
+              icon: "error",
+              button: "OK",
+            });
+          }
+        })
+        .catch((err) =>
+          swal({
+            title: "Oh No!",
+            text: "An Error Occured",
+            icon: "error",
+            button: "OK",
+          })
+        );
+    }
   };
 
+  //JSX
   return (
     <motion.div
       className="outermost-container"

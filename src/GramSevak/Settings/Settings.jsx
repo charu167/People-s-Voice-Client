@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 const Settings = () => {
   const history = useHistory();
-  if (!sessionStorage.getItem("loggedin")) {
+  if (!sessionStorage.getItem("loggedinGramSevak")) {
     history.push("/gramsevak/login");
   }
 

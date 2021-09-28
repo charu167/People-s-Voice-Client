@@ -1,16 +1,22 @@
+//IMPORTING LIBRARIES
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 
+//IMPORINTG COMPONENETS
 import Table from "../../components/Table/Table";
-import { titles, dbdata, DATA } from "./GramSevakListData";
+
+//IMPORTING DATA
+import { titles, dbdata } from "./GramSevakListData";
 
 const GramSevakList = () => {
+  //LOGIN CHECK
   const history = useHistory();
   if (!sessionStorage.getItem("loggedin")) {
     history.push("/admin/login");
   }
 
+  //JSX
   return (
     <motion.div
       className="outermost-container"

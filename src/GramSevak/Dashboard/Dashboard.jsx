@@ -1,18 +1,27 @@
+//IMPORTING CSS
+import "./Dashboard.css";
+
+//IMPORTING LIBRARIES
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
+
+//IMPORTING COMPONENTS
 import Card from "../../components/Cards/Cards";
 import BarChart from "../../components/Charts/BarChart";
-import "./Dashboard.css";
+
+//IMPORTING DATA
 import { cardData, BarChartLabels, BarChartDataSets } from "./DashBoardData";
 
 const GramSevakDashboard = () => {
+  //LOGIN CHECK
   const history = useHistory();
-  let k = sessionStorage.getItem("loggedin");
+  let k = sessionStorage.getItem("loggedinGramSevak");
   if (!k) {
     history.push("/gramsevak/login");
   }
 
+  //CARDS
   const Cards = cardData.map((e) => {
     return (
       <Card
@@ -25,6 +34,7 @@ const GramSevakDashboard = () => {
     );
   });
 
+  //JSX
   return (
     <motion.div
       className="outermost-container"

@@ -1,26 +1,35 @@
+//IMPORTING CSS
+import "./ComplaintRegisteration.css";
+
+//IMPORTING LIBRARIES
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useHistory } from "react-router";
-import "./ComplaintRegisteration.css";
+import swal from "sweetalert";
 
 const ComplaintRegisteration = () => {
-  const url = "/politician_image_building/complaintReg.php";
-
   const history = useHistory();
+  //LOGIN CHECK
   if (!sessionStorage.getItem("loggedin")) {
     history.push("/admin/login");
   }
+
+  //POST REQUEST URL
+  const url = "/politician_image_building/complaintReg.php";
+
+  //INPUTS
   const [inputs, setInputs] = useState({
-    name: "",
-    phone: null,
-    email: "",
-    address: "",
-    location: "",
-    complaint_type: "",
-    complaint_description: "",
+    name: "charu",
+    phone: 8308619106,
+    email: "charu@gmail.com",
+    address: "pune",
+    location: "pune",
+    complaint_type: "water",
+    complaint_description: "water pipe broken",
   });
 
+  //CONNECTING FORM INPUTS AND INPUTS USESTATE
   let name, value;
   const handleInputs = (event) => {
     name = event.target.name;
@@ -29,29 +38,93 @@ const ComplaintRegisteration = () => {
     setInputs({ ...inputs, [name]: value });
   };
 
+  //VALIDATION
+  function validation() {
+    if (
+      inputs.name === "" ||
+      inputs.phone === null ||
+      inputs.email === "" ||
+      inputs.address === "" ||
+      inputs.location === "" ||
+      inputs.complaint_type === "" ||
+      inputs.complaint_description === ""
+    ) {
+      swal({
+        title: "Oh No!",
+        text: "Please enter all the fields",
+        icon: "error",
+        button: "OK",
+      });
+      return false;
+    } else {
+      let pattern_phone = new RegExp(/^[6789][0-9]{9}/);
+      let pattern_email = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+      if (inputs.phone.length != 10 || !pattern_phone.test(inputs.phone)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Phone number",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else if (!pattern_email.test(inputs.email)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Email address",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  //POST REQUEST
   const Register = async (event) => {
     event.preventDefault();
+    if (validation()) {
+      let formdata = new FormData();
 
-    let formdata = new FormData();
+      formdata.append("name", inputs.name);
+      formdata.append("phone", inputs.phone);
+      formdata.append("email", inputs.email);
+      formdata.append("address", inputs.address);
+      formdata.append("location", inputs.location);
+      formdata.append("complaint_type", inputs.complaint_type);
+      formdata.append("complaint_description", inputs.complaint_description);
 
-    formdata.append("name", inputs.name);
-    formdata.append("phone", inputs.phone);
-    formdata.append("email", inputs.email);
-    formdata.append("address", inputs.address);
-    formdata.append("location", inputs.location);
-    formdata.append("complaint_type", inputs.complaint_type);
-    formdata.append("complaint_description", inputs.complaint_description);
-
-    await axios
-      .post(url, formdata)
-      .then((res) => {
-        if (res.data) {
-          window.alert("Registered");
-        }
-      })
-      .catch((err) => window.alert("error"));
+      await axios
+        .post(url, formdata)
+        .then((res) => {
+          if (res.data) {
+            swal(
+              "Good job!",
+              "Your complaint is registered, we'll get back to you soon",
+              "success"
+            );
+          } else {
+            swal({
+              title: "Oh No!",
+              text: "An Error Occured",
+              icon: "error",
+              button: "OK",
+            });
+          }
+        })
+        .catch((err) =>
+          swal({
+            title: "Oh No!",
+            text: "An Error Occured",
+            icon: "error",
+            button: "OK",
+          })
+        );
+    }
   };
 
+  //JSX
   return (
     <motion.div
       className="outermost-container"

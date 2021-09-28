@@ -1,15 +1,22 @@
+//IMPORTING LIBRARIES
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
+
+//IMPORINTG COMPONENTS
 import Table from "../../components/Table/Table";
+
+//IMPORINTG DATA
 import { titles, dbdata } from "./InProcessData";
 
 const InProcess = () => {
+  //LOGIN CHECK
   const history = useHistory();
   if (!sessionStorage.getItem("loggedin")) {
     history.push("/admin/login");
   }
 
+  //JSX
   return (
     <motion.div
       className="outermost-container"

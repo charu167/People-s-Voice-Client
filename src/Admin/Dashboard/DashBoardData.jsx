@@ -1,14 +1,17 @@
+//IMPORTING LIBRARIES
 import React, { useState } from "react";
 import axios from "axios";
 
+//DATA
 let newCard = [];
 let inProcessCard = [];
 let completedCard = [];
 let chartdata = [];
+let newdata = [];
+let inprodata = [];
+let completedata = [];
 
-const url_chart =
-  "/politician_image_building/Admin Dashboard/Chart/chartData.php";
-
+//GET URLs FOR CARDS
 const url_new =
   "/politician_image_building/Admin Dashboard/Complaints Count/NewCount.php";
 const url_inprocess =
@@ -16,6 +19,15 @@ const url_inprocess =
 const url_completed =
   "/politician_image_building/Admin Dashboard/Complaints Count/CompletedCount.php";
 
+//GET URLs FOR CHART
+const url_newdata =
+  "/politician_image_building/Admin Dashboard/Chart/chartnewData.php";
+const url_inprodata =
+  "/politician_image_building/Admin Dashboard/Chart/chartinproData.php";
+const url_completedata =
+  "/politician_image_building/Admin Dashboard/Chart/chartcompleteData.php";
+
+//CARD DATA
 axios.get(url_new).then((res) => {
   newCard.push(res.data);
 });
@@ -26,14 +38,20 @@ axios.get(url_completed).then((res) => {
   completedCard.push(res.data);
 });
 
-// New data
-let newData = [];
-axios.get(url_chart).then((res) => {
-  for (let i = 0; i < 12; i++) {
-    if (res.data[i] !== []) {
-      console.log(res.data[i][0]);
-    }
-    // newData.push(res.data[8][0].ct);
+//CHART DATA
+axios.get(url_newdata).then((res) => {
+  for (const i of res.data) {
+    newdata.push(parseInt(i));
+  }
+});
+axios.get(url_inprodata).then((res) => {
+  for (const i of res.data) {
+    inprodata.push(parseInt(i));
+  }
+});
+axios.get(url_completedata).then((res) => {
+  for (const i of res.data) {
+    completedata.push(parseInt(i));
   }
 });
 
@@ -79,20 +97,19 @@ const BarChartLabels = [
 const BarChartDataSets = [
   {
     label: "new",
-    data: [10, 20, 30, 25, 47, 50, 12, 46, 46, 67, 34, 56],
-    backgroundColor: [" #F75D81"],
+    data: newdata,
+    backgroundColor: ["#F75D81"],
   },
   {
     label: "in process",
-    data: [12, 25, 20, 45, 47, 40, 45, 73, 34, 56, 49, 52],
-    backgroundColor: [" #42A5F6"],
+    data: inprodata,
+    backgroundColor: ["#42A5F6"],
   },
   {
     label: "completed",
-    data: [5, 10, 14, 30, 28, 34, 29, 40, 36, 49, 28, 29],
+    data: completedata,
     backgroundColor: ["#7ED320"],
   },
 ];
 
-// export default DashBoardData;
-export { newData, cardData, BarChartDataSets, BarChartLabels, chartdata };
+export { cardData, BarChartDataSets, BarChartLabels, chartdata };

@@ -1,13 +1,20 @@
+//IMPORTING LIBRARIES
 import axios from "axios";
+import swal from "sweetalert";
 
+//DATA
 const titles = ["Complain ID", "Name", "Location", "Action Button"];
-
 let dbdata = [];
 
-const url_get = "/politician_image_building/Admin Dashboard/Complaints Retrieval/InProcessComplaintRetrieve.php";
+//GET URL
+const url_get =
+  "/politician_image_building/Admin Dashboard/Complaints Retrieval/InProcessComplaintRetrieve.php";
+
+//PUT URL
 const url_put =
   "/politician_image_building/Admin Dashboard/Complaint Status Handling/InProcessToCompleted.php";
 
+//HANDLING GET AND PUT REQUEST
 const dataPush = async () => {
   await axios.get(url_get).then((response) => {
     response.data.map((e) => {
@@ -21,12 +28,24 @@ const dataPush = async () => {
               .put(url_put, e.ID)
               .then((response) => {
                 if (response) {
-                  window.alert("success");
-                  console.log(response.data);
+                  swal("Good job!", "The complaint is completed!", "success");
+                  // console.log(response.data);
+                } else {
+                  swal({
+                    title: "Oh No!",
+                    text: "An Error Occured",
+                    icon: "error",
+                    button: "OK",
+                  });
                 }
               })
               .catch((error) => {
-                window.alert("error");
+                swal({
+                  title: "Oh No!",
+                  text: "An Error Occured",
+                  icon: "error",
+                  button: "OK",
+                });
               });
           }}
         >

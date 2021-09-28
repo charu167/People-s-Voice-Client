@@ -1,9 +1,18 @@
+//IMPORTING LIBRARIES
 import React from "react";
 import axios from "axios";
+
+//IMPORTING COMPONENTS
 import ToggleSwitch from "../../components/Buttons/ToggleSwitch";
 
-let dbdata = [];
+//GRAM SEVAK LIST GET REQUEST
 const url = "/politician_image_building/retrieveGramSevakData.php";
+
+//DATA
+let dbdata = [];
+const titles = ["Sr. No.", "Name", "Address", "Phone", "Email", "Status"];
+
+//GET REQUEST
 axios.get(url).then((res) =>
   res.data.map((e) => {
     dbdata.push([
@@ -17,10 +26,4 @@ axios.get(url).then((res) =>
   })
 );
 
-const titles = ["Sr. No.", "Name", "Address", "Phone", "Email", "Status"];
-
-// export {DATA}
-
-export { titles };
-
-export { dbdata };
+export { titles, dbdata };

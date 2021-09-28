@@ -6,7 +6,7 @@ import data, { titles } from "./UserDetailsData";
 
 const UserDetails = () => {
   const history = useHistory();
-  let k = sessionStorage.getItem("loggedin");
+  let k = sessionStorage.getItem("loggedinGramSevak");
   if (!k) {
     history.push("/gramsevak/login");
   }

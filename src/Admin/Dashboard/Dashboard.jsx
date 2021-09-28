@@ -1,27 +1,25 @@
-import React, { useEffect } from "react";
-
-import { motion } from "framer-motion";
-import Card from "../../components/Cards/Cards";
-import BarChart from "../../components/Charts/BarChart";
+//IMPORTING CSS
 import "./Dashboard.css";
-import {
-  newData,
-  cardData,
-  BarChartLabels,
-  BarChartDataSets,
-  chartdata,
-} from "./DashBoardData";
+
+//IMPORTING LIBRARIES
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { cardData, BarChartLabels, BarChartDataSets } from "./DashBoardData";
 import { useHistory } from "react-router";
 
+//IMPORINTG COMPONENTS
+import Card from "../../components/Cards/Cards";
+import BarChart from "../../components/Charts/BarChart";
+
 const AdminDashboard = () => {
-  console.log(chartdata);
-  console.log(newData);
+  //LOGIN CHECK
   const history = useHistory();
   let k = sessionStorage.getItem("loggedin");
   if (!k) {
     history.push("/admin/login");
   }
 
+  //CARDS
   const Cards = cardData.map((e) => {
     return (
       <Card
@@ -34,6 +32,7 @@ const AdminDashboard = () => {
     );
   });
 
+  //JSX
   return (
     <motion.div
       className="outermost-container"
