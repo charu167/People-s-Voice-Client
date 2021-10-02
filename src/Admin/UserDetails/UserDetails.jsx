@@ -1,15 +1,38 @@
 //IMPORTING LIBRARIES
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 //IMPORTING COMPONENTS
 import Table from "../../components/Table/Table";
 
-//IMPORTING DATA
-import data, { titles } from "./UserDetailsData";
-
 const UserDetails = () => {
+  //DATA
+  const titles = ["Sr. No.", "Name", "Address", "Phone", "Email"];
+  const [data, setData] = useState(null);
+
+  //URL GET
+  const url =
+    "/politician_image_building/Admin Dashboard/UserDetails/userdetails.php";
+
+  //FETCH DATA
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await axios.get(url);
+        const sample = [];
+        res.data.map((e, i) => {
+          sample.push([i + 1, e.name, e.address, e.phone, e.email]);
+        });
+        setData(sample);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  });
+
   //LOGIN CHECK
   const history = useHistory();
   if (!sessionStorage.getItem("loggedin")) {
@@ -30,7 +53,11 @@ const UserDetails = () => {
         transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
       }}
     >
-      <Table titles={titles} data={data} header={"User Details"} />
+      <Table
+        titles={titles}
+        data={data !== null ? data : []}
+        header={"User Details"}
+      />
     </motion.div>
   );
 };

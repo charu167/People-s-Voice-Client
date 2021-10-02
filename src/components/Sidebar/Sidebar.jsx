@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useRouteMatch } from "react-router-dom";
-import { titles } from "../../Admin/GramSevakList/GramSevakListData";
+
 import "./Sidebar.css";
 const Sidebar = (props) => {
   const { path, url } = useRouteMatch();

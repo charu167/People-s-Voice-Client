@@ -20,13 +20,13 @@ const ComplaintRegisteration = () => {
 
   //INPUTS
   const [inputs, setInputs] = useState({
-    name: "charu",
-    phone: 8308619106,
-    email: "charu@gmail.com",
-    address: "pune",
-    location: "pune",
-    complaint_type: "water",
-    complaint_description: "water pipe broken",
+    name: "",
+    phone: null,
+    email: "",
+    address: "",
+    location: "",
+    complaint_type: "",
+    complaint_description: "",
   });
 
   //CONNECTING FORM INPUTS AND INPUTS USESTATE
