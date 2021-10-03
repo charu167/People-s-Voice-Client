@@ -17,6 +17,8 @@ const GramSevakDashboard = () => {
   //LOGIN CHECK
   const history = useHistory();
   let k = sessionStorage.getItem("loggedinGramSevak");
+  let l = sessionStorage.getItem("GSRegion");
+  console.log(l);
   if (!k) {
     history.push("/gramsevak/login");
   }

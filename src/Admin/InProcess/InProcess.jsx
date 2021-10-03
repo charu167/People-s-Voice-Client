@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import swal from "sweetalert";
 
 //IMPORTING CSS
 import "./InProcess.css";
@@ -23,7 +24,9 @@ const InProcess = () => {
   const handleAction = async (id) => {
     try {
       const res = await axios.put(url_put, id);
-      console.log(res.data);
+      if (res.data) {
+        swal("Good job!", "The complaint is completed now!", "success");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -46,7 +49,7 @@ const InProcess = () => {
             <button
               className="inp_btn"
               onClick={() => {
-                handleAction(e.ID);
+                handleAction(e.C_ID);
               }}
             >
               Forward

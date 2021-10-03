@@ -25,10 +25,16 @@ const ComplaintRegisteration = () => {
     email: "",
     address: "",
     location: "",
+   
     complaint_type: "",
     complaint_description: "",
   });
+  const regionList = ["Region", "Indori", "Mumbai", "Chennai", "Bangalore"];
 
+  const [region, setRegion] = useState(null);
+  const handleRegion = (value) => {
+    setRegion(value);
+  };
   //CONNECTING FORM INPUTS AND INPUTS USESTATE
   let name, value;
   const handleInputs = (event) => {
@@ -46,6 +52,7 @@ const ComplaintRegisteration = () => {
       inputs.email === "" ||
       inputs.address === "" ||
       inputs.location === "" ||
+      region === "Region"||
       inputs.complaint_type === "" ||
       inputs.complaint_description === ""
     ) {
@@ -92,13 +99,18 @@ const ComplaintRegisteration = () => {
       formdata.append("email", inputs.email);
       formdata.append("address", inputs.address);
       formdata.append("location", inputs.location);
+      formdata.append("region", region);
       formdata.append("complaint_type", inputs.complaint_type);
       formdata.append("complaint_description", inputs.complaint_description);
 
       await axios
         .post(url, formdata)
         .then((res) => {
-          if (res.data) {
+
+          console.log(res.data)
+          
+          if (res.data!==-1) {
+          
             swal(
               "Good job!",
               "Your complaint is registered, we'll get back to you soon",
@@ -178,6 +190,17 @@ const ComplaintRegisteration = () => {
             name="location"
             placeholder="Location"
           />
+           <select
+            onChange={(event) => {
+              handleRegion(event.target.value);
+            }}
+            name="region"
+            id=""
+          >
+            {regionList.map((e) => {
+              return <option value={e}>{e}</option>;
+            })}
+          </select>
           <input
             onChange={handleInputs}
             value={inputs.complaint_type}

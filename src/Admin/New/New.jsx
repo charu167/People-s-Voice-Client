@@ -1,6 +1,6 @@
 //IMPORTING LIBRARIES
 import React, { useEffect, useState } from "react";
-import { swal } from "sweetalert";
+import swal from "sweetalert";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
@@ -26,12 +26,8 @@ const New = () => {
   const handleClick = async (id) => {
     try {
       const res = await axios.put(url_put, id);
-      if (res) {
-        swal({
-          title: "Good job!",
-          text: "You clicked the button!",
-          icon: "success",
-        });
+      if (res.data) {
+        swal("Good job!", "The complaint is in process now!", "success");
       }
     } catch (error) {
       console.log(error);
@@ -48,7 +44,7 @@ const New = () => {
             i + 1,
             e.name,
             e.location,
-            <button className="new_btn" onClick={() => handleClick(e.ID)}>
+            <button className="new_btn" onClick={() => handleClick(e.C_ID)}>
               Forward
             </button>,
           ]);

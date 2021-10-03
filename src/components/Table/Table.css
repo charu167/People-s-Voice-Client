@@ -198,6 +198,7 @@
 
 .table-container .table .table-data {
   text-align: center;
+  /* height: 100px; */
   /* background-color: darkturquoise; */
   border-bottom: 1px solid #e9e9e9;
   color: #989898;

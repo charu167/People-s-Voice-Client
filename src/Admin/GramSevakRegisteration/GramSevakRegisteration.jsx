@@ -26,6 +26,7 @@ const GramSevakRegisteration = () => {
     address: "",
     password: "",
     confirm_password: "",
+    region: "",
   });
 
   //CONNECTING INPUTS AND INPUTS USESTATE
@@ -45,7 +46,8 @@ const GramSevakRegisteration = () => {
       inputs.email === "" ||
       inputs.address === "" ||
       inputs.password === "" ||
-      inputs.confirm_password === ""
+      inputs.confirm_password === "" ||
+      inputs.region === ""
     ) {
       swal({
         title: "Oh no!",
@@ -98,6 +100,7 @@ const GramSevakRegisteration = () => {
       formdata.append("password", inputs.password);
       formdata.append("address", inputs.address);
       formdata.append("phone", inputs.phone);
+      formdata.append("region", inputs.region);
 
       await axios
         .post(url, formdata)
@@ -184,6 +187,14 @@ const GramSevakRegisteration = () => {
             type="password"
             name="confirm_password"
             placeholder="Confirm  Password"
+          />
+
+          <input
+            onChange={handleInputs}
+            value={inputs.region}
+            type="text"
+            name="region"
+            placeholder="Region"
           />
 
           <button onClick={Register}>Submit</button>

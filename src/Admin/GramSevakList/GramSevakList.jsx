@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import swal from "sweetalert";
 
 //IMPORINTG COMPONENETS
 import Table from "../../components/Table/Table";
@@ -12,9 +13,52 @@ const GramSevakList = () => {
   //GET URL
   const url = "/politician_image_building/retrieveGramSevakData.php";
 
+  //PUT URL
+  const url_put =
+    "/politician_image_building/Admin Dashboard/GramsevakStatusHandling/status.php";
+
   //DATA
   let [dbdata, setDbdata] = useState(null);
-  const titles = ["Sr. No.", "Name", "Address", "Phone", "Email", "Status"];
+  const titles = [
+    "Sr. No.",
+    "Name",
+    "Address",
+    "Phone",
+    "Email",
+    "Region",
+    "Status",
+  ];
+
+  const handleToggle = (id) => {
+    try {
+      swal({
+        title: "Are you sure, you want to change the status?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then(async (change) => {
+        if (change) {
+          const res = await axios.put(url_put, id);
+          if (res.data === 1) {
+            swal("Status changed", {
+              icon: "success",
+            });
+          } else {
+            swal({
+              title: "Oh No!",
+              text: "An Error Occured",
+              icon: "error",
+              button: "OK",
+            });
+          }
+        } else {
+          swal("Status not changed");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -28,10 +72,18 @@ const GramSevakList = () => {
             e.address,
             e.phone,
             e.email,
-            <ToggleSwitch
-              key={i}
-              checked={parseInt(e.status) === 1 ? true : false}
-            />,
+            e.region,
+            <label className="switch">
+              <input
+                onChange={() => {
+                  handleToggle(e.GS_ID);
+                }}
+                checked={parseInt(e.status) === 1 ? true : false}
+                type="checkbox"
+                name="toggle"
+              />
+              <span className="slider" />
+            </label>,
           ]);
         });
         setDbdata(sample);

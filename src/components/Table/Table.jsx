@@ -7,11 +7,15 @@ const Table = (props) => {
 
   //items to be shown at once in the table
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const itemsPerPageList = [10, 20, 30, 40];
+  const itemsPerPageList = [10, 20, 30, 40, "all"];
   const dropDownMenu = itemsPerPageList.map((e) => (
     <li
       onClick={() => {
-        setItemsPerPage(e);
+        if (e === "all") {
+          setItemsPerPage(props.data.length);
+        } else {
+          setItemsPerPage(e);
+        }
         setDropdown(0);
       }}
     >
@@ -126,7 +130,7 @@ const Table = (props) => {
         <thead>
           <tr className="table-head">{titles}</tr>
         </thead>
-        <tbody>{rows}</tbody>
+        {rows}
       </table>
     </div>
   );

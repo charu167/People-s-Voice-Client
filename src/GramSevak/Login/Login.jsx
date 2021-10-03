@@ -13,6 +13,7 @@ const Login = () => {
   const [inputs, setInput] = useState({
     name: "",
     password: "",
+    // region: "",
   });
 
   //CONNECTING INPUTS TO INPUTS USESTATE
@@ -39,9 +40,10 @@ const Login = () => {
     axios
       .post(url, formdata)
       .then((res) => {
-        console.log(res.data);
-        if (res.data === 1) {
+        // console.log(res.data);
+        if (res.data) {
           sessionStorage.setItem("loggedinGramSevak", 1);
+          sessionStorage.setItem("GSRegion", res.data.region);
           history.push("/gramsevak");
         } else if (res.data === 0) {
           swal({
@@ -77,6 +79,14 @@ const Login = () => {
           placeholder="Username"
           autoComplete="off"
         />
+        {/* <input
+          type="text"
+          name="region"
+          onChange={handleInputs}
+          value={inputs.region}
+          placeholder="Region"
+        /> */}
+
         <input
           type="password"
           name="password"
