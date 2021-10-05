@@ -1,34 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import Table from "../../components/Table/Table";
 import axios from "axios";
-import data, { titles } from "./NewData";
 
 const New = () => {
+  const titles = ["Complain ID", "Name", "Location", "Action Button"];
+  const [data, setData] = useState(null);
+  const url_get =
+    "/politician_image_building/Admin Dashboard/Complaints Retrieval/NewComplaintsRetrieve.php";
+
   const history = useHistory();
   let k = sessionStorage.getItem("loggedinGramSevak");
+  let region = sessionStorage.getItem("region");
   if (!k) {
     history.push("/gramsevak/login");
   }
 
-  let dbdata = [];
-
-  const url = "/politician_image_building/retrieveComplaints.php";
   useEffect(() => {
-    axios.get(url).then((response) => {
-      console.log(response.data);
-      response.data.map((e) => {
-        dbdata.push([
-          [e.ID],
-          [e.name],
-          [e.location],
-          [<button>action</button>],
-        ]);
-      });
-      console.log(dbdata);
-    });
-  });
+    const getData = async () => {
+      try {
+        const res = await axios.get(url_get, {
+          headers: {
+            region: region,
+          },
+        });
+        const sample2 = [];
+        res.data.map((e, i) => {
+          sample2.push([
+            i + 1,
+            e.name,
+            e.location,
+            <button className="new_btn">Forward</button>,
+          ]);
+        });
+        setData(sample2);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, [data]);
 
   return (
     <motion.div
@@ -43,7 +55,11 @@ const New = () => {
         transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
       }}
     >
-      <Table titles={titles} data={data} header={"New Complaints"} />
+      <Table
+        titles={titles}
+        data={data !== null ? data : []}
+        header={"New Complaints"}
+      />
     </motion.div>
   );
 };

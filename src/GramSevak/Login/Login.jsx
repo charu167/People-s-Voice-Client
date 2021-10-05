@@ -40,11 +40,20 @@ const Login = () => {
     axios
       .post(url, formdata)
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         if (res.data) {
-          sessionStorage.setItem("loggedinGramSevak", 1);
-          sessionStorage.setItem("GSRegion", res.data.region);
-          history.push("/gramsevak");
+          if (parseInt(res.data.status) === 1) {
+            sessionStorage.setItem("loggedinGramSevak", 1);
+            sessionStorage.setItem("GSRegion", res.data.region);
+            history.push("/gramsevak");
+          } else {
+            swal({
+              title: "Your account is deactivated!",
+              text: " Please contact admin",
+              icon: "error",
+              button: "Ok",
+            });
+          }
         } else if (res.data === 0) {
           swal({
             title: "Incorrect Credentials",
