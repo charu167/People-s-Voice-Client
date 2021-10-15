@@ -213,3 +213,7 @@
   width: 100%;
   font-size: 13px;
 }
+
+.table-container .regionList.inactive {
+  display: none;
+}

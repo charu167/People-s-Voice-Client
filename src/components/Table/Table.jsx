@@ -4,6 +4,16 @@ import "./Table.css";
 const Table = (props) => {
   //Dropdown button
   const [dropdown, setDropdown] = useState(0);
+  const [regionList, setRegionList] = useState([
+    "all",
+    "indori",
+    "talegaon",
+    "Beverly Hills",
+    "Manhattan",
+    "wadgaon",
+    "New York",
+  ]);
+  const [region, setRegion] = useState("all");
 
   //items to be shown at once in the table
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -32,7 +42,13 @@ const Table = (props) => {
 
   //each row in table coming from props
   const rows = props.data
-    .filter((row) => row[0] >= index && row[0] <= index + itemsPerPageInterval)
+    .filter((row) =>
+      row[0] >= index &&
+      row[0] <= index + itemsPerPageInterval &&
+      region === "all"
+        ? true
+        : row[5] === region
+    )
     .map((filteredRow, index) => (
       <tr key={index} className="table-data">
         {filteredRow.map((e) => (
@@ -44,6 +60,18 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
+      <select
+        className={`regionList ${props.regionList ? "" : "inactive"}`}
+        onChange={(event) => {
+          setRegion(event.target.value);
+        }}
+        id=""
+      >
+        {props.regions.map((e) => {
+          return <option value={e}>{e}</option>;
+        })}
+      </select>
+
       <div
         style={!props.additional ? { display: "none" } : { display: "flex" }}
         className="additional"

@@ -28,7 +28,7 @@ const Reports = () => {
     const getData = async () => {
       try {
         const res = await axios.get(url);
-        
+
         const sample = [];
         res.data.map((e, i) => {
           sample.push([
@@ -36,7 +36,7 @@ const Reports = () => {
             e.u_name,
             e.u_address,
             e.u_phone,
-            e.forAdmin ,
+            e.forAdmin,
             e.c_region,
             e.date,
             e.g,
@@ -49,6 +49,24 @@ const Reports = () => {
     };
     getData();
   }, [data]);
+
+  //GETTING REGIONS LIST FROM BACKEND
+  const url_regions = "/politician_image_building/User/GetRegions.php";
+  const [regions, setRegions] = useState(null);
+  useEffect(() => {
+    const getData = async () => {
+      axios.get(url_regions).then((res) => {
+        const sample = [];
+        sample.push("all");
+        res.data.map((e) => {
+          sample.push(e.region);
+        });
+
+        setRegions(sample);
+      });
+    };
+    getData();
+  }, [regions]);
 
   //LOGIN CHECK
   const history = useHistory();
@@ -75,6 +93,8 @@ const Reports = () => {
         data={data !== null ? data : []}
         header={"Reports"}
         additional={true}
+        regionList={true}
+        regions={regions === null ? [] : regions}
       />
     </motion.div>
   );
