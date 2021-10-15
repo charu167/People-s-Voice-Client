@@ -11,22 +11,27 @@ const InProcess = () => {
 
   const history = useHistory();
   let k = sessionStorage.getItem("loggedinGramSevak");
+  let region = sessionStorage.getItem("GSRegion");
   if (!k) {
     history.push("/gramsevak/login");
   }
 
   //GET REQUEST
   const url =
-    "/politician_image_building/Admin Dashboard/Complaints Retrieval/InProcessComplaintRetrieve.php";
+    "/politician_image_building/Gramsevak Dashboard/Complaints Retrieval/InProcess.php";
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get(url);
+        const res = await axios.get(url, {
+          headers: {
+            region: region,
+          },
+        });
         const sample = [];
 
         res.data.map((e, i) => {
-          sample.push([i + 1, e.name, e.location, e.status]);
+          sample.push([i + 1, e.u_name, e.c_location, e.forGS]);
         });
         setData(sample);
       } catch (error) {

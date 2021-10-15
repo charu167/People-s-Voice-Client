@@ -14,9 +14,11 @@ const ComplaintRegisteration = () => {
   if (!sessionStorage.getItem("loggedinGramSevak")) {
     history.push("/admin/login");
   }
+  const region = sessionStorage.getItem("GSRegion");
 
   //POST REQUEST URL
-  const url = "/politician_image_building/complaintReg.php";
+  const url =
+    "/politician_image_building/Gramsevak Dashboard/Complaint Registeration/ComplaintReg.php";
 
   //INPUTS
   const [inputs, setInputs] = useState({
@@ -87,16 +89,20 @@ const ComplaintRegisteration = () => {
     if (validation()) {
       let formdata = new FormData();
 
-      formdata.append("name", inputs.name);
-      formdata.append("phone", inputs.phone);
-      formdata.append("email", inputs.email);
-      formdata.append("address", inputs.address);
-      formdata.append("location", inputs.location);
-      formdata.append("complaint_type", inputs.complaint_type);
-      formdata.append("complaint_description", inputs.complaint_description);
+      formdata.append("c_type", inputs.complaint_type);
+      formdata.append("c_description", inputs.complaint_description);
+      formdata.append("c_location", inputs.location);
+      formdata.append("u_name", inputs.name);
+      formdata.append("u_email", inputs.email);
+      formdata.append("u_address", inputs.address);
+      formdata.append("u_phone", inputs.phone);
 
       await axios
-        .post(url, formdata)
+        .post(url, formdata, {
+          headers: {
+            region: region,
+          },
+        })
         .then((res) => {
           if (res.data) {
             swal(

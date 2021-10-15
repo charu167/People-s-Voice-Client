@@ -1,8 +1,12 @@
-.new_btn{
-    padding: 5px 7px;
-    background-color: #4482FF;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+.new_btn {
+  padding: 5px 7px;
+  background-color: #4482ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.new_btn.inactive {
+  background-color: gray;
 }

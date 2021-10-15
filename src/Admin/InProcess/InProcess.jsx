@@ -33,19 +33,19 @@ const InProcess = () => {
   };
 
   //DATA
-  const titles = ["Complain ID", "Name", "Location", "Action Button"];
+  const titles = ["Sr. No.", "Name", "Location", "Action Button"];
   const [dbdata, setDbdata] = useState(null);
   useEffect(() => {
     const getData = async () => {
       try {
         const res = await axios.get(url_get);
-        // console.log(res.data);
+        
         const sample = [];
         res.data.map((e, i) => {
           sample.push([
             i + 1,
-            e.name,
-            e.location,
+            e.u_name,
+            e.c_location,
             <button
               className="inp_btn"
               onClick={() => {

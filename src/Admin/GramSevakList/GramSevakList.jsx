@@ -11,7 +11,7 @@ import ToggleSwitch from "../../components/Buttons/ToggleSwitch";
 
 const GramSevakList = () => {
   //GET URL
-  const url = "/politician_image_building/retrieveGramSevakData.php";
+  const url = "/politician_image_building/Admin Dashboard/Gramsevak List/GramsevakList.php";
 
   //PUT URL
   const url_put =
@@ -68,7 +68,7 @@ const GramSevakList = () => {
         res.data.map((e, i) => {
           sample.push([
             i + 1,
-            e.Name,
+            e.name,
             e.address,
             e.phone,
             e.email,

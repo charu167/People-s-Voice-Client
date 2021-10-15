@@ -16,7 +16,7 @@ const GramSevakRegisteration = () => {
   }
 
   //POST REQUEST URL
-  const url = "/politician_image_building/gramsevakReg.php";
+  const url = "/politician_image_building/Admin Dashboard/Gramsevak Registeration/gramsevakReg.php";
 
   //INPUTS
   const [inputs, setInputs] = useState({
@@ -97,14 +97,15 @@ const GramSevakRegisteration = () => {
 
       formdata.append("name", inputs.name);
       formdata.append("email", inputs.email);
-      formdata.append("password", inputs.password);
-      formdata.append("address", inputs.address);
       formdata.append("phone", inputs.phone);
+      formdata.append("address", inputs.address);
       formdata.append("region", inputs.region);
+      formdata.append("password", inputs.password);
 
       await axios
         .post(url, formdata)
         .then((res) => {
+          console.log(res);
           if (res.data) {
             swal("Good job!", "You've registered a Gramsevak!", "success");
           } else {
@@ -174,6 +175,15 @@ const GramSevakRegisteration = () => {
             name="address"
             placeholder="Address"
           />
+
+          <input
+            onChange={handleInputs}
+            value={inputs.region}
+            type="text"
+            name="region"
+            placeholder="Region"
+          />
+
           <input
             onChange={handleInputs}
             value={inputs.password}
@@ -187,14 +197,6 @@ const GramSevakRegisteration = () => {
             type="password"
             name="confirm_password"
             placeholder="Confirm  Password"
-          />
-
-          <input
-            onChange={handleInputs}
-            value={inputs.region}
-            type="text"
-            name="region"
-            placeholder="Region"
           />
 
           <button onClick={Register}>Submit</button>

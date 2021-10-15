@@ -23,7 +23,7 @@ const UserDetails = () => {
         const res = await axios.get(url);
         const sample = [];
         res.data.map((e, i) => {
-          sample.push([i + 1, e.name, e.address, e.phone, e.email]);
+          sample.push([i + 1, e.u_name, e.u_address, e.u_phone, e.u_email]);
         });
         setData(sample);
       } catch (error) {

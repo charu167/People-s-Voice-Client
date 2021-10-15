@@ -28,21 +28,21 @@ const Reports = () => {
     const getData = async () => {
       try {
         const res = await axios.get(url);
+        
         const sample = [];
         res.data.map((e, i) => {
           sample.push([
             i + 1,
-            e.name,
-            e.address,
-            e.phone,
-            e.status,
-            e.region,
+            e.u_name,
+            e.u_address,
+            e.u_phone,
+            e.forAdmin ,
+            e.c_region,
             e.date,
             e.g,
           ]);
         });
         setData(sample);
-        // console.log(data);
       } catch (error) {
         console.log(error);
       }

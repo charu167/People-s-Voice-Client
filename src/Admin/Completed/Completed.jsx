@@ -12,7 +12,7 @@ const Completed = () => {
     "/politician_image_building/Admin Dashboard/Complaints Retrieval/CompletedComplaintsRetrieve.php";
 
   //DATA
-  const titles = ["Complain ID", "Name", "Location", "Status"];
+  const titles = ["Sr. No.", "Name", "Location", "Status"];
   let [dbdata, setDbdata] = useState(null);
 
   //GET REQUEST
@@ -21,9 +21,8 @@ const Completed = () => {
       try {
         const res = await axios.get(url);
         const sample = [];
-
         res.data.map((e, i) => {
-          sample.push([i + 1, e.name, e.location, e.status]);
+          sample.push([i + 1, e.u_name, e.c_location, e.forAdmin]);
         });
         setDbdata(sample);
       } catch (error) {

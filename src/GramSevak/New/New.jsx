@@ -8,14 +8,28 @@ const New = () => {
   const titles = ["Complain ID", "Name", "Location", "Action Button"];
   const [data, setData] = useState(null);
   const url_get =
-    "/politician_image_building/Admin Dashboard/Complaints Retrieval/NewComplaintsRetrieve.php";
+    "/politician_image_building/Gramsevak Dashboard/Complaints Retrieval/New.php";
+
+  const url_put =
+    "/politician_image_building/Gramsevak Dashboard/Complaint Status Handling/ForwardToAdmin.php";
 
   const history = useHistory();
   let k = sessionStorage.getItem("loggedinGramSevak");
-  let region = sessionStorage.getItem("region");
+  let region = sessionStorage.getItem("GSRegion");
+
   if (!k) {
     history.push("/gramsevak/login");
   }
+
+  const handleClick = (ID) => {
+    axios.put(url_put, ID).then((res) => {
+      console.log(res.data);
+    });
+  };
+
+  const handleNothing = () => {
+    return 0;
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -25,13 +39,25 @@ const New = () => {
             region: region,
           },
         });
+
         const sample2 = [];
         res.data.map((e, i) => {
           sample2.push([
             i + 1,
-            e.name,
-            e.location,
-            <button className="new_btn">Forward</button>,
+            e.u_name,
+            e.c_location,
+            <button
+              onClick={() => {
+                parseInt(e.forAdmin) === 0
+                  ? handleClick(e.C_ID)
+                  : handleNothing();
+              }}
+              className={`new_btn  ${
+                parseInt(e.forAdmin) !== 0 ? "inactive" : ""
+              }`}
+            >
+              Forward to Admin
+            </button>,
           ]);
         });
         setData(sample2);

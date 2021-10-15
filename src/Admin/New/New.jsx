@@ -42,8 +42,8 @@ const New = () => {
         res.data.map((e, i) => {
           sample2.push([
             i + 1,
-            e.name,
-            e.location,
+            e.u_name,
+            e.c_location,
             <button className="new_btn" onClick={() => handleClick(e.C_ID)}>
               Forward
             </button>,

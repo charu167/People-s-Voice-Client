@@ -13,21 +13,26 @@ import BarChart from "../../components/Charts/BarChart";
 
 //GET URLs FOR CARDS
 const url_new =
-  "/politician_image_building/Admin Dashboard/Complaints Count/NewCount.php";
+  "/politician_image_building/Gramsevak Dashboard/Complaints Count/NewCount.php";
 const url_inprocess =
-  "/politician_image_building/Admin Dashboard/Complaints Count/InPRocessCount.php";
+  "/politician_image_building/Gramsevak Dashboard/Complaints Count/InProcessCount.php";
 const url_completed =
-  "/politician_image_building/Admin Dashboard/Complaints Count/CompletedCount.php";
+  "/politician_image_building/Gramsevak Dashboard/Complaints Count/CompletedCount.php";
 
 //GET URLs FOR CHART
 const url_newdata =
-  "/politician_image_building/Admin Dashboard/Chart/chartnewData.php";
+  "/politician_image_building/Gramsevak Dashboard/Chart/chartnewData.php";
 const url_inprodata =
-  "/politician_image_building/Admin Dashboard/Chart/chartinproData.php";
+  "/politician_image_building/Gramsevak Dashboard/Chart/chartinproData.php";
 const url_completedata =
-  "/politician_image_building/Admin Dashboard/Chart/chartcompleteData.php";
+  "/politician_image_building/Gramsevak Dashboard/Chart/chartcompleteData.php";
 
 const GramSevakDashboard = () => {
+  //LOGIN CHECK
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedinGramSevak");
+  let region = sessionStorage.getItem("GSRegion");
+
   //DATA
   const [newCard, setNewCard] = useState(null);
   const [inProcessCard, setInProcessCard] = useState(null);
@@ -96,13 +101,25 @@ const GramSevakDashboard = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res1 = await axios.get(url_new);
+        const res1 = await axios.get(url_new, {
+          headers: {
+            region: region,
+          },
+        });
         setNewCard(res1.data);
 
-        const res2 = await axios.get(url_inprocess);
+        const res2 = await axios.get(url_inprocess, {
+          headers: {
+            region: region,
+          },
+        });
         setInProcessCard(res2.data);
 
-        const res3 = await axios.get(url_completed);
+        const res3 = await axios.get(url_completed, {
+          headers: {
+            region: region,
+          },
+        });
         setCompletedCard(res3.data);
       } catch (error) {
         console.log(error);
@@ -114,7 +131,11 @@ const GramSevakDashboard = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res4 = await axios.get(url_newdata);
+        const res4 = await axios.get(url_newdata, {
+          headers: {
+            region: region,
+          },
+        });
         const sample1 = [];
         res4.data.map((e) => {
           sample1.push(e);
@@ -130,7 +151,11 @@ const GramSevakDashboard = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res5 = await axios.get(url_inprodata);
+        const res5 = await axios.get(url_inprodata, {
+          headers: {
+            region: region,
+          },
+        });
         const sample1 = [];
         res5.data.map((e) => {
           sample1.push(e);
@@ -146,7 +171,11 @@ const GramSevakDashboard = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res6 = await axios.get(url_completedata);
+        const res6 = await axios.get(url_completedata, {
+          headers: {
+            region: region,
+          },
+        });
         const sample3 = [];
         res6.data.map((e) => {
           sample3.push(e);
@@ -159,11 +188,6 @@ const GramSevakDashboard = () => {
     getData();
   }, []);
 
-  //LOGIN CHECK
-  const history = useHistory();
-  let k = sessionStorage.getItem("loggedinGramSevak");
-  let l = sessionStorage.getItem("GSRegion");
-  console.log(l);
   if (!k) {
     history.push("/gramsevak/login");
   }
@@ -197,7 +221,7 @@ const GramSevakDashboard = () => {
     >
       <div className="dashboard">
         <div className="dashboard-item">
-          <div className="dashboard-title">Complaint Dashboard</div>
+          <div className="dashboard-title">Complaint Dashboard <h1>{region}</h1></div>
           <div className="dashboard-data">{Cards}</div>
         </div>
 
