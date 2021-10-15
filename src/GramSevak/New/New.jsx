@@ -56,7 +56,7 @@ const New = () => {
                 parseInt(e.forAdmin) !== 0 ? "inactive" : ""
               }`}
             >
-              Forward to Admin
+              {parseInt(e.forAdmin) !== 0 ? "forwarded" : "forward to admin"}
             </button>,
           ]);
         });
