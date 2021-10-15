@@ -81,6 +81,7 @@ const New = () => {
         titles={titles}
         data={sample !== null ? sample : []}
         header={"New Complaints"}
+        regions={[]}
       />
     </motion.div>
   );

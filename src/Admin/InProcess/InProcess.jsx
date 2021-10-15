@@ -88,6 +88,7 @@ const InProcess = () => {
         titles={titles}
         data={dbdata !== null ? dbdata : []}
         header={"In Process Complaints"}
+        regions={[]}
       />
     </motion.div>
   );

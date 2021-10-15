@@ -57,6 +57,7 @@ const UserDetails = () => {
         titles={titles}
         data={data !== null ? data : []}
         header={"User Details"}
+        regions={[]}
       />
     </motion.div>
   );

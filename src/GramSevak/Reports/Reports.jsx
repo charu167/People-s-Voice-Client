@@ -68,6 +68,7 @@ const Reports = () => {
         titles={titles}
         data={data !== null ? data : []}
         header={"Reports"}
+        regions={[]}
       />
     </motion.div>
   );

@@ -120,6 +120,7 @@ const GramSevakList = () => {
         titles={titles}
         data={dbdata !== null ? dbdata : []}
         header={"Gram Sevak List"}
+        regions={[]}
       />
     </motion.div>
   );

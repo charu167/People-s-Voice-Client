@@ -65,6 +65,7 @@ const Completed = () => {
         titles={titles}
         data={data !== null ? data : []}
         header={"Completed Complaints"}
+        regions={[]}
       />
     </motion.div>
   );

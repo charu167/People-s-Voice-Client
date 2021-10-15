@@ -56,6 +56,7 @@ const Completed = () => {
         titles={titles}
         data={dbdata !== null ? dbdata : []}
         header={"Completed Complaints"}
+        regions={[]}
       />
     </motion.div>
   );
