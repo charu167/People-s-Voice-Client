@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import swal from "sweetalert";
 import axios from "axios";
 import "./ComplaintRegisteration.css";
 import { useHistory } from "react-router-dom";
 
 const ComplaintRegisteration = () => {
-  let history = useHistory();
+  //URLs
+  const url_post = "/politician_image_building/User/ComlpaintReg.php";
+  const url_get = "/politician_image_building/User/GetRegions.php";
 
-  const handlePush = () => {
-    history.push("/");
-  };
-
-  const url = "/politician_image_building/complaintReg.php";
-
+  //INPUTS AND REGION
   const [inputs, setInputs] = useState({
     name: "",
     phone: null,
@@ -23,6 +21,25 @@ const ComplaintRegisteration = () => {
     complaint_description: "",
   });
 
+  const [region, setRegion] = useState(null);
+
+  //GETTING REGIONS LIST FROM BACKEND
+  const [regions, setRegions] = useState(null);
+  useEffect(() => {
+    const getData = async () => {
+      axios.get(url_get).then((res) => {
+        const sample = [];
+        res.data.map((e) => {
+          sample.push(e.region);
+        });
+
+        setRegions(sample);
+      });
+    };
+    getData();
+  }, [regions]);
+
+  //HANDLING INPUTS
   let name, value;
   const handleInputs = (event) => {
     name = event.target.name;
@@ -31,29 +48,92 @@ const ComplaintRegisteration = () => {
     setInputs({ ...inputs, [name]: value });
   };
 
+  //VALIDATION
+  function validation() {
+    if (
+      inputs.name === "" ||
+      inputs.phone === null ||
+      inputs.email === "" ||
+      inputs.address === "" ||
+      inputs.location === "" ||
+      inputs.complaint_type === "" ||
+      inputs.complaint_description === "" ||
+      region === null
+    ) {
+      swal({
+        title: "Oh No!",
+        text: "Please enter all the fields",
+        icon: "error",
+        button: "OK",
+      });
+      return false;
+    } else {
+      let pattern_phone = new RegExp(/^[6789][0-9]{9}/);
+      let pattern_email = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+      if (inputs.phone.length != 10 || !pattern_phone.test(inputs.phone)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Phone number",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else if (!pattern_email.test(inputs.email)) {
+        swal({
+          title: "Oh No!",
+          text: "Please enter valid Email address",
+          icon: "error",
+          button: "OK",
+        });
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  //POST REQUEST
   const Register = async (event) => {
     event.preventDefault();
+    if (validation()) {
+      let formdata = new FormData();
 
-    let formdata = new FormData();
+      formdata.append("c_type", inputs.complaint_type);
+      formdata.append("c_description", inputs.complaint_description);
+      formdata.append("c_location", inputs.location);
+      formdata.append("u_name", inputs.name);
+      formdata.append("u_email", inputs.email);
+      formdata.append("u_address", inputs.address);
+      formdata.append("u_phone", inputs.phone);
+      formdata.append("c_region", region);
 
-    formdata.append("name", inputs.name);
-    formdata.append("phone", inputs.phone);
-    formdata.append("email", inputs.email);
-    formdata.append("address", inputs.address);
-    formdata.append("location", inputs.location);
-    formdata.append("complaint_type", inputs.complaint_type);
-    formdata.append("complaint_description", inputs.complaint_description);
-
-    await axios
-      .post(url, formdata)
-      .then((res) => {
-        if (res.data) {
-          if (window.confirm(res.data.status)) {
-            history.push("/");
+      await axios
+        .post(url_post, formdata)
+        .then((res) => {
+          if (res.data) {
+            swal(
+              "Good job!",
+              "Your complaint is registered, we'll get back to you soon",
+              "success"
+            );
+          } else {
+            swal({
+              title: "Oh No!",
+              text: "An Error Occured",
+              icon: "error",
+              button: "OK",
+            });
           }
-        }
-      })
-      .catch((err) => window.alert("error"));
+        })
+        .catch((err) =>
+          swal({
+            title: "Oh No!",
+            text: "An Error Occured",
+            icon: "error",
+            button: "OK",
+          })
+        );
+    }
   };
 
   return (
@@ -123,6 +203,19 @@ const ComplaintRegisteration = () => {
             name="complaint_description"
             placeholder="Complaint Description"
           />
+
+          <select
+            name="region"
+            onChange={(event) => {
+              setRegion(event.target.value);
+            }}
+          >
+            {regions !== null
+              ? regions.map((e) => {
+                  return <option value={e}>{e}</option>;
+                })
+              : []}
+          </select>
           <button onClick={Register}>Submit</button>
         </form>
       </div>
