@@ -10,8 +10,15 @@ import Table from "../../components/Table/Table";
 import ToggleSwitch from "../../components/Buttons/ToggleSwitch";
 
 const GramSevakList = () => {
+  //LOGIN CHECK
+  const history = useHistory();
+  if (!sessionStorage.getItem("loggedin")) {
+    history.push("/admin/login");
+  }
+
   //GET URL
-  const url = "/politician_image_building/Admin Dashboard/Gramsevak List/GramsevakList.php";
+  const url =
+    "/politician_image_building/Admin Dashboard/Gramsevak List/GramsevakList.php";
 
   //PUT URL
   const url_put =
@@ -39,6 +46,7 @@ const GramSevakList = () => {
       }).then(async (change) => {
         if (change) {
           const res = await axios.put(url_put, id);
+
           if (res.data === 1) {
             swal("Status changed", {
               icon: "success",
@@ -93,12 +101,6 @@ const GramSevakList = () => {
     };
     getData();
   }, [dbdata]);
-
-  //LOGIN CHECK
-  const history = useHistory();
-  if (!sessionStorage.getItem("loggedin")) {
-    history.push("/admin/login");
-  }
 
   //JSX
   return (

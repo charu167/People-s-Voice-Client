@@ -5,7 +5,7 @@ import "./Login.css";
 import swal from "sweetalert";
 
 const Login = () => {
-  //POST REQUEST URL
+  //POST REQUEST URL3
   const url = "/politician_image_building/Admin Dashboard/Login/Login.php";
 
   const history = useHistory();
@@ -45,7 +45,7 @@ const Login = () => {
           history.push("/admin");
         } else if (res.data === 0) {
           swal({
-            title: "Incorrect Credentials",
+            title: "Deactivated",
             text: "Please enter valid Credentials!",
             icon: "error",
             button: "OK",

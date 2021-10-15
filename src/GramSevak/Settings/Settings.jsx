@@ -9,8 +9,8 @@ const Settings = () => {
   }
 
   const handleLogout = () => {
-    sessionStorage.removeItem("loggedin");
-    sessionStorage.clear();
+    sessionStorage.removeItem("loggedinGramSevak");
+    // sessionStorage.clear();
     history.push("/gramsevak/login");
   };
 
