@@ -5,6 +5,37 @@ import Table from "../../components/Table/Table";
 import axios from "axios";
 
 const New = () => {
+  //LOGIN CHECK
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedinGramSevak");
+  let region = sessionStorage.getItem("GSRegion");
+
+  useEffect(() => {
+    if (!k) {
+      history.push("/gramsevak/login");
+    }
+    const check = async () => {
+      await axios
+        .get(
+          "/politician_image_building/Gramsevak Dashboard/Get Gramsevak Status/GetStatus.php",
+          {
+            headers: {
+              region: region,
+            },
+          }
+        )
+        .then((res) => {
+          if (parseInt(res.data) === 0) {
+            sessionStorage.removeItem("loggedinGramSevak");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    check();
+  });
+
   const titles = ["Complain ID", "Name", "Location", "Action Button"];
   const [data, setData] = useState(null);
   const url_get =
@@ -12,14 +43,6 @@ const New = () => {
 
   const url_put =
     "/politician_image_building/Gramsevak Dashboard/Complaint Status Handling/ForwardToAdmin.php";
-
-  const history = useHistory();
-  let k = sessionStorage.getItem("loggedinGramSevak");
-  let region = sessionStorage.getItem("GSRegion");
-
-  if (!k) {
-    history.push("/gramsevak/login");
-  }
 
   const handleClick = (ID) => {
     axios.put(url_put, ID).then((res) => {

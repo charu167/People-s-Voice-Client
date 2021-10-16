@@ -53,6 +53,7 @@ const Login = () => {
               icon: "error",
               button: "Ok",
             });
+            sessionStorage.removeItem("loggedinGramSevak");
           }
         } else if (res.data === 0) {
           swal({

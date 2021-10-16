@@ -12,9 +12,32 @@ const InProcess = () => {
   const history = useHistory();
   let k = sessionStorage.getItem("loggedinGramSevak");
   let region = sessionStorage.getItem("GSRegion");
-  if (!k) {
-    history.push("/gramsevak/login");
-  }
+
+  useEffect(() => {
+    if (!k) {
+      history.push("/gramsevak/login");
+    }
+    const check = async () => {
+      await axios
+        .get(
+          "/politician_image_building/Gramsevak Dashboard/Get Gramsevak Status/GetStatus.php",
+          {
+            headers: {
+              region: region,
+            },
+          }
+        )
+        .then((res) => {
+          if (parseInt(res.data) === 0) {
+            sessionStorage.removeItem("loggedinGramSevak");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    check();
+  });
 
   //GET REQUEST
   const url =

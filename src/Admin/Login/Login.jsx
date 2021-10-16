@@ -45,7 +45,7 @@ const Login = () => {
           history.push("/admin");
         } else if (res.data === 0) {
           swal({
-            title: "Deactivated",
+            title: "Invalid Credentials",
             text: "Please enter valid Credentials!",
             icon: "error",
             button: "OK",

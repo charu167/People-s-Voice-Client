@@ -32,6 +32,31 @@ const GramSevakDashboard = () => {
   const history = useHistory();
   let k = sessionStorage.getItem("loggedinGramSevak");
   let region = sessionStorage.getItem("GSRegion");
+  useEffect(() => {
+    if (!k) {
+      history.push("/gramsevak/login");
+    }
+    const check = async () => {
+      await axios
+        .get(
+          "/politician_image_building/Gramsevak Dashboard/Get Gramsevak Status/GetStatus.php",
+          {
+            headers: {
+              region: region,
+            },
+          }
+        )
+        .then((res) => {
+          if (parseInt(res.data) === 0) {
+            sessionStorage.removeItem("loggedinGramSevak");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    check();
+  });
 
   //DATA
   const [newCard, setNewCard] = useState(null);
@@ -188,10 +213,6 @@ const GramSevakDashboard = () => {
     getData();
   }, []);
 
-  if (!k) {
-    history.push("/gramsevak/login");
-  }
-
   //CARDS
   const Cards = cardData.map((e) => {
     return (
@@ -221,7 +242,9 @@ const GramSevakDashboard = () => {
     >
       <div className="dashboard">
         <div className="dashboard-item">
-          <div className="dashboard-title">Complaint Dashboard <h1>{region}</h1></div>
+          <div className="dashboard-title">
+            Complaint Dashboard <h1>{region}</h1>
+          </div>
           <div className="dashboard-data">{Cards}</div>
         </div>
 

@@ -2,19 +2,42 @@
 import "./ComplaintRegisteration.css";
 
 //IMPORTING LIBRARIES
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useHistory } from "react-router";
 import swal from "sweetalert";
 
 const ComplaintRegisteration = () => {
-  const history = useHistory();
   //LOGIN CHECK
-  if (!sessionStorage.getItem("loggedinGramSevak")) {
-    history.push("/admin/login");
-  }
+  const history = useHistory();
+  let k = sessionStorage.getItem("loggedinGramSevak");
   const region = sessionStorage.getItem("GSRegion");
+  useEffect(() => {
+    if (!k) {
+      history.push("/gramsevak/login");
+    }
+    const check = async () => {
+      await axios
+        .get(
+          "/politician_image_building/Gramsevak Dashboard/Get Gramsevak Status/GetStatus.php",
+          {
+            headers: {
+              region: region,
+            },
+          }
+        )
+        .then((res) => {
+          if (parseInt(res.data) === 0) {
+            sessionStorage.removeItem("loggedinGramSevak");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    check();
+  });
 
   //POST REQUEST URL
   const url =
