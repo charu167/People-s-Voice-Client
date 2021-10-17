@@ -1,12 +1,87 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { NavLink, useRouteMatch } from "react-router-dom";
+import axios from "axios";
 
 const Navbar = (props) => {
   const { path, url } = useRouteMatch();
 
+  let region = sessionStorage.getItem("GSRegion");
+
+  const [notification, setNotification] = useState("notification inactive");
+  const [notiCount, setNotiCount] = useState("notiCount inactive");
+  const [notiData, setNotiData] = useState(null);
+  const [notiCountData, setNotiCountData] = useState(0);
+  //FETCHING NOTIFICATION DATA
+  const url_get = props.notification;
+  useEffect(() => {
+    const getData = async () => {
+      await axios
+        .get(url_get, {
+          headers: {
+            region: region,
+          },
+        })
+        .then((res) => {
+          const sample = [];
+          res.data.map((e, i) => {
+            sample.push([i, e.u_name, e.c_location]);
+          });
+          setNotiData(sample);
+          if (res.data.length > 9) {
+            setNotiCountData("9+");
+          } else {
+            setNotiCountData(res.data.length);
+          }
+          if (res.data.length !== 0) {
+            setNotiCount("notiCount");
+          } else {
+            setNotiCount("notiCount inactive");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getData();
+  }, [notiCountData, notiData]);
+
   const mediaLinksData = [
-    { icon: <i class="bx bxs-bell"></i>, path: "#" },
+    {
+      icon: (
+        <i
+          class="bx bxs-bell"
+          onClick={() => {
+            notification === "notification inactive"
+              ? setNotification("notification ")
+              : setNotification("notification inactive");
+          }}
+        >
+          <span className={notiCount}>{notiCountData}</span>
+          <div className={notification}>
+            <table>
+              <tbody>
+                {notiData === null
+                  ? []
+                  : notiData.map((e) => {
+                      return (
+                        <tr>
+                          <td>{e[0]}</td>
+                          <td>{e[1]}</td>
+                          <td>{e[2]}</td>
+                        </tr>
+                      );
+                    })}
+              </tbody>
+            </table>
+            <NavLink to={props.viewAll}>
+              <button>view all</button>
+            </NavLink>
+          </div>
+        </i>
+      ),
+      path: "#",
+    },
     { icon: <i class="bx bxs-cog"></i>, path: props.path },
     { icon: <i class="bx bx-fullscreen"></i>, path: "/" },
   ];

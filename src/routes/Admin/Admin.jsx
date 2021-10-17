@@ -42,7 +42,15 @@ const Admin = () => {
         </Route>
 
         <Route path={`${path}`}>
-          <Navbar prop={a ? "" : "inactive"} logo={"Admin"} path = {'/admin/settings'} />
+          <Navbar
+            prop={a ? "" : "inactive"}
+            logo={"Admin"}
+            path={"/admin/settings"}
+            notification={
+              "/politician_image_building/Admin Dashboard/Complaints Retrieval/NewComplaintsRetrieve.php"
+            }
+            viewAll={`${path}/new`}
+          />
         </Route>
 
         <Route exact path={`${path}`}>

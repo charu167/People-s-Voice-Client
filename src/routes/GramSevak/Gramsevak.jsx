@@ -44,6 +44,10 @@ const Gramsevak = () => {
             prop={a ? "" : "inactive"}
             logo={"GramSevak"}
             path={"/gramsevak/settings"}
+            notification={
+              "/politician_image_building/Gramsevak Dashboard/Complaints Retrieval/New.php"
+            }
+            viewAll={`${path}/new`}
           />
         </Route>
 
@@ -67,7 +71,7 @@ const Gramsevak = () => {
           <Settings />
         </Route>
 
-        <Route path={`/gramsevak/new`}>
+        <Route path={`${path}/new`}>
           <New />
         </Route>
 
