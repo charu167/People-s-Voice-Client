@@ -168,7 +168,7 @@ const ComplaintRegisteration = () => {
       }}
     >
       <div className="form-container">
-        <div className="cover"></div>
+        {/* <div className="cover"></div> */}
         <form className="form">
           <span className="title">Complaint Registeration</span>
 
