@@ -13,14 +13,16 @@
 }
 
 .table-container .additional .excel .btn {
+  position: relative;
   background-color: #4482ff;
   border: none;
   padding: 5px 10px;
   color: white;
   border-radius: 5px;
-  width: 150px;
-  margin-right: 70px;
+  width: 170px;
+  margin-right: 60px;
   cursor: pointer;
+
 }
 
 /* top section */
@@ -216,4 +218,17 @@
 
 .table-container .regionList.inactive {
   display: none;
+}
+
+
+.table-container .utilities select {
+  width: 180px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc9c9;
+  color: #989898;
 }

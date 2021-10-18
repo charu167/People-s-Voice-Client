@@ -82,8 +82,12 @@
 }
 
 .notification {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
   position: absolute;
-  width: 400px;
+  width: 300px;
+  min-width: 160px;
   height: fit-content;
   background-color: white;
   -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.99);
@@ -119,4 +123,24 @@
 
 .notiCount.inactive{
   display: none;
+}
+.notification-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  padding: 5px;
+
+}
+.notification table{
+  background-color: rgb(202, 202, 202);
+}
+.notification table tbody tr{
+  margin: 5px;
+  padding: 10px;
+  border: 1px;
+}
+.noti-name{
+  font-weight: bold;
 }

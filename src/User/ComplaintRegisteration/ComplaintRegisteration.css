@@ -7,7 +7,7 @@
   }
   
   .form-container .form {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -26,7 +26,14 @@
     background-color: transparent;
     font-size: 15px;
   }
-  
+  .form-container .form select {
+    padding: 10px 20px;
+    margin: 20px 20px;
+    border: none;
+    border-bottom: 1px solid #7588b8;
+    background-color: transparent;
+    font-size: 15px;
+  }
   .form-container .form button {
     width: 70%;
     margin: auto;
@@ -34,7 +41,7 @@
     margin-top: 10px;
     height: 35px;
     font-size: 15px;
-    background-color: teal;
+    background-color: rgb(19, 126, 192);
     border: none;
     cursor: pointer;
   }

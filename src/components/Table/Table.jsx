@@ -60,18 +60,6 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
-      <select
-        className={`regionList ${props.regionList ? "" : "inactive"}`}
-        onChange={(event) => {
-          setRegion(event.target.value);
-        }}
-        id=""
-      >
-        {props.regions.map((e) => {
-          return <option value={e}>{e}</option>;
-        })}
-      </select>
-
       <div
         style={!props.additional ? { display: "none" } : { display: "flex" }}
         className="additional"
@@ -86,15 +74,7 @@ const Table = (props) => {
             buttonText="Download as Excel"
           />
         </div>
-        <div className="excel">
-          <ReactHTMLTableToExcel
-            className="btn"
-            table="Table"
-            filename="empToEx"
-            sheet="Sheet"
-            buttonText="Download as Excel"
-          />
-        </div>
+        
       </div>
       {/* table header */}
       <div className="top-section">
@@ -143,6 +123,19 @@ const Table = (props) => {
                 }}
               ></i>
             </button>
+          </div>
+          <div>
+          <select
+          className={`regionList ${props.regionList ? "" : "inactive"}`}
+          onChange={(event) => {
+          setRegion(event.target.value);
+          }}
+          id=""
+          >
+          {props.regions.map((e) => {
+          return <option value={e}>{e}</option>;
+          })}
+          </select>
           </div>
 
           {/* search */}

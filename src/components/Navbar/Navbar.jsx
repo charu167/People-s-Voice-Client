@@ -58,17 +58,23 @@ const Navbar = (props) => {
           }}
         >
           <span className={notiCount}>{notiCountData}</span>
+          
           <div className={notification}>
+            <h2 className="notification-title">Notification</h2>
             <table>
               <tbody>
                 {notiData === null
                   ? []
                   : notiData.map((e) => {
                       return (
-                        <tr>
-                          <td>{e[0]}</td>
+                        <tr className="tblrw">
+                          {/* <td>{e[0]}</td> */}
+                          <div className="noti-name">
                           <td>{e[1]}</td>
+                          </div>
+                          <div className="noti-info">
                           <td>{e[2]}</td>
+                          </div>
                         </tr>
                       );
                     })}
