@@ -25,7 +25,7 @@ const Navbar = (props) => {
         .then((res) => {
           const sample = [];
           res.data.map((e, i) => {
-            sample.push([i, e.u_name, e.c_location]);
+            sample.push([i, e.u_name, e.c_description]);
           });
           setNotiData(sample);
           if (res.data.length > 9) {
@@ -56,11 +56,11 @@ const Navbar = (props) => {
               ? setNotification("notification ")
               : setNotification("notification inactive");
           }}
-        >
+        > 
           <span className={notiCount}>{notiCountData}</span>
-          
+         
           <div className={notification}>
-            <h2 className="notification-title">Notification</h2>
+            <h4 className="notification-title">Notification</h4>
             <table>
               <tbody>
                 {notiData === null
@@ -69,20 +69,23 @@ const Navbar = (props) => {
                       return (
                         <tr className="tblrw">
                           {/* <td>{e[0]}</td> */}
-                          <div className="noti-name">
-                          <td>{e[1]}</td>
-                          </div>
-                          <div className="noti-info">
-                          <td>{e[2]}</td>
-                          </div>
+                          <NavLink to="#" className="noti-name">
+                           
+                          <h5>{e[1]}</h5>
+                         
+                          <p>{e[2]}</p>
+                          </NavLink>
                         </tr>
                       );
                     })}
               </tbody>
             </table>
+            <div className="mybutton">
             <NavLink to={props.viewAll}>
-              <button>view all</button>
+              
+              <button>View all</button>
             </NavLink>
+            </div>
           </div>
         </i>
       ),

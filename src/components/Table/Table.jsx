@@ -125,6 +125,12 @@ const Table = (props) => {
             </button>
           </div>
           <div>
+            <input type="date" name="from_date"></input>
+          </div>
+          <div>
+            <input type="date" name="to_date"></input>
+          </div>
+          <div>
           <select
           className={`regionList ${props.regionList ? "" : "inactive"}`}
           onChange={(event) => {
@@ -137,7 +143,7 @@ const Table = (props) => {
           })}
           </select>
           </div>
-
+          
           {/* search */}
           <div className="search">
             <i class="bx bx-search-alt"></i>
