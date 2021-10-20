@@ -4,16 +4,8 @@ import "./Table.css";
 const Table = (props) => {
   //Dropdown button
   const [dropdown, setDropdown] = useState(0);
-  const [regionList, setRegionList] = useState([
-    "all",
-    "indori",
-    "talegaon",
-    "Beverly Hills",
-    "Manhattan",
-    "wadgaon",
-    "New York",
-  ]);
   const [region, setRegion] = useState("all");
+  const [search, setSearch] = useState("");
 
   //items to be shown at once in the table
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -57,6 +49,35 @@ const Table = (props) => {
       </tr>
     ));
 
+  const handleSearch = (val) => {
+    if (val.toString().toLowerCase().includes(search.toLowerCase())) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const searchRows = () => {
+    return props.data
+      .filter((row) => {
+        for (let i = 0; i < row.length; i++) {
+          if (handleSearch(row[i])) {
+            return true;
+            break;
+          } else {
+            continue;
+          }
+        }
+      })
+      .map((filteredRow, index) => (
+        <tr key={index} className="table-data">
+          {filteredRow.map((e) => (
+            <td>{e}</td>
+          ))}
+        </tr>
+      ));
+  };
+
   //rendering JSX
   return (
     <div className="table-container">
@@ -74,7 +95,6 @@ const Table = (props) => {
             buttonText="Download as Excel"
           />
         </div>
-        
       </div>
       {/* table header */}
       <div className="top-section">
@@ -124,30 +144,32 @@ const Table = (props) => {
               ></i>
             </button>
           </div>
+
           <div>
-            <input type="date" name="from_date"></input>
+            <select
+              className={`regionList ${props.regionList ? "" : "inactive"}`}
+              onChange={(event) => {
+                setRegion(event.target.value);
+              }}
+              id=""
+            >
+              {props.regions.map((e) => {
+                return <option value={e}>{e}</option>;
+              })}
+            </select>
           </div>
-          <div>
-            <input type="date" name="to_date"></input>
-          </div>
-          <div>
-          <select
-          className={`regionList ${props.regionList ? "" : "inactive"}`}
-          onChange={(event) => {
-          setRegion(event.target.value);
-          }}
-          id=""
-          >
-          {props.regions.map((e) => {
-          return <option value={e}>{e}</option>;
-          })}
-          </select>
-          </div>
-          
+
           {/* search */}
           <div className="search">
             <i class="bx bx-search-alt"></i>
-            <input type="search" name="search" placeholder="Search" />
+            <input
+              onChange={(event) => {
+                setSearch(event.target.value);
+              }}
+              type="search"
+              name="search"
+              placeholder="Search"
+            />
           </div>
         </div>
       </div>
@@ -157,7 +179,7 @@ const Table = (props) => {
         <thead>
           <tr className="table-head">{titles}</tr>
         </thead>
-        {rows}
+        <tbody>{search === "" ? rows : searchRows(search)}</tbody>
       </table>
     </div>
   );
