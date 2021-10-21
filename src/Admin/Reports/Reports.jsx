@@ -28,7 +28,7 @@ const Reports = () => {
     const getData = async () => {
       try {
         const res = await axios.get(url);
-
+console.log(res.data);
         const sample = [];
         res.data.map((e, i) => {
           sample.push([
@@ -67,6 +67,10 @@ const Reports = () => {
     };
     getData();
   }, [regions]);
+
+
+ 
+
 
   //LOGIN CHECK
   const history = useHistory();

@@ -1,5 +1,6 @@
 .settings {
   background-color: white;
+  
   border: 1px solid #e9e9e9;
   width: 80%;
   height: 500px;
@@ -21,10 +22,10 @@
 }
 
 .settings button {
-  width: 40%;
+  width: 20%;
   margin: auto;
   margin-bottom: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 5px;
   border: none;
   background-color: #4482ff;
@@ -35,4 +36,31 @@
 
 .settings button:hover {
   background-color: #7298e4;
+}
+.settings .update .main{
+  
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #ccc9c9;
+    cursor: pointer;
+  border: none;
+    color: #989898;
+}
+.settings .update .heading{
+  float: left;
+  
+}
+.settings .update input{
+  padding: 10px 30px 10px 5px;
+  margin: 10px;
+}
+.settings .update .heading p{
+padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #323332;
+    width: 75px;
 }

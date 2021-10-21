@@ -3,8 +3,10 @@ import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import "./Table.css";
 const Table = (props) => {
   //Dropdown button
+ 
   const [dropdown, setDropdown] = useState(0);
   const [region, setRegion] = useState("all");
+  const [type, setType] = useState("type");
   const [search, setSearch] = useState("");
 
   //items to be shown at once in the table
@@ -39,7 +41,10 @@ const Table = (props) => {
       row[0] <= index + itemsPerPageInterval &&
       region === "all"
         ? true
-        : row[5] === region
+        : row[5] === region &&
+        type === "type"
+        ? true
+        : row[6] === type
     )
     .map((filteredRow, index) => (
       <tr key={index} className="table-data">
@@ -81,6 +86,17 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
+      <div>
+        <select onChange={(event)=>{
+          setType(event.target.value)
+        }}>
+          <option value="type">type</option>
+          <option value="road">road</option>
+          <option value="water">water</option>
+          <option value="electricity">electricity</option>
+          <option value="other">other</option>
+        </select>
+      </div>
       <div
         style={!props.additional ? { display: "none" } : { display: "flex" }}
         className="additional"
