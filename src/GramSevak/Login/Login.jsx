@@ -40,8 +40,21 @@ const Login = () => {
     axios
       .post(url, formdata)
       .then((res) => {
-        console.log(res.data);
-        if (res.data) {
+        if (res.data === -1) {
+          swal({
+            title: "Missing Info!",
+            text: "Please enter all the details",
+            icon: "error",
+            button: "OK",
+          });
+        } else if (res.data === 0) {
+          swal({
+            title: "Incorrect Credentials",
+            text: "Please enter valid Credentials!",
+            icon: "error",
+            button: "OK",
+          });
+        } else {
           if (parseInt(res.data.status) === 1) {
             sessionStorage.setItem("loggedinGramSevak", 1);
             sessionStorage.setItem("GSRegion", res.data.region);
@@ -55,20 +68,6 @@ const Login = () => {
             });
             sessionStorage.removeItem("loggedinGramSevak");
           }
-        } else if (res.data === 0) {
-          swal({
-            title: "Incorrect Credentials",
-            text: "Please enter valid Credentials!",
-            icon: "error",
-            button: "OK",
-          });
-        } else if (res.data === -1) {
-          swal({
-            title: "Missing Info!",
-            text: "Please enter all the details",
-            icon: "error",
-            button: "OK",
-          });
         }
       })
       .catch((err) => {
