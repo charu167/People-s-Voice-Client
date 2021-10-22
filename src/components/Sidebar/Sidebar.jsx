@@ -13,18 +13,34 @@ const Sidebar = (props) => {
         className="menu-item-major"
         onClick={() => {
           if (inactive) {
-            setInactive(false);
+            setInactive(!inactive);
             props.changeNav(!props.variable);
           }
         }}
       >
-        <NavLink className="menu-item" to={e.path}>
+        <div className="menu-item" to="#">
           <div className="menu-icon">{e.icon}</div>
-          <span>{e.title}</span>
-        </NavLink>
+          <NavLink
+            onClick={() => {
+              setInactive(true);
+            }}
+            className="link"
+            to={e.path}
+          >
+            <span>{e.title}</span>
+          </NavLink>
+        </div>
       </li>
     );
   });
+
+  const handleDocClick = () => {
+    setInactive(true);
+    props.changeNav(false);
+    setExpand(false);
+  };
+
+  document.addEventListener("click", handleDocClick, true);
 
   //Rendering JSX
   return (
@@ -46,15 +62,27 @@ const Sidebar = (props) => {
         <ul>
           {sideBarItems}
           {props.submenu ? (
-            <li className="menu-item-major" onClick={() => setExpand(!expand)}>
-              <NavLink className="menu-item" to="#">
+            <li className="menu-item-major">
+              <div className="menu-item">
                 <div className="menu-icon">
-                  <i class="bx bxs-user"></i>
+                  <i
+                    onClick={() => {
+                      setInactive(!inactive);
+                      props.changeNav(1);
+                    }}
+                    class="bx bxs-user"
+                  ></i>
                 </div>
-                <span>
+                <span
+                  onClick={() => {
+                    setExpand(!expand);
+                    setInactive(false);
+                    props.changeNav(1);
+                  }}
+                >
                   Gramsevak <i class="bx bx-right-arrow"></i>
                 </span>
-              </NavLink>
+              </div>
               <ul className={`sub-menu ${expand ? "active" : ""}`}>
                 {props.submenuData.map((e) => {
                   return (

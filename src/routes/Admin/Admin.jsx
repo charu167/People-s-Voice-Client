@@ -27,10 +27,6 @@ const Admin = () => {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        <Route exact path={`${path}/login`}>
-          <Login />
-        </Route>
-
         <Route path={`${path}`}>
           <Sidebar
             changeNav={(a) => setA(a)}
@@ -51,6 +47,10 @@ const Admin = () => {
             }
             viewAll={`${path}/new`}
           />
+        </Route>
+
+        <Route exact path={`${path}/login`}>
+          <Login />
         </Route>
 
         <Route exact path={`${path}`}>
