@@ -22,6 +22,21 @@
   transition: all 0.2s ease-in-out;
 }
 
+.main-nav .set {
+  position: absolute;
+  width: 300px;
+  right: 50px;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.main-nav .set.inactive{
+  display: none;
+}
+
 .main-nav.inactive .logo {
   width: 80px;
 }
@@ -97,18 +112,17 @@
   top: 60px;
 }
 
-.notification.inactive{
+.notification.inactive {
   display: none;
 }
 
-.notification table{
+.notification table {
   /* background-color: violet; */
   width: 100%;
   padding: 15px;
 }
 
-
-.notiCount{
+.notiCount {
   background-color: #4482ff;
   color: white;
   position: absolute;
@@ -124,81 +138,77 @@
   display: flex;
 }
 
-.notiCount.inactive{
+.notiCount.inactive {
   display: none;
 }
-.notification-title{
+.notification-title {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
-  padding: 20px 15px 20px;
 
+  padding: 20px 15px 20px;
 }
-.notification table{
+.notification table {
   background-color: #f1f3f6;
 }
-.notification table tbody tr{
+.notification table tbody tr {
   font-size: 13px;
-    font-weight: 500;
-    color: rgb(151, 151, 151);
-    padding: 10px 15px 20px;
-    display: flex;
-    text-decoration: none;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-  
+  font-weight: 500;
+  color: rgb(151, 151, 151);
+  padding: 10px 15px 20px;
+  display: flex;
+  text-decoration: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
-.notification .noti-name h5{
+.notification .noti-name h5 {
   font-size: 13px;
-    font-weight: 500;
-    color: rgb(50, 51, 50);
-    margin-top: 0px;
-    padding-bottom: 5px;
+  font-weight: 500;
+  color: rgb(50, 51, 50);
+  margin-top: 0px;
+  padding-bottom: 5px;
 }
-p{
+p {
   font-size: 12px;
-    font-weight: 400;
-    color: rgb(151, 151, 151);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding-bottom: 10px;
+  font-weight: 400;
+  color: rgb(151, 151, 151);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
-.notification .noti-name{
- 
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    text-align: left;
-    width: 100%;
-    border-bottom: 1px solid rgb(134, 134, 134);
-    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-
+.notification .noti-name {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid rgb(134, 134, 134);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
-.notification .mybutton{
+.notification .mybutton {
   font-size: 13px;
-    font-weight: 500;
-    color: rgb(151, 151, 151);
-    padding: 10px 15px 20px;
-    display: flex;
-    text-decoration: none;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  font-weight: 500;
+  color: rgb(151, 151, 151);
+  padding: 10px 15px 20px;
+  display: flex;
+  text-decoration: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
-.notification button{
+.notification button {
   border: 0px;
   background-color: white;
-  cursor:pointer;
+  cursor: pointer;
 }

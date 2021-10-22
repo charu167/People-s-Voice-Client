@@ -48,6 +48,7 @@ const Gramsevak = () => {
               "/politician_image_building/Gramsevak Dashboard/Complaints Retrieval/New.php"
             }
             viewAll={`${path}/new`}
+            logout={'gramsevak'}
           />
         </Route>
 

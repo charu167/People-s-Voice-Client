@@ -33,11 +33,11 @@ const Settings = () => {
     check();
   });
 
-  const handleLogout = () => {
-    sessionStorage.removeItem("loggedinGramSevak");
-    // sessionStorage.clear();
-    history.push("/gramsevak/login");
-  };
+  // const handleLogout = () => {
+  //   sessionStorage.removeItem("loggedinGramSevak");
+    
+  //   history.push("/gramsevak/login");
+  // };
 
   const [update, setUpdate] = useState({
     name: "",
@@ -200,7 +200,7 @@ const Settings = () => {
         </form>
         <button onClick={handleSubmit}>Update</button>
 
-        <button onClick={handleLogout}>logout</button>
+        {/* <button onClick={handleLogout}>logout</button> */}
       </div>
     </div>
   );

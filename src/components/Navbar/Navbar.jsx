@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { NavLink, useRouteMatch } from "react-router-dom";
+import { NavLink, useRouteMatch, useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Navbar = (props) => {
+  const history = useHistory();
   const { path, url } = useRouteMatch();
 
   let region = sessionStorage.getItem("GSRegion");
@@ -12,6 +13,7 @@ const Navbar = (props) => {
   const [notiCount, setNotiCount] = useState("notiCount inactive");
   const [notiData, setNotiData] = useState(null);
   const [notiCountData, setNotiCountData] = useState(0);
+  const [settings, setSettings] = useState("set inactive");
   //FETCHING NOTIFICATION DATA
   const url_get = props.notification;
   useEffect(() => {
@@ -56,9 +58,9 @@ const Navbar = (props) => {
               ? setNotification("notification ")
               : setNotification("notification inactive");
           }}
-        > 
+        >
           <span className={notiCount}>{notiCountData}</span>
-         
+
           <div className={notification}>
             <h4 className="notification-title">Notification</h4>
             <table>
@@ -70,10 +72,9 @@ const Navbar = (props) => {
                         <tr className="tblrw">
                           {/* <td>{e[0]}</td> */}
                           <NavLink to="#" className="noti-name">
-                           
-                          <h5>{e[1]}</h5>
-                         
-                          <p>{e[2]}</p>
+                            <h5>{e[1]}</h5>
+
+                            <p>{e[2]}</p>
                           </NavLink>
                         </tr>
                       );
@@ -81,17 +82,62 @@ const Navbar = (props) => {
               </tbody>
             </table>
             <div className="mybutton">
-            <NavLink to={props.viewAll}>
-              
-              <button>View all</button>
-            </NavLink>
+              <NavLink to={props.viewAll}>
+                <button>View all</button>
+              </NavLink>
             </div>
           </div>
         </i>
       ),
       path: "#",
     },
-    { icon: <i class="bx bxs-cog"></i>, path: props.path },
+    {
+      icon: (
+        <i
+          onClick={() => {
+            settings === "set inactive"
+              ? setSettings("set")
+              : setSettings("set inactive");
+          }}
+          class="bx bxs-user-circle"
+        >
+          <div className={settings}>
+            <NavLink
+              className="link"
+              to={props.path}
+              style={
+                props.logout === "gramsevak"
+                  ? {
+                      display: "flex",
+                    }
+                  : {
+                      display: "none",
+                    }
+              }
+            >
+              <span>settings</span>
+            </NavLink>
+            <span>
+              <i
+                onClick={
+                  props.logout === "gramsevak"
+                    ? () => {
+                        sessionStorage.removeItem("loggedinGramSevak");
+                        history.push("/gramsevak/login");
+                      }
+                    : () => {
+                        sessionStorage.removeItem("loggedin");
+                        history.push("/admin/login");
+                      }
+                }
+                class="bx bx-log-out"
+              ></i>
+            </span>
+          </div>
+        </i>
+      ),
+      path: "#",
+    },
     { icon: <i class="bx bx-fullscreen"></i>, path: "/" },
   ];
 
