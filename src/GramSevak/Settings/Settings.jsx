@@ -136,7 +136,7 @@ const Settings = () => {
   return (
     <div className="outermost-container">
       <div className="settings">
-        <h3 className="title">Settings</h3>
+        <h3 className="title">Update Profile</h3>
 
         <form className="update">
           <div className="main">

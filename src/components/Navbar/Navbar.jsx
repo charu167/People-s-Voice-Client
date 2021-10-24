@@ -115,9 +115,9 @@ const Navbar = (props) => {
                     }
               }
             >
-              <span>settings</span>
+              <span>Edit Profile</span>
             </NavLink>
-            <span>
+            <span className='link'>
               <i
                 onClick={
                   props.logout === "gramsevak"
@@ -130,7 +130,7 @@ const Navbar = (props) => {
                         history.push("/admin/login");
                       }
                 }
-                class="bx bx-log-out"
+                class="bx bx-log-out" 
               ></i>
             </span>
           </div>

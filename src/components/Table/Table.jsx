@@ -86,17 +86,7 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
-      <div>
-        <select onChange={(event)=>{
-          setType(event.target.value)
-        }}>
-          <option value="type">type</option>
-          <option value="road">road</option>
-          <option value="water">water</option>
-          <option value="electricity">electricity</option>
-          <option value="other">other</option>
-        </select>
-      </div>
+      
       <div
         style={!props.additional ? { display: "none" } : { display: "flex" }}
         className="additional"
@@ -174,7 +164,17 @@ const Table = (props) => {
               })}
             </select>
           </div>
-
+          <div>
+        <select onChange={(event)=>{
+          setType(event.target.value)
+        }}>
+          <option value="type">type</option>
+          <option value="road">road</option>
+          <option value="water">water</option>
+          <option value="electricity">electricity</option>
+          <option value="other">other</option>
+        </select>
+      </div>
           {/* search */}
           <div className="search">
             <i class="bx bx-search-alt"></i>
