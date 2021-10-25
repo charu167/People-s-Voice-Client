@@ -61,10 +61,10 @@ const Table = (props) => {
         (date.date2 === null
           ? true
           : Math.round(Date.parse(date.date2) / (1000 * 60 * 60 * 24)) >=
-            Math.round(Date.parse(row[7]) / (1000 * 60 * 60 * 24))) &&
+            Math.round(Date.parse(row[props.date]) / (1000 * 60 * 60 * 24))) &&
         (date.date1 === null
           ? true
-          : Math.round(Date.parse(row[7]) / (1000 * 60 * 60 * 24)) >=
+          : Math.round(Date.parse(row[props.date]) / (1000 * 60 * 60 * 24)) >=
             Math.round(Date.parse(date.date1) / (1000 * 60 * 60 * 24)))
     )
     .map((filteredRow, index) => (
@@ -107,7 +107,10 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
-      <div className="date">
+      <div
+        className="date"
+        style={!props.date ? { display: "none" } : { display: "flex" }}
+      >
         <label htmlFor="date1">Start date</label>
         <input
           name="date1"

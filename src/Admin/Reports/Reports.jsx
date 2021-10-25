@@ -96,6 +96,7 @@ const Reports = () => {
         additional={true}
         regionList={true}
         regions={regions === null ? [] : regions}
+        date={7}
       />
     </motion.div>
   );

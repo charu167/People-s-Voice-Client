@@ -91,6 +91,7 @@ const Reports = () => {
         data={data !== null ? data : []}
         header={"Reports"}
         regions={[]}
+        date={5}
       />
     </motion.div>
   );
