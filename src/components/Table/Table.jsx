@@ -108,33 +108,15 @@ const Table = (props) => {
   return (
     <div className="table-container">
       <div
-        className="date"
-        style={!props.date ? { display: "none" } : { display: "flex" }}
-      >
-        <label htmlFor="date1">Start date</label>
-        <input
-          name="date1"
-          type="date"
-          onChange={(event) => {
-            setDate({ ...date, ["date1"]: event.target.valueAsDate });
-          }}
-        />
-
-        <label htmlFor="date2">End date</label>
-        <input
-          name="date2"
-          type="date"
-          onChange={(event) => {
-            setDate({ ...date, ["date2"]: event.target.valueAsDate });
-          }}
-        />
-      </div>
-
-      <div
         style={!props.additional ? { display: "none" } : { display: "flex" }}
         className="additional"
       >
-        {/* excel */}
+      </div>
+      {/* table header */}
+      <div className="top-section">
+        <div className="header">
+          <span>{props.header}</span>
+          {/* excel */}
         <div className="excel">
           <ReactHTMLTableToExcel
             className="btn"
@@ -144,11 +126,6 @@ const Table = (props) => {
             buttonText="Download as Excel"
           />
         </div>
-      </div>
-      {/* table header */}
-      <div className="top-section">
-        <div className="header">
-          <span>{props.header}</span>
         </div>
 
         {/* Utilities */}
@@ -234,6 +211,28 @@ const Table = (props) => {
           </div>
         </div>
       </div>
+      <div className="date"
+        style={!props.date ? { display: "none" } : { display: "flex" }}
+      >
+        <label htmlFor="date1">Start date</label>
+        <input
+          name="date1"
+          type="date"
+          onChange={(event) => {
+            setDate({ ...date, ["date1"]: event.target.valueAsDate });
+          }}
+        />
+
+        <label htmlFor="date2">End date</label>
+        <input
+          name="date2"
+          type="date"
+          onChange={(event) => {
+            setDate({ ...date, ["date2"]: event.target.valueAsDate });
+          }}
+        />
+      </div>
+
 
       {/* Main Table */}
       <table className="table" id="Table">
