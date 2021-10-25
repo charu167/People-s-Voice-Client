@@ -2,12 +2,28 @@ import React, { useEffect, useState } from "react";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import "./Table.css";
 const Table = (props) => {
+  // useEffect(() => {
+  //   console.log(Math.round(Date.now() / (1000 * 60 * 60 * 24)));
+  // }, []);
+
   //Dropdown button
- 
   const [dropdown, setDropdown] = useState(0);
   const [region, setRegion] = useState("all");
   const [type, setType] = useState("type");
   const [search, setSearch] = useState("");
+  const [date, setDate] = useState({
+    date1: null,
+    date2: null,
+  });
+
+  // props.data.map((e) => {
+  //   console.log(
+  //     Math.round(Date.parse(e[7]) / (1000 * 60 * 60 * 24)) >
+  //       Math.round(Date.now() / (1000 * 60 * 60 * 24))
+  //   );
+  // });
+
+  // console.log(Math.round(Date.parse(date) / (1000 * 60 * 60 * 24)));
 
   //items to be shown at once in the table
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -36,15 +52,20 @@ const Table = (props) => {
 
   //each row in table coming from props
   const rows = props.data
-    .filter((row) =>
-      row[0] >= index &&
-      row[0] <= index + itemsPerPageInterval &&
-      region === "all"
-        ? true
-        : row[5] === region &&
-        type === "type"
-        ? true
-        : row[6] === type
+    .filter(
+      (row) =>
+        row[0] >= index &&
+        row[0] <= index + itemsPerPageInterval &&
+        (region === "all" ? true : row[5] === region) &&
+        (type === "type" ? true : row[6] === type) &&
+        (date.date2 === null
+          ? true
+          : Math.round(Date.parse(date.date2) / (1000 * 60 * 60 * 24)) >=
+            Math.round(Date.parse(row[7]) / (1000 * 60 * 60 * 24))) &&
+        (date.date1 === null
+          ? true
+          : Math.round(Date.parse(row[7]) / (1000 * 60 * 60 * 24)) >=
+            Math.round(Date.parse(date.date1) / (1000 * 60 * 60 * 24)))
     )
     .map((filteredRow, index) => (
       <tr key={index} className="table-data">
@@ -86,7 +107,26 @@ const Table = (props) => {
   //rendering JSX
   return (
     <div className="table-container">
-      
+      <div className="date">
+        <label htmlFor="date1">Start date</label>
+        <input
+          name="date1"
+          type="date"
+          onChange={(event) => {
+            setDate({ ...date, ["date1"]: event.target.valueAsDate });
+          }}
+        />
+
+        <label htmlFor="date2">End date</label>
+        <input
+          name="date2"
+          type="date"
+          onChange={(event) => {
+            setDate({ ...date, ["date2"]: event.target.valueAsDate });
+          }}
+        />
+      </div>
+
       <div
         style={!props.additional ? { display: "none" } : { display: "flex" }}
         className="additional"
@@ -165,16 +205,18 @@ const Table = (props) => {
             </select>
           </div>
           <div>
-        <select onChange={(event)=>{
-          setType(event.target.value)
-        }}>
-          <option value="type">type</option>
-          <option value="road">road</option>
-          <option value="water">water</option>
-          <option value="electricity">electricity</option>
-          <option value="other">other</option>
-        </select>
-      </div>
+            <select
+              onChange={(event) => {
+                setType(event.target.value);
+              }}
+            >
+              <option value="type">type</option>
+              <option value="road">road</option>
+              <option value="water">water</option>
+              <option value="electricity">electricity</option>
+              <option value="other">other</option>
+            </select>
+          </div>
           {/* search */}
           <div className="search">
             <i class="bx bx-search-alt"></i>

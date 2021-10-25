@@ -19,6 +19,7 @@ const Reports = () => {
     "Phone",
     "Status",
     "Region",
+    "Type",
     "Date",
     "Gramsevak",
   ];
@@ -28,7 +29,6 @@ const Reports = () => {
     const getData = async () => {
       try {
         const res = await axios.get(url);
-console.log(res.data);
         const sample = [];
         res.data.map((e, i) => {
           sample.push([
@@ -38,6 +38,7 @@ console.log(res.data);
             e.u_phone,
             e.forAdmin,
             e.c_region,
+            e.c_type,
             e.date,
             e.g,
           ]);
@@ -67,10 +68,6 @@ console.log(res.data);
     };
     getData();
   }, [regions]);
-
-
- 
-
 
   //LOGIN CHECK
   const history = useHistory();
