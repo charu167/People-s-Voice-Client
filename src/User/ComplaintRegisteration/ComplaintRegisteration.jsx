@@ -12,13 +12,16 @@ const ComplaintRegisteration = () => {
 
   //INPUTS AND REGION
   const [inputs, setInputs] = useState({
-    name: "",
-    phone: null,
-    email: "",
-    address: "",
+    // name: "",
+    // phone: null,
+    // email: "",
+    // address: "",
     location: "",
     complaint_type: "",
     complaint_description: "",
+    c_region: "",
+    uid: 1,
+    gsid: 1,
   });
 
   const [region, setRegion] = useState(null);
@@ -36,8 +39,8 @@ const ComplaintRegisteration = () => {
         setRegions(sample);
       });
     };
-    getData();
-  }, [regions]);
+    // getData();
+  }, []);
 
   //HANDLING INPUTS
   let name, value;
@@ -51,14 +54,14 @@ const ComplaintRegisteration = () => {
   //VALIDATION
   function validation() {
     if (
-      inputs.name === "" ||
-      inputs.phone === null ||
-      inputs.email === "" ||
-      inputs.address === "" ||
+      // inputs.name === "" ||
+      // inputs.phone === null ||
+      // inputs.email === "" ||
+      // inputs.address === "" ||
       inputs.location === "" ||
       inputs.complaint_type === "" ||
-      inputs.complaint_description === "" ||
-      region === null
+      inputs.complaint_description === ""
+      // region === null
     ) {
       swal({
         title: "Oh No!",
@@ -95,21 +98,28 @@ const ComplaintRegisteration = () => {
   //POST REQUEST
   const Register = async (event) => {
     event.preventDefault();
-    if (validation()) {
+    if (true) {
       let formdata = new FormData();
 
-      formdata.append("c_type", inputs.complaint_type);
-      formdata.append("c_description", inputs.complaint_description);
-      formdata.append("c_location", inputs.location);
-      formdata.append("u_name", inputs.name);
-      formdata.append("u_email", inputs.email);
-      formdata.append("u_address", inputs.address);
-      formdata.append("u_phone", inputs.phone);
-      formdata.append("c_region", region);
+      // formdata.append("c_type", inputs.complaint_type);
+      formdata.append("c_type", "");
+      // formdata.append("c_description", inputs.complaint_description);
+      formdata.append("c_description", "My elder brother is B.Com passout still has got no job");
+      // formdata.append("c_location", inputs.location);
+      formdata.append("c_location", "shivajinagar");
+      // formdata.append("c_region", region);
+      formdata.append("c_region", "akurdi");
+      // formdata.append("u_name", inputs.name);
+      // formdata.append("u_email", inputs.email);
+      // formdata.append("u_address", inputs.address);
+      // formdata.append("u_phone", inputs.phone);
+      formdata.append("uid", 1);
+      formdata.append("gsid", 1);
 
       await axios
-        .post(url_post, formdata)
+        .post("http://localhost:8000/complain/", formdata)
         .then((res) => {
+          console.log(res.data);
           if (res.data) {
             swal(
               "Good job!",
