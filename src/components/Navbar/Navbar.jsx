@@ -52,48 +52,6 @@ const Navbar = (props) => {
     {
       icon: (
         <i
-          class="bx bxs-bell"
-          onClick={() => {
-            notification === "notification inactive"
-              ? setNotification("notification ")
-              : setNotification("notification inactive");
-          }}
-        >
-          <span className={notiCount}>{notiCountData}</span>
-
-          <div className={notification}>
-            <h4 className="notification-title">Notification</h4>
-            <table>
-              <tbody>
-                {notiData === null
-                  ? []
-                  : notiData.map((e) => {
-                      return (
-                        <tr className="tblrw">
-                          {/* <td>{e[0]}</td> */}
-                          <NavLink to="#" className="noti-name">
-                            <h5>{e[1]}</h5>
-
-                            <p>{e[2]}</p>
-                          </NavLink>
-                        </tr>
-                      );
-                    })}
-              </tbody>
-            </table>
-            <div className="mybutton">
-              <NavLink to={props.viewAll}>
-                <button>View all</button>
-              </NavLink>
-            </div>
-          </div>
-        </i>
-      ),
-      path: "#",
-    },
-    {
-      icon: (
-        <i
           onClick={() => {
             settings === "set inactive"
               ? setSettings("set")
@@ -117,7 +75,7 @@ const Navbar = (props) => {
             >
               <span>Edit Profile</span>
             </NavLink>
-            <span className='link'>
+            <span className="link">
               <i
                 onClick={
                   props.logout === "gramsevak"
@@ -130,7 +88,7 @@ const Navbar = (props) => {
                         history.push("/admin/login");
                       }
                 }
-                class="bx bx-log-out" 
+                class="bx bx-log-out"
               ></i>
             </span>
           </div>

@@ -1,0 +1,10 @@
+.cform {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  width: 400px;
+  margin: auto;
+  padding: 200px 20px 20px 20px;
+  background-color: aliceblue;
+}

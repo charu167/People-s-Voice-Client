@@ -3,19 +3,18 @@ import { Route, useRouteMatch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 //Importing components
-import Login from "../../Admin/Login/Login";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import AdminDashboard from "../../Admin/Dashboard/Dashboard";
-import GramSevakRegisteration from "../../Admin/GramSevakRegisteration/GramSevakRegisteration";
-import GramSevakList from "../../Admin/GramSevakList/GramSevakList";
-import ComplaintRegisteration from "../../Admin/ComplaintRegisteration/ComplaintRegisteration";
-import UserDetails from "../../Admin/UserDetails/UserDetails";
-import Settings from "../../Admin/Settings/Settings";
-import Reports from "../../Admin/Reports/Reports";
-import New from "../../Admin/New/New";
-import InProcess from "../../Admin/InProcess/InProcess";
-import Completed from "../../Admin/Completed/Completed";
+import Login from "../../pages/Admin/Login/Login";
+import AdminDashboard from "../../pages/Admin/Dashboard/Dashboard";
+import GramSevakRegisteration from "../../pages/Admin/GramSevakRegisteration/GramSevakRegisteration";
+import GramSevakList from "../../pages/Admin/GramSevakList/GramSevakList";
+import UserDetails from "../../pages/Admin/UserDetails/UserDetails";
+import Settings from "../../pages/Admin/Settings/Settings";
+import Reports from "../../pages/Admin/Reports/Reports";
+import New from "../../pages/Admin/New/New";
+import InProcess from "../../pages/Admin/InProcess/InProcess";
+import Completed from "../../pages/Admin/Completed/Completed";
 
 //Importing data
 import { sideBarData, submenuData } from "./AdminData";
@@ -63,10 +62,6 @@ const Admin = () => {
 
         <Route path={`${path}/gslist`}>
           <GramSevakList />
-        </Route>
-
-        <Route path={`${path}/complainreg`}>
-          <ComplaintRegisteration />
         </Route>
 
         <Route path={`${path}/userdetail`}>
