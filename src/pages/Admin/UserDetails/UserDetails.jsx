@@ -1,15 +1,14 @@
 //IMPORTING LIBRARIES
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { Chip } from "@mui/material";
 
 //IMPORTING COMPONENTS
 import Table from "../../../components/Table/Table";
 
 const UserDetails = () => {
   //DATA
-  const titles = ["Sr. No.", "Name", "Email", "Address", "Phone", "Region"];
+  const titles = ["ID", "Name", "Email", "Address", "Phone", "Region"];
   const [data, setData] = useState(null);
 
   //URL GET
@@ -23,7 +22,14 @@ const UserDetails = () => {
         .then((res) => {
           const sample = [];
           res.data.forEach((e, i) => {
-            sample.push([i + 1, e.name, e.email, e.address, e.phone, e.region]);
+            sample.push({
+              ID: e.id,
+              Name: e.name,
+              Email: e.email,
+              Address: e.address,
+              Phone: e.phone,
+              Region: <Chip color="secondary" label={e.region} />,
+            });
           });
           setData(sample);
         })
@@ -36,25 +42,13 @@ const UserDetails = () => {
 
   //JSX
   return (
-    <motion.div
-      className="outermost-container"
-      initial={{ y: 500 }}
-      animate={{
-        y: 0,
-        transition: { duration: 0.5, type: "spring" },
-      }}
-      exit={{
-        y: -500,
-        transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
-      }}
-    >
+    <div className="outermost-container">
       <Table
         titles={titles}
         data={data !== null ? data : []}
         header={"User Details"}
-        regions={[]}
       />
-    </motion.div>
+    </div>
   );
 };
 

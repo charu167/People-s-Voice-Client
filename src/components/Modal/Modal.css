@@ -1,0 +1,43 @@
+.modal {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal .one {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4%;
+}
+
+.modal .one #status {
+  /* background-color: bisque; */
+  padding-top: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.modal .two {
+  padding: 0% 4% 0% 4%;
+  text-align: justify;
+}
+
+.modal .three {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 2%;
+  margin-top: 2%;
+  width: 92%;
+}
+
+.modal .three #date {
+  padding-top: 2%;
+}

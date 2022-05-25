@@ -5,6 +5,7 @@ import Admin from "./routes/Admin/Admin";
 import PageOne from "./components/utilities/PageOne";
 
 import { AuthProvider } from "./context/AuthContext";
+import Motion from "./components/Motion/Motion";
 
 function App() {
   return (

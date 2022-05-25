@@ -21,7 +21,11 @@ const Login = () => {
       api={api}
       login={login}
       user="userid"
-      redirect="/user"
+      redirect="/user/dashboard"
+      button_text={"Log In"}
+      bottom_text={"Don't have an account? Sign Up."}
+      header={"Log In"}
+      push="/user/register"
     />
   );
 };

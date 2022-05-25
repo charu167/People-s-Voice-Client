@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 .card {
-  width: 265px;
-  height: 80px;
+  width: 310px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-family: 'Raleway', sans-serif;
 }
 
@@ -16,8 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 130px;
-  border-radius: 5px 0px 0px 5px;
+  width: 210px;
+  /* border-radius: 5px 0px 0px 5px; */
   font-size: 45px;
   border: none;
   padding-top: 7px;
@@ -48,6 +48,13 @@
   background-color: #b34e65;
 }
 
+.card.card.light-blue .logo {
+  background-color: #73b0cd;
+}
+.card.card.light-blue .logo:hover{
+  background-color: rgb(106, 162, 188);
+}
+
 .card .logo i {
   color: #ffffff;
 }
@@ -60,7 +67,7 @@
   text-align: left;
   justify-content: center;
   padding-left: 20px;
-  border-radius: 0px 5px 5px 0px;
+  /* border-radius: 0px 5px 5px 0px; */
 }
 
 .card.blue .data {
@@ -73,6 +80,10 @@
 
 .card.red .data {
   background-color: #f75d81;
+}
+
+.card.light-blue .data {
+  background-color: #89CEEF;
 }
 
 .card .data .count {

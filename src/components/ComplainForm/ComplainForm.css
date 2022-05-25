@@ -1,10 +1,11 @@
 .cform {
-  margin-top: 200px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  width: 400px;
+  padding-top: 15%;
+}
+
+.cform .btncform {
+  display: block;
   margin: auto;
-  padding: 200px 20px 20px 20px;
-  background-color: aliceblue;
+  width: 100%;
+  background-color: black;
+  margin-top: 5%;
 }

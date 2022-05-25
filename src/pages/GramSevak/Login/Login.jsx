@@ -22,7 +22,10 @@ const Login = () => {
       api={api}
       login={login}
       user={user}
-      redirect="/gramsevak"
+      header={"Log In"}
+      button_text={"Log In"}
+      bottom_text={""}
+      push={"#"}
     />
   );
 };

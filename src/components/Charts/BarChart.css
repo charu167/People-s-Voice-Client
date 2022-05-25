@@ -1,18 +1,4 @@
 .bar-chart {
-  /* height: 500px; */
-  width: 700px;
+  width: 500px;
   overflow: visible;
-}
-
-.bar-chart button {
-  border: none;
-  background-color: transparent;
-  border: 1px solid #ccc9c9;
-  width: 180px;
-  height: 30px;
-  cursor: pointer;
-  color: #989898;
-  display: block;
-  margin: auto;
-  margin-bottom: 20px;
 }

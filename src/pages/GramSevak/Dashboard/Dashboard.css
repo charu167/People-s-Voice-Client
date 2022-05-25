@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 
 .dashboard {
-  /* background-color: rgb(192, 172, 172); */
   width: 96.5%;
   padding-top: 0px;
   padding-bottom: 40px;
@@ -11,22 +10,21 @@
 .dashboard .dashboard-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e5e5e5;
-  padding-bottom: 30px;
-  background-color: white;
-  margin: 20px 0px;
+  padding-bottom: 3%;
+  /* margin: 20px 0px; */
 }
 
 .dashboard .dashboard-item .dashboard-title {
   font-size: 30px;
-  /* background-color: blueviolet; */
-  padding: 10px 80px;
-  margin-bottom: 20px;
+  margin-bottom: 2%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 100%;
+  margin: auto;
 }
 
 .dashboard .dashboard-item .dashboard-data {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  /* background-color: darkslategray; */
 }

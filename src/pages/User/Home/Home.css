@@ -1,3 +1,93 @@
+.Home-Page {
+  padding-bottom: 20%;
+  background-color: #f5f5f5;
+  padding-top: 9%;
+}
+
+.Home-Page .one {
+  display: flex;
+
+  padding-left: 7%;
+  padding-right: 7%;
+  justify-content: center;
+}
+
+.Home-Page .one .left {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.Home-Page .one .right {
+  flex: 1;
+  /* background-color: #7f7679; */
+}
+
+.Home-Page .one .right img {
+  width: 400px;
+}
+
+.Home-Page .get-started button {
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  height: 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  background-color: #000000;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.hero {
+  /* background-color: rgb(47, 91, 128); */
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hero ._1 {
+  color: #7f7679;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.hero .item {
+  width: 30%;
+  /* background-color: aqua; */
+  margin-left: 7%;
+  margin-right: 7%;
+  padding: 5%;
+  margin-top: 0;
+}
+
+.hero #_1 {
+  align-self: flex-start;
+}
+.hero #_2 {
+  align-self: flex-end;
+}
+.hero #_3 {
+  align-self: flex-start;
+}
+
+.hero .item .title {
+  font-size: 35px;
+  margin-bottom: 4%;
+  color: #7f7679;
+}
+
+.hero .item .content {
+  font-size: 20px;
+  color: #9b8f93;
+}
+
 .grid-cover {
   width: 65%;
   height: 300px;

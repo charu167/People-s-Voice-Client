@@ -1,22 +1,15 @@
 //IMPORTING LIBRARIES
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
-import { motion } from "framer-motion";
-
-//IMPORTING COMPONENTS
 import Table from "../../../components/Table/Table";
+import { Button } from "@mui/material";
+import Modal from "../../../components/Modal/Modal";
 
 const Completed = () => {
-  const titles = [
-    "Complain ID",
-    "Type",
-    "Description",
-    "Location",
-    "Date",
-    "Action Button",
-  ];
+  const titles = ["Date", "Type", "Location", "View"];
   const [data, setData] = useState(null);
+  const [currentData, setCurrentData] = useState(0);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const getComplaints = async () => {
@@ -29,17 +22,29 @@ const Completed = () => {
           },
         })
         .then((res) => {
-          console.log(res.data);
           const sample = [];
+          const date = new Date();
           res.data.forEach((e, i) => {
-            sample.push([
-              i + 1,
-              e.c_type,
-              e.c_description,
-              e.c_location,
-              e.c_date,
-              e.forGS,
-            ]);
+            sample.push({
+              description: e.c_description,
+              status: e.forAdmin,
+              Date: date.toDateString(e.c_date),
+              Type: e.c_type,
+              Location: e.c_location,
+              View: (
+                <Button
+                  onClick={() => {
+                    setOpen(true);
+                    setCurrentData(i);
+                  }}
+                  variant="contained"
+                  color="info"
+                  size="small"
+                >
+                  View
+                </Button>
+              ),
+            });
           });
           setData(sample);
         })
@@ -52,25 +57,34 @@ const Completed = () => {
 
   //JSX
   return (
-    <motion.div
-      className="outermost-container"
-      initial={{ y: 500 }}
-      animate={{
-        y: 0,
-        transition: { duration: 0.5, type: "spring" },
-      }}
-      exit={{
-        y: -500,
-        transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
-      }}
-    >
+    <div className="outermost-container">
       <Table
         titles={titles}
         data={data !== null ? data : []}
         header={"Completed Complaints"}
-        regions={[]}
       />
-    </motion.div>
+      <Modal
+        data={
+          data !== null
+            ? {
+                type: data[currentData].Type,
+                status: data[currentData].status,
+                description: data[currentData].description,
+                location: data[currentData].Location,
+                date: data[currentData].Date,
+              }
+            : {
+                type: "",
+                status: "",
+                description: "",
+                location: "",
+                date: "",
+              }
+        }
+        setOpen={setOpen}
+        open={open}
+      />
+    </div>
   );
 };
 export default Completed;

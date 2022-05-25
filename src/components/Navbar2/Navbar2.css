@@ -1,0 +1,37 @@
+.Navbar2 {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px 10px 0px;
+  z-index: 100;
+  -webkit-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.54); 
+box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.54);
+}
+
+.Navbar2 .left .brand {
+  font-size: 60px;
+  font-variant: small-caps;
+  /* font-weight: 500; */
+  color: #000000;
+  background: -webkit-linear-gradient(#eee, rgb(0, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Navbar2 .right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar2 .right .link1 {
+  font-size: 18px;
+  /* font-weight: 500; */
+  color: #000000;
+}

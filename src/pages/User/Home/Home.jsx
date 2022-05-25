@@ -1,80 +1,64 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link, useRouteMatch, useHistory } from "react-router-dom";
 import { DataGrid } from "@mui/x-data-grid";
-import { Button } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
+import { Send } from "@mui/icons-material";
 import axios from "axios";
 import "./Home.css";
 import AuthContext from "../../../context/AuthContext";
+import { NavLink } from "react-router-dom";
+import Imagelist from "../../../components/ImageList/ImageList";
 
 export default function Home() {
-  const { isLoggedIn } = useContext(AuthContext);
-
-  const [rows, setRows] = useState([]);
-
-  const columns = [
-    { field: "col1", headerName: "Sr. no.", width: 80 },
-    { field: "col2", headerName: "Type", width: 150 },
-    { field: "col3", headerName: "Location", width: 150 },
-    { field: "col4", headerName: "Status", width: 150 },
-    { field: "col5", headerName: "Date", width: 150 },
-    {
-      field: "col6",
-      headerName: "View",
-      width: 150,
-      renderCell: (params) => <Button variant="contained">{"params"}</Button>,
-    },
-  ];
-
-  const getData = async () => {
-    axios
-      .get("http://localhost:8000/complain/", {
-        params: {
-          admin: 2,
-          userid: 2,
-          // userid: localStorage.getItem("userid"),
-        },
-      })
-      .then((res) => {
-        console.log(localStorage.getItem("userid"));
-        const sample = [];
-        res.data.forEach((e, i) => {
-          sample.push({
-            id: i,
-            col1: i,
-            col2: e.c_type,
-            col3: e.c_location,
-            col4: e.forAdmin,
-            col5: e.c_date,
-            // col6: renderCell("somtig"),
-          });
-        });
-
-        setRows(sample);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  const history = useHistory();
-  const auth1 = () => {
-    if (isLoggedIn("userid")) {
-      return;
-    } else {
-      history.push("/user/login");
-    }
-  };
-  useEffect(() => {
-    getData();
-    auth1();
-  }, []);
-
   return (
-    <div>
-      <h1>Home page for end user</h1>
+    <div className="Home-Page">
+      <div className="one">
+        <div className="left">
+          <Typography id="h4" variant="h4">
+            We make sure that
+          </Typography>
+          <Typography id="h3" variant="h3">
+            Your Voice Reaches The World
+          </Typography>
+          <div className="get-started">
+            <NavLink className="link" to="/user/login">
+              <Button variant="contained">GET STARTED</Button>
+            </NavLink>
+          </div>
+        </div>
+        <div className="right">
+          {/* <Imagelist /> */}
+          <img
+            src="https://www.seekpng.com/png/detail/15-158352_phoenix-png-clipart-phoenix-clipart-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
 
-      <div className="grid-cover">
-        <DataGrid rows={rows} columns={columns} />
+      <div className="hero">
+        <div className="_1">How It Works</div>
+        <div className="item" id="_1">
+          <h3 className="title">Create an account</h3>
+          <h6 className="content">
+            Create an user account to register new complaints or grievances and
+            get full benifits of our data analysis model.
+          </h6>
+        </div>
+        <div className="item" id="_2">
+          <h3 className="title">Raise New Tickets</h3>
+          <h6 className="content">
+            Once you are a registered user, you can raise unlimited number of
+            tickets about your daily problems which will be solved by higher
+            aithorities.
+          </h6>
+        </div>
+        <div className="item" id="_3">
+          <h3 className="title">Data Ananlysis</h3>
+          <h6 className="content">
+            We provide a comprehensive data analysis regarding the grievance
+            handling situation in your region.
+          </h6>
+        </div>
       </div>
     </div>
   );

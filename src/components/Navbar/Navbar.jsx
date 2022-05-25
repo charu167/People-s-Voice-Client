@@ -1,132 +1,102 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
-import { NavLink, useRouteMatch, useHistory } from "react-router-dom";
-import axios from "axios";
+import { NavLink, useRouteMatch } from "react-router-dom";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Avatar,
+  Tooltip,
+  MenuItem,
+} from "@mui/material";
+import { ShieldMoonRounded } from "@mui/icons-material";
 
-const Navbar = (props) => {
-  const history = useHistory();
-  const { path, url } = useRouteMatch();
+const Navbar = () => {
+  const { path } = useRouteMatch();
 
-  let region = sessionStorage.getItem("GSRegion");
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
-  const [notification, setNotification] = useState("notification inactive");
-  const [notiCount, setNotiCount] = useState("notiCount inactive");
-  const [notiData, setNotiData] = useState(null);
-  const [notiCountData, setNotiCountData] = useState(0);
-  const [settings, setSettings] = useState("set inactive");
-  //FETCHING NOTIFICATION DATA
-  const url_get = props.notification;
-  useEffect(() => {
-    const getData = async () => {
-      await axios
-        .get(url_get, {
-          headers: {
-            region: region,
-          },
-        })
-        .then((res) => {
-          const sample = [];
-          res.data.map((e, i) => {
-            sample.push([i, e.u_name, e.c_description]);
-          });
-          setNotiData(sample);
-          if (res.data.length > 9) {
-            setNotiCountData("9+");
-          } else {
-            setNotiCountData(res.data.length);
-          }
-          if (res.data.length !== 0) {
-            setNotiCount("notiCount");
-          } else {
-            setNotiCount("notiCount inactive");
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    getData();
-  }, [notiCountData, notiData]);
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
-  const mediaLinksData = [
-    {
-      icon: (
-        <i
-          onClick={() => {
-            settings === "set inactive"
-              ? setSettings("set")
-              : setSettings("set inactive");
-          }}
-          class="bx bxs-user-circle"
-        >
-          <div className={settings}>
-            <NavLink
-              className="link"
-              to={props.path}
-              style={
-                props.logout === "gramsevak"
-                  ? {
-                      display: "flex",
-                    }
-                  : {
-                      display: "none",
-                    }
-              }
-            >
-              <span>Edit Profile</span>
-            </NavLink>
-            <span className="link">
-              <i
-                onClick={
-                  props.logout === "gramsevak"
-                    ? () => {
-                        sessionStorage.removeItem("loggedinGramSevak");
-                        history.push("/gramsevak/login");
-                      }
-                    : () => {
-                        sessionStorage.removeItem("loggedin");
-                        history.push("/admin/login");
-                      }
-                }
-                class="bx bx-log-out"
-              ></i>
-            </span>
-          </div>
-        </i>
-      ),
-      path: "#",
-    },
-    { icon: <i class="bx bx-fullscreen"></i>, path: "/" },
-  ];
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
-  const mediaLinks = mediaLinksData.map((e) => {
-    return (
-      <li>
-        <NavLink to={e.path} id="full">
-          {e.icon}
-        </NavLink>
-      </li>
-    );
-  });
+  const settings0 = ["settings", "Logout"];
 
   return (
-    <>
-      <nav className={`main-nav ${props.prop}`}>
-        {/* LOGO */}
-        <div className="logo">
-          <h2>{props.logo}</h2>
-          {/* <i class="bx bx-podcast"></i> */}
-        </div>
+    <div className="navbar">
+      <AppBar position="static">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <ShieldMoonRounded
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            />
+            <NavLink className="link" to="/">
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  letterSpacing: ".1rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                PEOPLE'S VOICE
+              </Typography>
+            </NavLink>
 
-        {/* main links */}
-        <div className="menu-links">{/* <ul>{menuLinks}</ul> */}</div>
+            <Box
+              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            ></Box>
 
-        {/* media */}
-        <div className="media-links ">
-          <ul className="media-social">{mediaLinks}</ul>
-        </div>
-      </nav>
-    </>
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/11/2021-Best-Latest-Whatsapp-Dp-Profile-Images-pics.gif"
+                  />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings0.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <NavLink className="link" to={`${path}/settings`}>
+                      <Typography textAlign="center">{setting}</Typography>
+                    </NavLink>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </div>
   );
 };
 

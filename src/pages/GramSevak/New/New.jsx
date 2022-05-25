@@ -1,23 +1,17 @@
 //IMPORTING LIBRARIES
 import React, { useEffect, useState } from "react";
-import swal from "sweetalert";
-import { motion } from "framer-motion";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { Button } from "@mui/material";
+import Modal from "../../../components/Modal/Modal";
 
 //IMPORTING COMPONENTS
 import Table from "../../../components/Table/Table";
 
 const New = () => {
-  const titles = [
-    "Complain ID",
-    "Type",
-    "Description",
-    "Location",
-    "Date",
-    "Action Button",
-  ];
-  const [dbdata, setDbdata] = useState(null);
+  const titles = ["Date", "Type", "Location", "Action", "View"];
+  const [data, setData] = useState(null);
+  const [currentData, setCurrentData] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const getComplaints = async () => {
     await axios
@@ -30,23 +24,42 @@ const New = () => {
       })
       .then((res) => {
         const sample = [];
+        const date = new Date();
         res.data.forEach((e, i) => {
-          sample.push([
-            i + 1,
-            e.c_type,
-            e.c_description,
-            e.c_location,
-            e.c_date,
-            <button
-              onClick={() => {
-                handleUpdate(e.id);
-              }}
-            >
-              Forward
-            </button>,
-          ]);
+          sample.push({
+            description: e.c_description,
+            status: e.forAdmin,
+            Date: date.toDateString(e.c_date),
+            Type: e.c_type,
+            Location: e.c_location,
+            Action: (
+              <Button
+                onClick={() => {
+                  handleUpdate(e.id);
+                }}
+                variant="contained"
+                color="warning"
+                size="small"
+              >
+                Forward
+              </Button>
+            ),
+            View: (
+              <Button
+                onClick={() => {
+                  setOpen(true);
+                  setCurrentData(i);
+                }}
+                variant="contained"
+                color="info"
+                size="small"
+              >
+                View
+              </Button>
+            ),
+          });
         });
-        setDbdata(sample);
+        setData(sample);
       })
       .catch((err) => {
         console.log(err);
@@ -57,7 +70,6 @@ const New = () => {
     await axios
       .put("http://localhost:8000/complain/?admin=0&status=2&id=" + id)
       .then((res) => {
-        console.log(res.data);
         getComplaints();
       })
       .catch((err) => {
@@ -71,25 +83,34 @@ const New = () => {
 
   //JSX
   return (
-    <motion.div
-      className="outermost-container"
-      initial={{ y: 500 }}
-      animate={{
-        y: 0,
-        transition: { duration: 0.5, type: "spring" },
-      }}
-      exit={{
-        y: -500,
-        transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
-      }}
-    >
+    <div className="outermost-container">
       <Table
         titles={titles}
-        data={dbdata !== null ? dbdata : []}
+        data={data !== null ? data : []}
         header={"New Complaints"}
-        regions={[]}
       />
-    </motion.div>
+      <Modal
+        data={
+          data !== null
+            ? {
+                type: data[currentData].Type,
+                status: data[currentData].status,
+                description: data[currentData].description,
+                location: data[currentData].Location,
+                date: data[currentData].Date,
+              }
+            : {
+                type: "",
+                status: "",
+                description: "",
+                location: "",
+                date: "",
+              }
+        }
+        setOpen={setOpen}
+        open={open}
+      />
+    </div>
   );
 };
 

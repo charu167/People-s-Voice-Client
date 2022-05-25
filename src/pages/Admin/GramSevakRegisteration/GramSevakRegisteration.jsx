@@ -1,5 +1,5 @@
 import React from "react";
-import Auth from "../../../components/Auth/Auth";
+import Auth2 from "../../../components/Auth/Auth2";
 
 export default function GramSevakRegisteration() {
   const input_names = [
@@ -23,5 +23,16 @@ export default function GramSevakRegisteration() {
   };
 
   const api = "gramsevak/";
-  return <Auth input_names={input_names} inputs_={inputs_} api={api} />;
+  return (
+    <Auth2
+      header={"Register a new Gramsevak"}
+      button_text={"Register"}
+      bottom_text={""}
+      input_names={input_names}
+      inputs_={inputs_}
+      login={false}
+      api={api}
+      push={"#"}
+    />
+  );
 }

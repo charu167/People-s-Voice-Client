@@ -1,103 +1,149 @@
-import React, { useEffect, useState } from "react";
-import { NavLink, useRouteMatch } from "react-router-dom";
-
+import * as React from "react";
+import { useRouteMatch, NavLink } from "react-router-dom";
 import "./Sidebar.css";
-const Sidebar = (props) => {
-  const { path, url } = useRouteMatch();
-  const [inactive, setInactive] = useState(true);
-  const [expand, setExpand] = useState(false);
+import { styled, useTheme } from "@mui/material/styles";
 
-  const sideBarItems = props.sideBarData.map((e) => {
-    return (
-      <li
-        className="menu-item-major"
-        onClick={() => {
-          if (inactive) {
-            setInactive(!inactive);
-            props.changeNav(!props.variable);
-          }
-        }}
-      >
-        <div className="menu-item" to="#">
-          <div className="menu-icon">{e.icon}</div>
-          <NavLink
-            onClick={() => {
-              setInactive(true);
-            }}
-            className="link"
-            to={e.path}
-          >
-            <span>{e.title}</span>
-          </NavLink>
-        </div>
-      </li>
-    );
-  });
+import MuiDrawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 
-  const handleDocClick = () => {
-    setInactive(true);
-    props.changeNav(false);
-    setExpand(false);
+import {
+  Dashboard,
+  Summarize,
+  FormatListBulleted,
+  PersonAddAlt1,
+  People,
+} from "@mui/icons-material";
+
+const drawerWidth = 240;
+
+const openedMixin = (theme) => ({
+  width: drawerWidth,
+  transition: theme.transitions.create("width", {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.enteringScreen,
+  }),
+  overflowX: "hidden",
+});
+
+const closedMixin = (theme) => ({
+  transition: theme.transitions.create("width", {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  overflowX: "hidden",
+  width: `calc(${theme.spacing(7)} + 1px)`,
+  [theme.breakpoints.up("sm")]: {
+    width: `calc(${theme.spacing(8)} + 1px)`,
+  },
+});
+
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+}));
+
+const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  width: drawerWidth,
+  flexShrink: 0,
+  whiteSpace: "nowrap",
+  boxSizing: "border-box",
+  ...(open && {
+    ...openedMixin(theme),
+    "& .MuiDrawer-paper": openedMixin(theme),
+  }),
+  ...(!open && {
+    ...closedMixin(theme),
+    "& .MuiDrawer-paper": closedMixin(theme),
+  }),
+}));
+
+export default function Sidebar() {
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
+  const { path } = useRouteMatch();
+
+  console.log(path);
+
+  const handleDrawerClose = () => {
+    setOpen(!open);
   };
 
-  document.addEventListener("click", handleDocClick, true);
+  const items = [
+    {
+      name: "Dashboard",
+      link: "",
+      icon: <Dashboard />,
+    },
+    {
+      name: "Reports",
+      link: "/reports",
+      icon: <Summarize />,
+    },
+    {
+      name: "Gramsevak",
+      link: path === "/gramsevak" ? "#" : "/gslist",
+      icon: <FormatListBulleted />,
+    },
+    {
+      name: "New GS",
+      link: path === "/gramsevak" ? "/complainreg" : "/gsreg",
+      icon: <PersonAddAlt1 />,
+    },
+    {
+      name: "Users",
+      link: "/userdetail",
+      icon: <People />,
+    },
+  ];
 
-  //Rendering JSX
   return (
-    <div className={`side-bar ${inactive ? "inactive" : ""}`}>
-      <div className="top-section">
-        <div
-          className="logo"
-          onClick={() => {
-            setInactive(!inactive);
-            props.changeNav(!props.variable);
-            setExpand(0);
-          }}
-        >
-          <i class="bx bx-menu"></i>
-        </div>
-      </div>
-
-      <div className="main-menu">
-        <ul>
-          {sideBarItems}
-          {props.submenu ? (
-            <li className="menu-item-major">
-              <div className="menu-item">
-                <div className="menu-icon">
-                  <i
-                    onClick={() => {
-                      setInactive(!inactive);
-                      props.changeNav(1);
-                    }}
-                    class="bx bxs-user"
-                  ></i>
-                </div>
-                <span
-                  onClick={() => {
-                    setExpand(!expand);
-                    setInactive(false);
-                    props.changeNav(1);
+    <div className="sidebar">
+      <Drawer variant="permanent" open={open}>
+        <DrawerHeader onClick={handleDrawerClose}>
+          <IconButton>
+            {!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {items.map((e, i) => (
+            <NavLink className="link" to={`${path}` + e.link}>
+              <ListItemButton
+                key={e.name}
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? "initial" : "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : "auto",
+                    justifyContent: "center",
                   }}
                 >
-                  Gramsevak <i class="bx bx-right-arrow"></i>
-                </span>
-              </div>
-              <ul className={`sub-menu ${expand ? "active" : ""}`}>
-                {props.submenuData.map((e) => {
-                  return (
-                    <li>
-                      <NavLink to={e.path}>{e.title}</NavLink>
-                    </li>
-                  );
-                })}
-              </ul>
-            </li>
-          ) : null}
-        </ul>
-      </div>
+                  {e.icon}
+                </ListItemIcon>
+                <ListItemText primary={e.name} sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </NavLink>
+          ))}
+        </List>
+      </Drawer>
     </div>
   );
-};
-
-export default Sidebar;
+}

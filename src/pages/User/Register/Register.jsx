@@ -1,5 +1,5 @@
 import React from "react";
-import Auth from "../../../components/Auth/Auth";
+import Auth2 from "../../../components/Auth/Auth2";
 
 const Register = () => {
   const input_names = [
@@ -22,7 +22,19 @@ const Register = () => {
 
   const api = "user/";
 
-  return <Auth input_names={input_names} inputs_={inputs_} api={api} />;
+  return (
+    <Auth2
+      input_names={input_names}
+      inputs_={inputs_}
+      api={api}
+      user="userid"
+      redirect="/user"
+      button_text={"Sign Up"}
+      bottom_text={"Already have an account? Sign In."}
+      header={"Sign Up"}
+      push="/user/login"
+    />
+  );
 };
 
 export default Register;

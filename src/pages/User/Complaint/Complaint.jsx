@@ -1,8 +1,7 @@
-import React from 'react'
-import './Complaint.css'
+import React from "react";
+
+import SingleComplain from "../../../components/SingleComplain/SingleComplain";
 
 export default function Complaint() {
-  return (
-    <div>Complaint</div>
-  )
+  return <SingleComplain />;
 }

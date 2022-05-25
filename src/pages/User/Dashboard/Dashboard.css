@@ -1,0 +1,31 @@
+.user-dashboard {
+  padding-top: 10%;
+}
+
+.user-dashboard .alert{
+  margin: 0% 5% 3% 5%;
+}
+
+.user-dashboard .top {
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.user-dashboard .top .chart {
+  /* background-color: brown; */
+  width: fit-content;
+  padding-left: 1%;
+}
+
+.user-dashboard .top .cards{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.user-dashboard .user-table{
+  margin: 3% 3%;
+  border: 1px solid #EAECEE;
+}

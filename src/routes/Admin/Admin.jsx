@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 
 //Importing components
 import Navbar from "../../components/Navbar/Navbar";
@@ -16,78 +15,53 @@ import New from "../../pages/Admin/New/New";
 import InProcess from "../../pages/Admin/InProcess/InProcess";
 import Completed from "../../pages/Admin/Completed/Completed";
 
-//Importing data
-import { sideBarData, submenuData } from "./AdminData";
-
 const Admin = () => {
   const { path, url } = useRouteMatch();
-  const [a, setA] = useState(0);
 
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
-        <Route path={`${path}`}>
-          <Sidebar
-            changeNav={(a) => setA(a)}
-            variable={a}
-            sideBarData={sideBarData}
-            submenuData={submenuData}
-            submenu={1}
-          />
-        </Route>
+      <Sidebar />
+      <Navbar />
 
-        <Route path={`${path}`}>
-          <Navbar
-            prop={a ? "" : "inactive"}
-            logo={"Admin"}
-            path={"/admin/settings"}
-            notification={
-              "/politician_image_building/Admin Dashboard/Complaints Retrieval/NewComplaintsRetrieve.php"
-            }
-            viewAll={`${path}/new`}
-          />
-        </Route>
+      <Route exact path={`${path}`}>
+        <AdminDashboard />
+      </Route>
 
-        <Route exact path={`${path}/login`}>
-          <Login />
-        </Route>
+      <Route path={`${path}/new`}>
+        <New />
+      </Route>
 
-        <Route exact path={`${path}`}>
-          <AdminDashboard />
-        </Route>
+      <Route path={`${path}/inprocess`}>
+        <InProcess />
+      </Route>
 
-        <Route path={`${path}/gsreg`}>
-          <GramSevakRegisteration />
-        </Route>
+      <Route path={`${path}/completed`}>
+        <Completed />
+      </Route>
 
-        <Route path={`${path}/gslist`}>
-          <GramSevakList />
-        </Route>
+      <Route path={`${path}/reports`}>
+        <Reports />
+      </Route>
 
-        <Route path={`${path}/userdetail`}>
-          <UserDetails />
-        </Route>
+      <Route path={`${path}/gslist`}>
+        <GramSevakList />
+      </Route>
 
-        <Route path={`${path}/reports`}>
-          <Reports />
-        </Route>
+      <Route path={`${path}/gsreg`}>
+        <GramSevakRegisteration />
+      </Route>
 
-        <Route path={`${path}/settings`}>
-          <Settings />
-        </Route>
+      <Route path={`${path}/userdetail`}>
+        <UserDetails />
+      </Route>
 
-        <Route path={`${path}/new`}>
-          <New />
-        </Route>
+      <Route exact path={`${path}/login`}>
+        <Login />
+      </Route>
 
-        <Route path={`${path}/inprocess`}>
-          <InProcess />
-        </Route>
-
-        <Route path={`${path}/completed`}>
-          <Completed />
-        </Route>
-      </AnimatePresence>
+      <Route path={`${path}/settings`}>
+        <Settings />
+      </Route>
     </>
   );
 };

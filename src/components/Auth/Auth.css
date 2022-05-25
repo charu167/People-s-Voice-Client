@@ -1,28 +1,11 @@
 .auth {
-  padding: 90px 20px 20px 20px;
-  margin: auto;
-  background-color: rgb(61, 48, 58);
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  height: fit-content;
-
-  width: 400px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: #ffffff;
+  /* background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%); */
 }
 
-.auth input {
-  height: 40px;
-  font-size: 16px;
-  background-color: rgb(61, 48, 58);
-  border: none;
-  border-bottom: 1px solid rgb(167, 155, 155);
-  color: rgb(167, 155, 155);
-}
-
-.auth button {
-  color: rgb(255, 255, 255);
+.auth .btn-auth {
+  color: white;
   background-color: black;
-  border: none;
-  height: 40px;
-  font-size: 20px;
 }

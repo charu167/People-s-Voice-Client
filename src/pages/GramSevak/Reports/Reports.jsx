@@ -1,8 +1,9 @@
 //IMPORTING LIBRARIES
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import Modal from "../../../components/Modal/Modal";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { Button } from "@mui/material";
 
 //IMPORTING COMPONENTS
 import Table from "../../../components/Table/Table";
@@ -11,11 +12,14 @@ const Reports = () => {
   //URL
   const url = "http://localhost:8000/reports/";
 
-  const titles = ["Sr. No.", "Name", "Address", "Phone", "Status", "Date"];
+  const titles = ["Name", "Address", "Phone", "Type", "Date", "View"];
   const [data, setData] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [currentData, setCurrentData] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
+      const date = new Date();
       await axios
         .get(url, {
           params: {
@@ -28,14 +32,27 @@ const Reports = () => {
           const sample = [];
 
           res.data.forEach((e, i) => {
-            sample.push([
-              i + 1,
-              e.user.name,
-              e.user.address,
-              e.user.phone,
-              1,
-              e.date,
-            ]);
+            sample.push({
+              description: e.description,
+              status: e.forGS,
+              Date: date.toDateString(e.date),
+              Name: e.user.name,
+              Address: e.user.address,
+              Phone: e.user.phone,
+              Type: e.type,
+              View: (
+                <Button
+                  onClick={() => {
+                    setCurrentData(i);
+                    setOpen(true);
+                  }}
+                  size="small"
+                  variant="contained"
+                >
+                  View
+                </Button>
+              ),
+            });
             setData(sample);
           });
         })
@@ -47,33 +64,41 @@ const Reports = () => {
   }, []);
 
   //LOGIN CHECK
-  const history = useHistory();
-  if (!sessionStorage.getItem("loggedin")) {
-    history.push("/admin/login");
-  }
+  // const history = useHistory();
+  // if (!sessionStorage.getItem("loggedin")) {
+  //   history.push("/admin/login");
+  // }
 
   //JSX
   return (
-    <motion.div
-      className="outermost-container"
-      initial={{ y: 500 }}
-      animate={{
-        y: 0,
-        transition: { duration: 0.5, type: "spring" },
-      }}
-      exit={{
-        y: -500,
-        transition: { duration: 0.3, type: "spring", ease: "ease-in-out" },
-      }}
-    >
+    <div className="outermost-container">
       <Table
         titles={titles}
         data={data !== null ? data : []}
         header={"Reports"}
-        additional={true}
-        regions={[]}
       />
-    </motion.div>
+      <Modal
+        data={
+          data !== null
+            ? {
+                type: data[currentData].Type,
+                status: data[currentData].status,
+                description: data[currentData].description,
+                location: data[currentData].Location,
+                date: data[currentData].Date,
+              }
+            : {
+                type: "",
+                status: "",
+                description: "",
+                location: "",
+                date: "",
+              }
+        }
+        setOpen={setOpen}
+        open={open}
+      />
+    </div>
   );
 };
 
